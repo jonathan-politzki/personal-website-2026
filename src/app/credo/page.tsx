@@ -21,7 +21,7 @@ export default function Credo() {
           
           <div className="mt-12 text-lg md:text-xl text-[#888] font-light leading-relaxed space-y-8 pl-9">
             <p>
-              As computational systems improve, we must actively and deeply think about <Link href="/writing/politzkis-law" className="text-white border-b border-white/30 hover:border-white transition-colors">where humans still stand out</Link>.
+              As computational systems improve, we must think deeply about <Link href="/writing/politzkis-law" className="text-white border-b border-white/30 hover:border-white transition-colors">where humans still stand out</Link>.
             </p>
             <div className="text-sm md:text-base text-[#666] font-mono pl-4 border-l border-[#333]">
               // Politzki's Law: Humans excel at high complexity, low data tasks. <br/>
@@ -39,24 +39,23 @@ export default function Credo() {
              Irreverence as a Virtue
            </h2>
            
-           <div className="mb-8">
-             <p className="text-lg text-white font-medium mb-2">
-               Irreverence is not mere disrespect; it is the necessary audacity to question established norms in pursuit of truth. It is the intellectual autonomy required to dismantle the old to build the new.
-             </p>
-           </div>
-
            <blockquote className="text-base text-[#888] italic border-l-2 border-[#444] pl-4 mb-8 leading-relaxed">
              “If the culture is heavily infused with respect and worship of ancient wisdom so that any intellectual innovation is considered deviant and blasphemous, technological creativity will be similarly constrained. Irreverence is a key to progress.”
              <br/>
              <span className="text-xs font-mono not-italic text-[#555] mt-2 block">— Joel Mokyr, A Culture of Growth</span>
            </blockquote>
 
-           <p className="text-lg text-[#aaa] leading-relaxed">
-             We need to actively disregard what is known today. Old institutional structures that have decayed, outdated, repetitive procedures, frameworks that are no longer suited for the end they were initially optimized for, and new innovations that are now possible that weren't before.
-           </p>
-           <p className="text-lg text-[#aaa] leading-relaxed mt-4">
-             True progress can only be achieved by navigating <strong className="text-white">out of distribution</strong>, into uncharted territory.
-           </p>
+           <div className="mb-8">
+             <p className="text-lg text-[#aaa] leading-relaxed mb-6">
+               Irreverence isn't disrespect; it is the authentic independence required to assess the world as it is.
+             </p>
+             <p className="text-lg text-[#aaa] leading-relaxed">
+               We must allow ourselves to audit the status quo. Many institutional structures and procedures persist simply because they are established, even after they have decayed or ceased to be optimal. Identifying these obsolete frameworks is not an act of rebellion, but a necessary step to clear the way for innovations that were previously impossible.
+             </p>
+             <p className="text-lg text-[#aaa] leading-relaxed mt-6">
+               True progress can only be achieved by navigating <strong className="text-white">out of distribution</strong>, into uncharted territory.
+             </p>
+           </div>
         </section>
 
         {/* --- Visualizations Section --- */}

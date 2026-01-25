@@ -14,9 +14,18 @@ export function OutOfDistributionVis() {
     let width = canvas.width = canvas.offsetWidth;
     let height = canvas.height = canvas.offsetHeight;
 
-    // The "Outlier" Point
-    const targetX = width * 0.85;
-    const targetY = height * 0.2;
+    // --- CONFIGURATION ---
+    // The "Map" (Known Distribution) covers most of the screen
+    const centerX = width * 0.4;
+    const centerY = height * 0.6;
+    const baseRadius = Math.min(width, height) * 0.45; // Much larger
+
+    // The "Outlier" Point (Unlikely Truth)
+    // Closer to the edge of the known, not miles away
+    const targetAngle = -Math.PI / 4; // Top-Right direction
+    const distFromCenter = baseRadius + 60; // Just outside the fractal edge
+    const targetX = centerX + distFromCenter * Math.cos(targetAngle);
+    const targetY = centerY + distFromCenter * Math.sin(targetAngle);
 
     let time = 0;
 
@@ -25,29 +34,27 @@ export function OutOfDistributionVis() {
       ctx.fillRect(0, 0, width, height);
       time += 0.005;
 
-      // 1. Draw "Known" Distribution (Fractal/Organic Cloud)
-      // Re-implementing the perlin-noise-like blob layer to ensure it looks "fractal" and "in-distribution"
-      const centerX = width * 0.25;
-      const centerY = height * 0.75;
-      const baseRadius = Math.min(width, height) * 0.25;
-
+      // 1. Draw "Known" Distribution (Large Fractal Cloud)
       ctx.save();
       ctx.translate(centerX, centerY);
 
-      // Draw multiple layers for depth/fractal feel
-      for (let layer = 0; layer < 3; layer++) {
+      // Draw multiple layers for depth
+      for (let layer = 0; layer < 4; layer++) {
         ctx.beginPath();
-        const layerOffset = layer * 15;
-        ctx.fillStyle = `rgba(100, 100, 100, ${0.05 + layer * 0.02})`;
-        ctx.strokeStyle = `rgba(150, 150, 150, ${0.1 + layer * 0.05})`;
+        const layerOffset = layer * 10;
+        ctx.fillStyle = `rgba(100, 100, 100, ${0.03 + layer * 0.01})`; // Very faint
+        ctx.strokeStyle = `rgba(150, 150, 150, ${0.05 + layer * 0.02})`;
         ctx.lineWidth = 1;
 
         for (let angle = 0; angle <= Math.PI * 2; angle += 0.05) {
           // Static noise based on angle (fractal edge)
-          const n1 = Math.sin(angle * 7) * 10;
-          const n2 = Math.cos(angle * 13) * 8;
-          const n3 = Math.sin(angle * 29) * 4;
-          const r = baseRadius - layerOffset + n1 + n2 + n3;
+          const n1 = Math.sin(angle * 7) * 15;
+          const n2 = Math.cos(angle * 13) * 10;
+          const n3 = Math.sin(angle * 29) * 5;
+          // Add gentle breathing to the whole mass
+          const breath = Math.sin(time + layer) * 2;
+          
+          const r = baseRadius - layerOffset + n1 + n2 + n3 + breath;
           
           const x = r * Math.cos(angle);
           const y = r * Math.sin(angle);
@@ -61,49 +68,45 @@ export function OutOfDistributionVis() {
       }
       ctx.restore();
 
-      // Label
-      ctx.fillStyle = "#666";
+      // Label for Known
+      ctx.fillStyle = "#444";
       ctx.font = "10px monospace";
-      ctx.fillText("KNOWN / LIKELY (IN-DISTRIBUTION)", 20, height - 20);
+      ctx.fillText("KNOWN DISTRIBUTION", 20, height - 20);
 
-      // 2. Draw "Unknown" Point (Out of Distribution)
+      // 2. Draw "Unknown" Point (Close Outlier)
       ctx.fillStyle = "#fff";
-      ctx.shadowBlur = 15;
+      ctx.shadowBlur = 10;
       ctx.shadowColor = "#fff";
       ctx.beginPath();
-      ctx.arc(targetX, targetY, 4, 0, Math.PI * 2);
+      ctx.arc(targetX, targetY, 3, 0, Math.PI * 2);
       ctx.fill();
       ctx.shadowBlur = 0;
 
-      // Label
-      ctx.fillText("UNKNOWN / UNLIKELY", targetX - 60, targetY + 20);
+      // Label for Unknown
+      ctx.fillStyle = "#fff";
+      ctx.fillText("UNLIKELY TRUTH", targetX + 10, targetY + 4);
 
-      // 3. Vector Arrow (The Focus)
-      // Start from the edge of the cloud roughly pointing towards target
-      const angleToTarget = Math.atan2(targetY - centerY, targetX - centerX);
-      const startR = baseRadius + 15; // slightly outside blob
-      const startX = centerX + startR * Math.cos(angleToTarget);
-      const startY = centerY + startR * Math.sin(angleToTarget);
+      // 3. Vector Arrow (Short, bridge the gap)
+      // Find the edge point on the fractal closest to target
+      const noiseAtAngle = Math.sin(targetAngle * 7) * 15 + Math.cos(targetAngle * 13) * 10;
+      const edgeR = baseRadius + noiseAtAngle;
+      const startX = centerX + edgeR * Math.cos(targetAngle);
+      const startY = centerY + edgeR * Math.sin(targetAngle);
       
       ctx.strokeStyle = "#fff";
       ctx.lineWidth = 1.5;
       
-      // Animate dash
-      ctx.setLineDash([4, 6]); 
-      ctx.lineDashOffset = -time * 30; 
-      
       ctx.beginPath();
       ctx.moveTo(startX, startY);
-      ctx.lineTo(targetX - 10, targetY + 5);
+      ctx.lineTo(targetX - 8, targetY); // Stop just before dot
       ctx.stroke();
-      ctx.setLineDash([]); 
 
       // Arrowhead
-      const angle = Math.atan2((targetY + 5) - startY, (targetX - 10) - startX);
+      const angle = Math.atan2(targetY - startY, targetX - startX);
       ctx.beginPath();
-      ctx.moveTo(targetX - 10, targetY + 5);
-      ctx.lineTo(targetX - 10 - 10 * Math.cos(angle - Math.PI / 6), targetY + 5 - 10 * Math.sin(angle - Math.PI / 6));
-      ctx.lineTo(targetX - 10 - 10 * Math.cos(angle + Math.PI / 6), targetY + 5 - 10 * Math.sin(angle + Math.PI / 6));
+      ctx.moveTo(targetX - 8, targetY);
+      ctx.lineTo(targetX - 8 - 6 * Math.cos(angle - Math.PI / 6), targetY - 6 * Math.sin(angle - Math.PI / 6));
+      ctx.lineTo(targetX - 8 - 6 * Math.cos(angle + Math.PI / 6), targetY - 6 * Math.sin(angle + Math.PI / 6));
       ctx.fillStyle = "#fff";
       ctx.fill();
 
