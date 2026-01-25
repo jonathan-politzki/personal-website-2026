@@ -1,0 +1,133 @@
+---
+title: "Self-Healing Software"
+publishedAt: "2025-05-23"
+summary: "The future of software bug reproduction."
+tags: ["substack"]
+type: "essay"
+---
+
+**Self-Healing Software is Here**
+
+If you’ve ever been a software engineer or QA, you’ve spent hours to days manually reproducing bugs. This painful process is not “a good learning experience.” It is a waste of your limited human focus and should be automated entirely.
+
+At Irreverent Capital, we see an opportunity to transition manual bug reproduction entirely from analog to a digital layer of abstraction.
+
+**Claude Shannon – Error Correcting Code**
+
+To this day, one of the most powerful books I’ve read was The Art of Doing Science & Engineering by Richard Hamming. The book heavily covers information theory.
+
+In the 1940s, Claude Shannon proved you could achieve reliable communication over noisy, error-prone channels. Before this, everyone thought you needed perfect hardware. Shannon showed that with the right error-correcting codes, you could make unreliable channels reliable. This revolutionized computing - suddenly you didn't need perfect components.
+
+**The Future is Already Here**
+
+While this historical parallel is at least a little helpful, I am not concerned with the past.
+
+In the last essay, we discuss the immense power of AI that is already here, it's just unevenly distributed. The only bottleneck to distribution is ironically us, its creator. Like electricity, it will take years before it is dispersed throughout the world. But coding tools have been some of the best initial use cases and offer insight into the future. Another reason coding tools will be some of the best initial use cases is developers are some of the best initial adopters.
+
+Even with sophisticated pre-production QA and observability tools, the challenge of reproducing bugs reported by customers in their unique, often heavily customized environments remains a significant manual burden. These tools identify that a problem exists, but the laborious task of pinpointing why and how in a specific customer instance is where the real bottleneck lies.
+
+**The Current Narrative For AI**
+
+The current narrative for AI is something like “AI Is good at low-complexity, high quantity tasks,” or something like this random VC presented that velocity and criticality are dimensions in which as you increase velocity and criticality, the value of your solution increases. That generally makes sense_._
+
+This brings us back to _Politzki’s Law_: computers excel in domains of high complexity that are ultimately deterministic or rule-based, like chess or, crucially, software execution. While understanding the human context of a bug is messy, the act of reproducing it within a given software environment is a deterministic process perfectly suited for AI, once the 'noise' is filtered.
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/280d29cc-1935-4a2a-907e-5083781acf94_1200x1600.png)
+
+_Some random vc happily providing his view._
+
+So if you can find a way to create a solution for high quantity problems, that are very critical, and involve some clean language like coding, that would be a very promising business. What I am going to propose in this essay is just that.
+
+**Bug Reproduction**
+
+Talking to nearly every single one of my developer friends, I have quickly realized it is an unnecessarily large part of the software engineering process that developers almost have a learned helplessness towards.
+
+After a Voice AI hackathon, Rohan Katakam was telling me about an idea that he had come up with outside of work. He roughly echoed the frustration that every developer has with reproducing bugs and how it takes up days of time, before he can even code or fix the problem.
+
+**The Problem:** bug reproduction is a manual and draining process that all developers hate, but must be done in order to fix a bug.
+
+The question then was whether there would be a good solution to this problem, and why now? We will walk through this in this essay and why now is the first time in history this is a solvable problem.
+
+**Bug Reproduction Nuances**
+
+Not all bugs are created equal. Speaking with friends in different lines of work, different levels of technical depth, different business sizes from startup - Amazon and other big tech companies, there are general consistencies, but also subtle differences in how customer bugs are reported and fixed.
+
+In larger companies, the hand-off process looks something like this.
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/ab652736-2639-4fda-9c58-154fb29add2c_1299x725.png)
+
+Unfortunately, it’s far from as simple as just fixing the bug. Here is how the process may look for a team at a larger company.
+
+1.  This process often begins when a customer submits an error they are experiencing.
+    
+2.  A customer support representative, account executive, or client-facing role will then gather more information and attempt to understand the issue and what’s going wrong.
+    
+3.  They may then send this report off to another support engineer who may try to solve the issue.
+    
+4.  If this is determined to be a bug and problem with the product, they will send this to the appropriate team in the company. At this stage, this bug may be reassigned multiple times. Teams may disagree who is responsible for the underlying code base.
+    
+5.  This bug is then triaged to determine severity and categorization and then assigned to an engineer.
+    
+6.  The developer may attempt to reproduce the bug for days, only to question whether it is even reproducible. He may then go to his team for more information. His team will contact the customer and this back-and-forth continues until the bug is resolved.
+    
+7.  Then, the developer will send this bug to his QA to verify his work and push any needed changes to the code base.
+    
+
+**Differences in Complexity**
+
+This is generally consistent at larger companies, with subtle differences. For instance, Google and Cisco do a pretty good job at isolating bug reproduction in the job of the QA, who packages it up nicely for an engineer to reproduce with little effort. However, the back-and-forth is often excruciating.  
+  
+In smaller, more lax companies, this reproduction process is much simpler. Maybe a customer receives a bug, support drops it into a slack channel, and then an engineer picks it up and fixes it. Many bugs, especially in web applications are not difficult to reproduce and are relatively low-complexity.
+
+However, many bugs in more legacy softwares have configuration drifts, and massively different environments between clients, leading to a constant “works on my machine” problem. With QAs and engineers pointing fingers and bugs never getting fixed. In all of this, customer support needs to interface with the client, who is incredibly pissed off and is wondering why a simple fix is taking weeks or months. This complexity is an important dimension–and it is one that humans are not good at dealing with.
+
+**Differences in Criticality**
+
+Some bugs may be incredibly important, so that waiting weeks is simply not in the cards. Financial institutions, healthcare providers, and other important infrastructure is the ground we walk on every day.
+
+Remember when a simple bug in Crowdstrike caused havoc?  
+  
+_“CrowdStrike's Falcon Sensor software update triggered a massive IT outage that crashed millions of Windows systems. The root cause was a bug in the software update process, specifically a "read-out-of-bounds memory safety error" in the CSagent.sys driver.”_
+
+It took a few hours to fix this bug, but already the losses were projected to be in excess of $5 billion. Imagine if it was self-healing? Software is no longer just an app on your phone, our world is entirely reliant on its consistent reliability.
+
+**Differences in Quantity**
+
+Some companies experience way more traffic and almost by nature have tons of random bugs that they are completely unable to service. An important metric is to look for companies where a QA deals with over 200 bugs per month.
+
+An important thought here is that many companies can not afford the QA teams needed to serve their customers. Similar to how Meta could not afford call centers for billions of users, it was completely impractical to maintain that level of service at that scale. However, AI changes that for call centers, and indeed it changes it for bug reproduction. In the future, every company will have self-healing software.
+
+**Why This is Now Possible**
+
+Is this even possible? It is. For one, people forget that computers are better than humans in some areas of complexity, like code, where there is a certain level of determinacy.
+
+Similarly, the introduction of long-contex, multi-modal models like Gemini have absolutely blown my mind. And the adoption of computer use agents that have a general enough sense of navigation and frankly don’t suck enables automation of entire human workflows. We stand at a powerful moment of leverage for humans to solve problems at scale.
+
+The largest bottleneck in this solution is matching environment configurations. This isn’t raw complexity. This is a deterministic reproduction process, and computers are really good at that. This is now a solvable problem.
+
+**The Opportunity**
+
+It’s clear that our friends face this problem. It’s even clearer that a lot of people face this problem.
+
+Let's zoom out. 200,000 engineering teams. Each burning 30-50 hours/week on reproduction. At $150-200/hour, that's $234k-520k per team annually. Total market of $50 billion in pure waste. And that's before counting downtime, customer churn, or catastrophic failures. Crowdstrike would have paid many millions to not have a fuck-up like they did.
+
+**Question Everything**
+
+I’m not someone who likes to optimize at the margins, we need to rethink this process from scratch. In the last essay, we discuss how the future of software won’t be sprinkling AI on legacy products. It will be rebuilding them from scratch with AI at its core.
+
+So for a solution, theoretically it should looks something like this:
+
+1.  Customer sends in a bug
+    
+2.  Immediate attempt to reproduce, recognizes exact missing information needed and sends a request for information to customer, or pulls it automatically
+    
+3.  Reproduces the bug
+    
+4.  Sends video + steps direct to engineer with proposed code solutions
+    
+
+And one day, the holy grail of this problem will be when the code self-heals and automates the patching process. A new layer of abstraction on top of software. Just as Shannon showed that imperfect channels could transmit perfect information with the right encoding, we believe AI can act as the 'decoder' for messy, incomplete bug reports and the 'stabilizer' for variable environments. It can ingest this 'noise' and output a clear, deterministic path to reproduction, effectively making an unreliable reporting process reliable for engineering action.
+
+What I am proposing here is that we take this graph and crunch it into a layer of abstraction that we never have to think about again.
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/251a0cfe-0d7e-4429-9c3c-c3db87e7893a_1180x1600.png)
