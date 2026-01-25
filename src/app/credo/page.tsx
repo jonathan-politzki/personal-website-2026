@@ -38,8 +38,21 @@ export default function Credo() {
            <h2 className="text-sm font-mono uppercase tracking-widest text-white mb-6">
              Irreverence as a Virtue
            </h2>
+           
+           <div className="mb-8">
+             <p className="text-lg text-white font-medium mb-2">
+               Irreverence is not mere disrespect; it is the necessary audacity to question established norms in pursuit of truth. It is the intellectual autonomy required to dismantle the old to build the new.
+             </p>
+           </div>
+
+           <blockquote className="text-base text-[#888] italic border-l-2 border-[#444] pl-4 mb-8 leading-relaxed">
+             “If the culture is heavily infused with respect and worship of ancient wisdom so that any intellectual innovation is considered deviant and blasphemous, technological creativity will be similarly constrained. Irreverence is a key to progress.”
+             <br/>
+             <span className="text-xs font-mono not-italic text-[#555] mt-2 block">— Joel Mokyr, A Culture of Growth</span>
+           </blockquote>
+
            <p className="text-lg text-[#aaa] leading-relaxed">
-             We need to actively disregard what is known today. Whether that is these old institutional structures that have decayed—or are no longer suited for the end they were initially built for—and new innovations that are now possible that weren't before.
+             We need to actively disregard what is known today. Old institutional structures that have decayed, outdated, repetitive procedures, frameworks that are no longer suited for the end they were initially optimized for, and new innovations that are now possible that weren't before.
            </p>
            <p className="text-lg text-[#aaa] leading-relaxed mt-4">
              True progress can only be achieved by navigating <strong className="text-white">out of distribution</strong>, into uncharted territory.
@@ -58,7 +71,7 @@ export default function Credo() {
               Fig 1. Creative Destruction
             </div>
             <p className="text-sm text-[#666] leading-relaxed">
-              Old frameworks must be actively cleared away to build room for better structures.
+              Old frameworks must be actively cleared away to build room for better structures. Growth through change.
             </p>
           </div>
 
