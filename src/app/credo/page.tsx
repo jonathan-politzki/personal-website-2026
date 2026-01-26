@@ -50,7 +50,7 @@ export default function Credo() {
                Irreverence isn't disrespect; it is the authentic independence required to assess the world as it is.
              </p>
              <p className="text-lg text-[#aaa] leading-relaxed">
-               Many institutions and procedures persist simply because they are established, even after they have decayed or ceased to be optimal. Identifying these obsolete frameworks is not an act of rebellion, but a necessary step to clear the way for innovations that were previously impossible.
+               Many institutions and procedures persist simply because they are established, even after they have decayed or ceased to be optimal. Identifying absolute structures is a necessary step to clear the way for innovations that were previously impossible.
              </p>
              <p className="text-lg text-[#aaa] leading-relaxed mt-6">
                True progress can only be achieved by navigating <strong className="text-white">out of distribution</strong>, into uncharted territory.
