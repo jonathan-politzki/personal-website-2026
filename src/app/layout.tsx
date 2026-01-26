@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Ruslan_Display, Courier_Prime, Source_Serif_4 } from "next/font/google";
 import Nav from "@/components/nav";
+import { Providers } from "@/components/providers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,8 +51,10 @@ export default function RootLayout({
           bg-[#050505] text-[#e5e5e5] overflow-x-hidden
         `}
       >
-        <Nav />
-        {children}
+        <Providers>
+          <Nav />
+          {children}
+        </Providers>
       </body>
     </html>
   );

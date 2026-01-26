@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Logo } from "@/components/logo";
+import { useTheme } from "@/context/theme-context";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,7 @@ export default function Nav() {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
+  const { credoIsDark } = useTheme();
 
   // Check if we're on an essay page (individual essay, not the tools)
   const isEssayPage = pathname.startsWith("/writing/") &&
@@ -23,8 +25,12 @@ export default function Nav() {
     !pathname.includes("/read") &&
     pathname !== "/writing";
 
-  // Check if we're on any writing/reading page that uses light theme
-  const isLightTheme = isEssayPage || pathname === "/writing/read";
+  // Check if we're on the Credo page
+  const isCredoPage = pathname === "/credo";
+
+  // Check if we're on any writing/reading page that uses light theme,
+  // or if Credo page is in light mode
+  const isLightTheme = isEssayPage || pathname === "/writing/read" || (isCredoPage && !credoIsDark);
 
   // Hide nav on scroll for essay pages
   useEffect(() => {

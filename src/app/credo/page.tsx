@@ -1,14 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Quote from "@/components/quote";
 import Link from "next/link";
 import { OutOfDistributionVis, StructureBreakdownVis } from "@/components/credo-visualizations";
 import { Sun, Moon } from "lucide-react";
+import { useTheme } from "@/context/theme-context";
 
 export default function Credo() {
   const [isGerman, setIsGerman] = useState(true);
   const [isDark, setIsDark] = useState(true);
+  const { setCredoIsDark } = useTheme();
+
+  // Sync local isDark state with context for nav
+  useEffect(() => {
+    setCredoIsDark(isDark);
+  }, [isDark, setCredoIsDark]);
 
   const theme = isDark ? {
     bg: "bg-[#0a0a0a]",
@@ -95,7 +102,7 @@ export default function Credo() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <div className="h-44 w-full">
-                <StructureBreakdownVis />
+                <StructureBreakdownVis isDark={isDark} />
               </div>
               <div className={`text-xs font-mono uppercase tracking-widest ${theme.subtle}`}>
                 Creative Destruction
@@ -104,7 +111,7 @@ export default function Credo() {
 
             <div className="space-y-2">
               <div className="h-44 w-full">
-                <OutOfDistributionVis />
+                <OutOfDistributionVis isDark={isDark} />
               </div>
               <div className={`text-xs font-mono uppercase tracking-widest ${theme.subtle}`}>
                 Unlikely Truth
