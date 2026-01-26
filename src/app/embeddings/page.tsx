@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Html, Text, Environment, Stars, Sparkles, OrbitControls } from "@react-three/drei";
+import { Html, Text, Environment, Stars, Sparkles, OrbitControls, Line } from "@react-three/drei";
 import { useRef, useState, useMemo, useEffect } from "react";
 import * as THREE from "three";
 import { motion } from "framer-motion";
@@ -83,19 +83,19 @@ const SORTED_WRITINGS = [...WRITINGS].sort((a, b) => new Date(a.date).getTime() 
 
 function ConnectionLine() {
   const points = useMemo(() => {
-    return SORTED_WRITINGS.map(w => new THREE.Vector3(...w.position));
+    const rawPoints = SORTED_WRITINGS.map(w => new THREE.Vector3(...(w.position as [number, number, number])));
+    const curve = new THREE.CatmullRomCurve3(rawPoints);
+    return curve.getPoints(100).map(p => [p.x, p.y, p.z] as [number, number, number]);
   }, []);
 
-  const lineGeometry = useMemo(() => {
-    const curve = new THREE.CatmullRomCurve3(points);
-    // Create more points for a smooth curve
-    return new THREE.BufferGeometry().setFromPoints(curve.getPoints(100));
-  }, [points]);
-
   return (
-    <line geometry={lineGeometry}>
-      <lineBasicMaterial attach="material" color="#333" transparent opacity={0.3} linewidth={1} />
-    </line>
+    <Line
+      points={points}
+      color="#333"
+      lineWidth={1}
+      transparent
+      opacity={0.3}
+    />
   );
 }
 

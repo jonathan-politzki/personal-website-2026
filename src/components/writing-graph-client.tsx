@@ -162,7 +162,6 @@ export default function WritingGraph({ posts }: { posts: Post[] }) {
             return "bg-[#333] border-[#333] opacity-30"; // Dim others
         }
         // Default cluster coloring (subtle)
-        const colors = ["bg-red-500", "bg-blue-500", "bg-green-500", "bg-yellow-500", "bg-purple-500", "bg-orange-500"];
         // We use inline styles for dynamic colors in real app, but here let's stick to monochrome/grayscale for the 'noir' vibe
         // unless we want to introduce color. Let's keep it 'noir' but use brightness.
         // Actually, let's map clusters to shades of grey/white to keep aesthetic
@@ -342,23 +341,46 @@ export default function WritingGraph({ posts }: { posts: Post[] }) {
                           setHoveredCluster(null);
                       }}
                     >
-                      {/* Tooltip - compact */}
+                      {/* Tooltip - positioned dynamically based on node location */}
                       <div
-                        className={`absolute w-max max-w-[180px] bg-[#0a0a0a] border border-[#333] px-3 py-2 pointer-events-none transition-all duration-200 shadow-xl
+                        className={`absolute w-max max-w-[250px] bg-[#0a0a0a] border border-[#333] p-4 pointer-events-none transition-all duration-200 shadow-2xl
                           ${hoveredPost === node.slug ? 'opacity-100' : 'opacity-0'}`}
                         style={{
+                          // Position tooltip based on where node is on graph
+                          // If node is in top 30% of graph (y > 70), show below; otherwise above
                           ...(node.y > 70
-                            ? { top: '100%', marginTop: '8px' }
-                            : { bottom: '100%', marginBottom: '8px' }
+                            ? { top: '100%', marginTop: '12px' }
+                            : { bottom: '100%', marginBottom: '12px' }
                           ),
+                          // Horizontal positioning: shift left/right if near edges
                           left: node.x < 15 ? '0' : node.x > 85 ? 'auto' : '50%',
                           right: node.x > 85 ? '0' : 'auto',
                           transform: node.x < 15 || node.x > 85 ? 'none' : 'translateX(-50%)',
                           zIndex: 9999,
                         }}
                       >
-                        <p className="text-[11px] font-medium text-white leading-tight">{node.title}</p>
-                        <p className="text-[9px] text-[#555] mt-1">{node.date}</p>
+                        <p className="text-xs font-bold text-white mb-1 leading-tight">{node.title}</p>
+                        <p className="text-[10px] text-[#666] mb-3">{node.date}</p>
+                        
+                        {node.clusterLabel && viewMode === "SEMANTIC" && (
+                            <div className="mb-3">
+                                <span className="text-[9px] uppercase tracking-widest text-[#888] border border-[#333] px-1.5 py-0.5 rounded">
+                                    {node.clusterLabel}
+                                </span>
+                            </div>
+                        )}
+
+                        {/* Mini Stats in Tooltip */}
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                          {node.attributes && Object.entries(node.attributes).slice(0, 6).map(([key, val]) => (
+                            <div key={key} className="flex justify-between items-center text-[9px] text-[#888] gap-2">
+                               <span className="uppercase tracking-wider opacity-70">{key.slice(0,4)}</span>
+                               <div className="w-12 h-1 bg-[#222] rounded-full overflow-hidden">
+                                 <div className="h-full bg-[#666]" style={{ width: `${val * 100}%` }} />
+                               </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </motion.div>
                   </Link>

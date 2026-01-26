@@ -16,8 +16,8 @@
       "x": 57.43027419715236,
       "y": 65.37033241959256
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 3,
+    "clusterLabel": "Mental Models"
   },
   {
     "slug": "a-new-religion",
@@ -37,7 +37,7 @@
       "y": 27.8819524804924
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "a-year-of-startups",
@@ -57,7 +57,7 @@
       "y": 80.06452470361951
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "ai-memory-future-outlook",
@@ -77,7 +77,7 @@
       "y": 33.10275466834764
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "ai-memory-market-dynamics",
@@ -97,7 +97,7 @@
       "y": 33.827828595773745
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "ai-memory-technical-foundations",
@@ -117,7 +117,7 @@
       "y": 16.537953425291214
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "ai-memory",
@@ -137,7 +137,7 @@
       "y": 27.75821767607043
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "ambitions-unedited",
@@ -157,7 +157,7 @@
       "y": 12.067033533084121
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "automating-the-world",
@@ -177,7 +177,7 @@
       "y": 69.08129033630661
     },
     "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "clusterLabel": "Building & Execution"
   },
   {
     "slug": "b2c-memory-layer",
@@ -197,7 +197,7 @@
       "y": 43.027770913307606
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "being-alone",
@@ -217,7 +217,7 @@
       "y": 18.994011115435526
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "biotech-update-04212023",
@@ -237,7 +237,7 @@
       "y": 64.83072819891015
     },
     "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "clusterLabel": "Building & Execution"
   },
   {
     "slug": "biotech-week-in-review-02-17-2023",
@@ -257,7 +257,7 @@
       "y": 86.47269474817162
     },
     "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "clusterLabel": "Building & Execution"
   },
   {
     "slug": "biotech-week-in-review-03-03-2023",
@@ -277,7 +277,7 @@
       "y": 78.29065251564018
     },
     "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "clusterLabel": "Building & Execution"
   },
   {
     "slug": "biotech-week-in-review-05-12-2023",
@@ -297,7 +297,7 @@
       "y": 54.97219016949282
     },
     "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "clusterLabel": "Mental Models"
   },
   {
     "slug": "boldness",
@@ -317,7 +317,7 @@
       "y": 66.53076299632471
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "building-jean-memory",
@@ -337,7 +337,7 @@
       "y": 37.99212802137223
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "business-execution",
@@ -357,7 +357,7 @@
       "y": 76.9404444912095
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "coming-soon",
@@ -377,7 +377,7 @@
       "y": 24.53114447645185
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "culture",
@@ -397,7 +397,7 @@
       "y": 56.9549902343496
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "deep-learnings-future",
@@ -416,8 +416,8 @@
       "x": 43.84839345491028,
       "y": 32.237637652323066
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 4,
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "deep-user-understanding-from-day",
@@ -437,7 +437,7 @@
       "y": 44.382470626787175
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "delta",
@@ -457,7 +457,7 @@
       "y": 29.60098148190522
     },
     "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "clusterLabel": "Mental Models"
   },
   {
     "slug": "engineering-context",
@@ -477,7 +477,7 @@
       "y": 29.780096504604305
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "entrepreneurial-risk",
@@ -497,7 +497,7 @@
       "y": 64.7716125420078
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "essay-10-abstraction-vs-first-principles",
@@ -517,7 +517,7 @@
       "y": 49.38564677007592
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "essay-11-time",
@@ -537,7 +537,7 @@
       "y": 70.43518747667159
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "essay-8-ambitions-edited",
@@ -557,7 +557,7 @@
       "y": 24.915278845573607
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "essay-9-value-society-money-and-work",
@@ -577,7 +577,7 @@
       "y": 59.25829213496482
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "everything-i-know-now",
@@ -597,7 +597,7 @@
       "y": 12.111110788418593
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "general-personal-embeddings",
@@ -616,8 +616,8 @@
       "x": 54.97404597021034,
       "y": 39.424856959182584
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 4,
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "going-to-california",
@@ -637,7 +637,7 @@
       "y": 70.99242685319844
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "google-tear-down-this-wall",
@@ -657,7 +657,7 @@
       "y": 49.56472157343452
     },
     "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "clusterLabel": "Mental Models"
   },
   {
     "slug": "have-convictions",
@@ -677,7 +677,7 @@
       "y": 68.4596980551743
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "information-theory-of-startups",
@@ -697,7 +697,7 @@
       "y": 56.2702236493766
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "jean-memory-the-necessity-of-irreverence",
@@ -717,7 +717,7 @@
       "y": 34.03467026715318
     },
     "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "clusterLabel": "Mental Models"
   },
   {
     "slug": "jean-software-for-the-individual",
@@ -737,7 +737,7 @@
       "y": 39.49878830082621
     },
     "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "clusterLabel": "Mental Models"
   },
   {
     "slug": "launching-irreverent-capital",
@@ -757,7 +757,7 @@
       "y": 78.32633589992933
     },
     "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "clusterLabel": "Building & Execution"
   },
   {
     "slug": "mcp-a2a-and-the-future-of-ai-infra",
@@ -777,7 +777,7 @@
       "y": 30.15744545411027
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "nephra-04212022",
@@ -797,7 +797,7 @@
       "y": 95
     },
     "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "clusterLabel": "Building & Execution"
   },
   {
     "slug": "outsiders",
@@ -817,7 +817,7 @@
       "y": 71.91922804755843
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "politzkis-law",
@@ -837,7 +837,7 @@
       "y": 52.36563176963631
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "project-delta",
@@ -857,7 +857,7 @@
       "y": 37.660554799792706
     },
     "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "clusterLabel": "Mental Models"
   },
   {
     "slug": "reflections-on-a-quarter-century",
@@ -877,7 +877,7 @@
       "y": 36.50105070456911
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "return",
@@ -897,7 +897,7 @@
       "y": 65.84345192850041
     },
     "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "clusterLabel": "Building & Execution"
   },
   {
     "slug": "self-healing-software",
@@ -917,7 +917,7 @@
       "y": 66.74348258727578
     },
     "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "clusterLabel": "Building & Execution"
   },
   {
     "slug": "self-reliance",
@@ -937,7 +937,7 @@
       "y": 21.875280548924298
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "structure-people-and-chaos",
@@ -957,7 +957,7 @@
       "y": 25.922701695019928
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "the-cemetery",
@@ -977,7 +977,7 @@
       "y": 30.54952096223527
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "the-irreverent-act",
@@ -997,7 +997,7 @@
       "y": 60.05791759041277
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "the-jean-manifesto",
@@ -1017,7 +1017,7 @@
       "y": 35.06610173147014
     },
     "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "clusterLabel": "AI Infrastructure"
   },
   {
     "slug": "the-logos",
@@ -1037,7 +1037,7 @@
       "y": 28.67914955739188
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "vacations",
@@ -1057,7 +1057,7 @@
       "y": 59.442195551156345
     },
     "cluster": 2,
-    "clusterLabel": "Cluster 3"
+    "clusterLabel": "Startup Theory"
   },
   {
     "slug": "what-is-life",
@@ -1077,7 +1077,7 @@
       "y": 14.114710108999288
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   },
   {
     "slug": "which-direction-to-live-it",
@@ -1097,6 +1097,6 @@
       "y": 5
     },
     "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "clusterLabel": "Philosophy of Self"
   }
 ]
