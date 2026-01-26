@@ -98,9 +98,9 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         </header>
 
         {/* Content */}
-        <div className="prose prose-lg prose-neutral max-w-none
+        <div className="prose prose-base prose-neutral max-w-none
           prose-headings:font-normal prose-headings:tracking-tight prose-headings:text-[#1a1a1a] prose-headings:font-[family-name:var(--font-serif)]
-          prose-p:text-[#1a1a1a] prose-p:leading-8 prose-p:font-light
+          prose-p:text-[#1a1a1a] prose-p:leading-7 prose-p:font-light
           prose-strong:text-[#1a1a1a] prose-strong:font-medium
           prose-a:text-[#1a1a1a] prose-a:underline prose-a:decoration-[#ccc] prose-a:underline-offset-4 hover:prose-a:decoration-[#1a1a1a] prose-a:transition-all
           prose-li:text-[#1a1a1a] prose-ul:my-6
