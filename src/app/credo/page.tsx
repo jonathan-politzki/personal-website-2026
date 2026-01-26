@@ -110,10 +110,10 @@ export default function Credo() {
               source="Twilight of the Idols"
             />
             
-            <Quote 
-              text={isGerman 
-                ? "Wer immer strebend sich bemüht, den können wir erlösen." 
-                : "He who strives and lives to strive\ncan earn redemption still."}
+            <Quote
+              text={isGerman
+                ? "Wer immer strebend sich bemüht,\nden können wir erlösen."
+                : "He who strives and lives to strive,\ncan earn redemption still."}
               author="Johann Wolfgang von Goethe"
               source="Faust, Part II"
             />
