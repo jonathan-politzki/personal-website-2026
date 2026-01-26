@@ -6,6 +6,7 @@
   --font-mono: var(--font-geist-mono);
   --font-calligraphy: var(--font-calligraphy);
   --font-type: var(--font-courier);
+  --font-reading: var(--font-serif);
 }
 
 :root {

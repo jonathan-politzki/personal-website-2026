@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Ruslan_Display, Courier_Prime } from "next/font/google";
+import { Geist, Geist_Mono, Ruslan_Display, Courier_Prime, Source_Serif_4 } from "next/font/google";
 import Nav from "@/components/nav";
 import "./globals.css";
 
@@ -25,6 +25,12 @@ const courier = Courier_Prime({
   subsets: ["latin"],
 });
 
+const sourceSerif = Source_Serif_4({
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-serif",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Jonathan Politzki",
   description: "Founder & Engineer.",
@@ -39,8 +45,8 @@ export default function RootLayout({
     <html lang="en" className="antialiased">
       <body
         className={`
-          ${geistSans.variable} ${geistMono.variable} 
-          ${ruslan.variable} ${courier.variable}
+          ${geistSans.variable} ${geistMono.variable}
+          ${ruslan.variable} ${courier.variable} ${sourceSerif.variable}
           bg-[#050505] text-[#e5e5e5] overflow-x-hidden
         `}
       >
