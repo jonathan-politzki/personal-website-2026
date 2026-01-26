@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { ArrowLeft, Settings, X } from "lucide-react";
 import Link from "next/link";
 
-// We'll fetch the post content client-side for this lab
 interface PostData {
   metadata: {
     title: string;
@@ -15,61 +14,36 @@ interface PostData {
   content: string;
 }
 
-type FontOption = "sans" | "serif" | "mono";
-type ThemeOption = "dark" | "light" | "sepia";
-type WeightOption = "light" | "regular" | "medium";
-type ContrastOption = "muted" | "normal" | "high";
-type SizeOption = "base" | "large" | "xl";
-type TitleWeightOption = "light" | "medium" | "bold";
-type AccentOption = "mono" | "warm" | "cool";
-type SpacingOption = "normal" | "generous";
+// Your preferred config as the baseline
+type ThemeOption = "light" | "dark" | "sepia";
+type LineHeightOption = "tight" | "normal" | "relaxed" | "loose";
+type AlignOption = "left" | "justify";
+type MeasureOption = "narrow" | "normal" | "wide";
+type ParagraphOption = "spacing" | "indent";
+type AccentOption = "mono" | "warm";
 
-const fontClasses: Record<FontOption, string> = {
-  sans: "font-sans",
-  serif: "font-[family-name:var(--font-serif)]",
-  mono: "font-mono",
+const themeClasses: Record<ThemeOption, { bg: string; text: string; muted: string; border: string }> = {
+  light: { bg: "bg-[#fafaf9]", text: "text-[#1a1a1a]", muted: "text-[#666]", border: "border-[#e0e0e0]" },
+  dark: { bg: "bg-[#0a0a0a]", text: "text-[#e0e0e0]", muted: "text-[#888]", border: "border-[#333]" },
+  sepia: { bg: "bg-[#f4ecd8]", text: "text-[#3d3222]", muted: "text-[#6b5d4d]", border: "border-[#d4c4a8]" },
 };
 
-const themeClasses: Record<ThemeOption, { bg: string; text: string; muted: string }> = {
-  dark: { bg: "bg-[#0a0a0a]", text: "text-[#ededed]", muted: "text-[#888]" },
-  light: { bg: "bg-[#fafaf9]", text: "text-[#1a1a1a]", muted: "text-[#666]" },
-  sepia: { bg: "bg-[#f4ecd8]", text: "text-[#3d3222]", muted: "text-[#6b5d4d]" },
+const lineHeightClasses: Record<LineHeightOption, string> = {
+  tight: "leading-6",    // 1.5
+  normal: "leading-7",   // 1.75
+  relaxed: "leading-8",  // 2.0
+  loose: "leading-9",    // 2.25
 };
 
-const weightClasses: Record<WeightOption, string> = {
-  light: "font-light",
-  regular: "font-normal",
-  medium: "font-medium",
+const measureClasses: Record<MeasureOption, string> = {
+  narrow: "max-w-lg",   // ~512px - very focused
+  normal: "max-w-2xl",  // ~672px - standard
+  wide: "max-w-3xl",    // ~768px - expansive
 };
 
-const titleWeightClasses: Record<TitleWeightOption, string> = {
-  light: "font-light",
-  medium: "font-medium",
-  bold: "font-semibold",
-};
-
-const contrastClasses: Record<ContrastOption, Record<ThemeOption, string>> = {
-  muted: { dark: "text-[#aaa]", light: "text-[#555]", sepia: "text-[#5a4a3a]" },
-  normal: { dark: "text-[#ccc]", light: "text-[#333]", sepia: "text-[#3d3222]" },
-  high: { dark: "text-[#ededed]", light: "text-[#1a1a1a]", sepia: "text-[#2a1f14]" },
-};
-
-const sizeClasses: Record<SizeOption, string> = {
-  base: "text-base leading-7",
-  large: "text-lg leading-8",
-  xl: "text-xl leading-9",
-};
-
-// Substack-inspired accent colors for blockquotes
 const accentColors: Record<AccentOption, Record<ThemeOption, string>> = {
-  mono: { dark: "#ededed", light: "#1a1a1a", sepia: "#3d3222" },
-  warm: { dark: "#f59e0b", light: "#ea580c", sepia: "#c2410c" }, // Gold/Orange
-  cool: { dark: "#60a5fa", light: "#2563eb", sepia: "#1d4ed8" }, // Blue
-};
-
-const spacingClasses: Record<SpacingOption, string> = {
-  normal: "space-y-6",
-  generous: "space-y-8",
+  mono: { light: "#1a1a1a", dark: "#e0e0e0", sepia: "#3d3222" },
+  warm: { light: "#ea580c", dark: "#f59e0b", sepia: "#c2410c" },
 };
 
 export default function ReadingLab({ params }: { params: Promise<{ slug: string }> }) {
@@ -77,22 +51,20 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
   const [post, setPost] = useState<PostData | null>(null);
   const [showPanel, setShowPanel] = useState(true);
 
-  // Reading settings
-  const [font, setFont] = useState<FontOption>("sans");
-  const [theme, setTheme] = useState<ThemeOption>("dark");
-  const [weight, setWeight] = useState<WeightOption>("light");
-  const [contrast, setContrast] = useState<ContrastOption>("muted");
-  const [size, setSize] = useState<SizeOption>("large");
-  const [titleWeight, setTitleWeight] = useState<TitleWeightOption>("light");
-  const [accent, setAccent] = useState<AccentOption>("mono");
-  const [spacing, setSpacing] = useState<SpacingOption>("normal");
+  // YOUR PREFERRED CONFIG AS DEFAULTS
+  const [theme, setTheme] = useState<ThemeOption>("light");
 
-  // Resolve params
+  // NEW EXPERIMENTS - things science says matter
+  const [lineHeight, setLineHeight] = useState<LineHeightOption>("normal");
+  const [align, setAlign] = useState<AlignOption>("left");
+  const [measure, setMeasure] = useState<MeasureOption>("normal");
+  const [paragraph, setParagraph] = useState<ParagraphOption>("spacing");
+  const [accent, setAccent] = useState<AccentOption>("mono");
+
   useEffect(() => {
     params.then((p) => setSlug(p.slug));
   }, [params]);
 
-  // Fetch post data
   useEffect(() => {
     if (!slug) return;
     fetch(`/api/post/${slug}`)
@@ -103,14 +75,13 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+      <div className="min-h-screen bg-[#fafaf9] flex items-center justify-center">
         <div className="text-[#666] font-mono text-sm">Loading...</div>
       </div>
     );
   }
 
   const themeStyle = themeClasses[theme];
-  const textContrast = contrastClasses[contrast][theme];
 
   return (
     <main className={`min-h-screen ${themeStyle.bg} ${themeStyle.text} transition-colors duration-300`}>
@@ -126,40 +97,21 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
 
       {/* Control Panel */}
       {showPanel && (
-        <div className={`fixed top-32 right-4 z-50 w-64 p-4 rounded-xl border ${
+        <div className={`fixed top-32 right-4 z-50 w-72 p-4 rounded-xl border ${
           theme === "dark"
             ? "bg-[#111] border-[#333]"
             : theme === "light"
             ? "bg-white border-[#ddd] shadow-lg"
             : "bg-[#efe6d5] border-[#d4c4a8] shadow-lg"
         }`}>
-          <h3 className="font-mono text-xs uppercase tracking-widest mb-4 opacity-60">Reading Lab</h3>
-
-          {/* Font */}
-          <div className="mb-4">
-            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Font</label>
-            <div className="flex gap-1">
-              {(["sans", "serif", "mono"] as FontOption[]).map((f) => (
-                <button
-                  key={f}
-                  onClick={() => setFont(f)}
-                  className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
-                    font === f
-                      ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
-                      : theme === "dark" ? "bg-white/10" : "bg-black/10"
-                  }`}
-                >
-                  {f}
-                </button>
-              ))}
-            </div>
-          </div>
+          <h3 className="font-mono text-xs uppercase tracking-widest mb-4 opacity-60">Reading Lab v2</h3>
+          <p className="text-[10px] opacity-40 mb-4">Base: serif / light / high contrast / base size</p>
 
           {/* Theme */}
           <div className="mb-4">
             <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Theme</label>
             <div className="flex gap-1">
-              {(["dark", "light", "sepia"] as ThemeOption[]).map((t) => (
+              {(["light", "dark", "sepia"] as ThemeOption[]).map((t) => (
                 <button
                   key={t}
                   onClick={() => setTheme(t)}
@@ -175,91 +127,101 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
             </div>
           </div>
 
-          {/* Weight */}
+          {/* Line Height - Science: optimal is 1.5-2.0x */}
           <div className="mb-4">
-            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Weight</label>
+            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">
+              Line Height <span className="opacity-40">(1.5-2.25x)</span>
+            </label>
             <div className="flex gap-1">
-              {(["light", "regular", "medium"] as WeightOption[]).map((w) => (
+              {(["tight", "normal", "relaxed", "loose"] as LineHeightOption[]).map((lh) => (
                 <button
-                  key={w}
-                  onClick={() => setWeight(w)}
-                  className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
-                    weight === w
+                  key={lh}
+                  onClick={() => setLineHeight(lh)}
+                  className={`flex-1 py-1.5 px-1 text-[10px] font-mono rounded ${
+                    lineHeight === lh
                       ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
                       : theme === "dark" ? "bg-white/10" : "bg-black/10"
                   }`}
                 >
-                  {w}
+                  {lh}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Contrast */}
+          {/* Text Alignment - Science: ragged right reduces fatigue */}
           <div className="mb-4">
-            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Contrast</label>
+            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">
+              Alignment
+            </label>
             <div className="flex gap-1">
-              {(["muted", "normal", "high"] as ContrastOption[]).map((c) => (
+              {(["left", "justify"] as AlignOption[]).map((a) => (
                 <button
-                  key={c}
-                  onClick={() => setContrast(c)}
+                  key={a}
+                  onClick={() => setAlign(a)}
                   className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
-                    contrast === c
+                    align === a
                       ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
                       : theme === "dark" ? "bg-white/10" : "bg-black/10"
                   }`}
                 >
-                  {c}
+                  {a === "left" ? "ragged" : "justify"}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Size */}
+          {/* Measure/Line Length - Science: 45-75 chars optimal */}
           <div className="mb-4">
-            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Size</label>
+            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">
+              Line Width <span className="opacity-40">(measure)</span>
+            </label>
             <div className="flex gap-1">
-              {(["base", "large", "xl"] as SizeOption[]).map((s) => (
+              {(["narrow", "normal", "wide"] as MeasureOption[]).map((m) => (
                 <button
-                  key={s}
-                  onClick={() => setSize(s)}
+                  key={m}
+                  onClick={() => setMeasure(m)}
                   className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
-                    size === s
+                    measure === m
                       ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
                       : theme === "dark" ? "bg-white/10" : "bg-black/10"
                   }`}
                 >
-                  {s}
+                  {m}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Title Weight - Substack-inspired */}
+          {/* Paragraph Style - indent vs spacing */}
           <div className="mb-4">
-            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Title</label>
+            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">
+              Paragraphs
+            </label>
             <div className="flex gap-1">
-              {(["light", "medium", "bold"] as TitleWeightOption[]).map((tw) => (
+              {(["spacing", "indent"] as ParagraphOption[]).map((p) => (
                 <button
-                  key={tw}
-                  onClick={() => setTitleWeight(tw)}
+                  key={p}
+                  onClick={() => setParagraph(p)}
                   className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
-                    titleWeight === tw
+                    paragraph === p
                       ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
                       : theme === "dark" ? "bg-white/10" : "bg-black/10"
                   }`}
                 >
-                  {tw}
+                  {p}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Accent Color - Substack-inspired */}
+          {/* Accent (blockquote color) */}
           <div className="mb-4">
-            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Accent</label>
+            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">
+              Accent
+            </label>
             <div className="flex gap-1">
-              {(["mono", "warm", "cool"] as AccentOption[]).map((a) => (
+              {(["mono", "warm"] as AccentOption[]).map((a) => (
                 <button
                   key={a}
                   onClick={() => setAccent(a)}
@@ -275,45 +237,22 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
             </div>
           </div>
 
-          {/* Spacing */}
-          <div className="mb-4">
-            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Spacing</label>
-            <div className="flex gap-1">
-              {(["normal", "generous"] as SpacingOption[]).map((sp) => (
-                <button
-                  key={sp}
-                  onClick={() => setSpacing(sp)}
-                  className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
-                    spacing === sp
-                      ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
-                      : theme === "dark" ? "bg-white/10" : "bg-black/10"
-                  }`}
-                >
-                  {sp}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Current combo display */}
+          {/* Current config */}
           <div className={`mt-4 pt-4 border-t ${theme === "dark" ? "border-[#333]" : "border-[#ccc]"}`}>
             <div className="text-[10px] font-mono opacity-40">
-              {font} / {theme} / {weight} / {contrast} / {size}
-            </div>
-            <div className="text-[10px] font-mono opacity-40 mt-1">
-              title: {titleWeight} / accent: {accent} / {spacing}
+              {theme} / {lineHeight} / {align} / {measure} / {paragraph} / {accent}
             </div>
           </div>
         </div>
       )}
 
       {/* Article */}
-      <article className="max-w-2xl mx-auto pt-24 pb-32 px-6">
+      <article className={`${measureClasses[measure]} mx-auto pt-24 pb-32 px-6`}>
         {/* Back link */}
         <nav className="mb-8 pt-2">
           <Link
             href={`/writing/${slug}`}
-            className={`group inline-flex items-center gap-2 ${themeStyle.muted} hover:${themeStyle.text} transition-colors`}
+            className={`group inline-flex items-center gap-2 ${themeStyle.muted} transition-colors`}
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             <span className="font-mono text-sm uppercase tracking-widest">Back to Essay</span>
@@ -321,14 +260,14 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
         </nav>
 
         {/* Header */}
-        <header className={`mb-16 border-b pb-8 ${theme === "dark" ? "border-[#222]" : "border-[#ddd]"}`}>
+        <header className={`mb-16 border-b pb-8 ${themeStyle.border}`}>
           <div className="flex flex-col gap-4 mb-8">
             <div className={`flex items-center gap-4 text-xs font-mono uppercase tracking-widest ${themeStyle.muted}`}>
               <time>{post.metadata.publishedAt}</time>
               <span>/</span>
-              <span>Reading Lab</span>
+              <span>Reading Lab v2</span>
             </div>
-            <h1 className={`text-4xl md:text-5xl tracking-tight leading-tight ${fontClasses[font]} ${titleWeightClasses[titleWeight]}`}>
+            <h1 className="text-4xl md:text-5xl font-light tracking-tight leading-tight font-[family-name:var(--font-serif)]">
               {post.metadata.title}
             </h1>
           </div>
@@ -340,27 +279,39 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
         {/* Content */}
         <div
           className={`
-            ${fontClasses[font]}
-            ${weightClasses[weight]}
-            ${textContrast}
-            ${sizeClasses[size]}
-            ${spacingClasses[spacing]}
+            font-[family-name:var(--font-serif)]
+            font-light
+            text-base
+            ${lineHeightClasses[lineHeight]}
+            ${align === "justify" ? "text-justify hyphens-auto" : "text-left"}
+            ${paragraph === "spacing" ? "space-y-6" : ""}
           `}
           style={{
-            // Apply accent color to blockquotes via CSS custom property
             ["--accent-color" as string]: accentColors[accent][theme],
+            ["--paragraph-indent" as string]: paragraph === "indent" ? "1.5em" : "0",
           }}
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        {/* Accent color styles for blockquotes */}
         <style jsx global>{`
+          article p {
+            text-indent: var(--paragraph-indent, 0);
+            margin-bottom: ${paragraph === "indent" ? "0" : "1.5rem"};
+          }
+          article p:first-of-type {
+            text-indent: 0;
+          }
           article blockquote {
             border-left: 3px solid var(--accent-color, currentColor);
             padding-left: 1.5rem;
             margin: 1.5rem 0;
             font-style: italic;
             opacity: 0.9;
+          }
+          article h2, article h3 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
           }
         `}</style>
       </article>
