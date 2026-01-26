@@ -39,18 +39,18 @@ export default function Credo() {
         {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
       </button>
 
-      <div className="relative z-10 pt-32 px-6 md:px-24 max-w-4xl mx-auto pb-32">
+      <div className="relative z-10 pt-32 px-6 md:px-16 max-w-5xl mx-auto pb-32">
 
         {/* --- Opening Statement --- */}
-        <header className="mb-16">
-          <h1 className={`text-3xl md:text-4xl font-light leading-snug mb-8 font-[family-name:var(--font-serif)] ${theme.text}`}>
+        <header className="mb-12">
+          <h1 className={`text-3xl md:text-4xl font-light leading-snug font-[family-name:var(--font-serif)] ${theme.text}`}>
             I am guided by self-determination and I try to work on important, unlikely things.
           </h1>
         </header>
 
         {/* --- Human Focus Section --- */}
-        <section className={`mb-12 pb-12 border-b ${theme.border}`}>
-          <p className={`text-lg md:text-xl font-light leading-relaxed mb-6 font-[family-name:var(--font-serif)] ${theme.muted}`}>
+        <section className={`mb-10 pb-10 border-b ${theme.border}`}>
+          <p className={`text-lg md:text-xl font-light leading-relaxed mb-5 font-[family-name:var(--font-serif)] ${theme.muted}`}>
             Human focus is the most misallocated resource on Earth.
           </p>
 
@@ -58,7 +58,7 @@ export default function Credo() {
             <p>
               As computational systems improve, we must think deeply about <Link href="/writing/politzkis-law" className={`${theme.accent} border-b ${isDark ? "border-white/30 hover:border-white" : "border-black/30 hover:border-black"} transition-colors`}>where humans still stand above machines</Link>.
             </p>
-            <p className={`text-sm font-mono pl-4 border-l-2 ${theme.border} ${theme.subtle}`}>
+            <p className={`text-sm font-mono ${theme.subtle}`}>
               Politzki's Law: Humans excel at high complexity, low data tasks—in other words, what is not known.
             </p>
             <p>
@@ -68,15 +68,14 @@ export default function Credo() {
         </section>
 
         {/* --- Irreverence Section --- */}
-        <section className={`mb-12 pb-12 border-b ${theme.border}`}>
-          <h2 className={`text-sm font-mono uppercase tracking-widest mb-6 ${theme.accent}`}>
+        <section className={`mb-10 pb-10 border-b ${theme.border}`}>
+          <h2 className={`text-sm font-mono uppercase tracking-widest mb-5 ${theme.accent}`}>
             Irreverence as a Virtue
           </h2>
 
-          <blockquote className={`text-sm italic border-l-2 ${theme.border} pl-4 mb-6 leading-relaxed ${theme.subtle}`}>
-            "Irreverence is a key to progress."
-            <span className="block text-xs font-mono not-italic mt-2">— Joel Mokyr</span>
-          </blockquote>
+          <p className={`text-sm italic mb-5 leading-relaxed ${theme.subtle}`}>
+            "Irreverence is a key to progress." <span className="text-xs font-mono not-italic">— Joel Mokyr</span>
+          </p>
 
           <div className={`space-y-4 font-[family-name:var(--font-serif)] ${theme.muted}`}>
             <p className="text-base leading-relaxed">
@@ -92,47 +91,38 @@ export default function Credo() {
         </section>
 
         {/* --- Visualizations --- */}
-        <section className={`mb-12 pb-12 border-b ${theme.border}`}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-3">
-              <div className="h-48 w-full">
+        <section className={`mb-10 pb-10 border-b ${theme.border}`}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <div className="h-44 w-full">
                 <StructureBreakdownVis />
               </div>
               <div className={`text-xs font-mono uppercase tracking-widest ${theme.subtle}`}>
-                Fig 1. Creative Destruction
+                Creative Destruction
               </div>
-              <p className={`text-sm leading-relaxed ${theme.subtle}`}>
-                Old frameworks must be cleared away to build room for better structures.
-              </p>
             </div>
 
-            <div className="space-y-3">
-              <div className="h-48 w-full">
+            <div className="space-y-2">
+              <div className="h-44 w-full">
                 <OutOfDistributionVis />
               </div>
               <div className={`text-xs font-mono uppercase tracking-widest ${theme.subtle}`}>
-                Fig 2. Unlikely Truth
+                Unlikely Truth
               </div>
-              <p className={`text-sm leading-relaxed ${theme.subtle}`}>
-                Directing focus away from the known and towards new, unlikely truth.
-              </p>
             </div>
           </div>
         </section>
 
         {/* --- Quotes --- */}
         <section>
-          <div className="mb-4 flex items-center gap-3">
-            <div className={`h-px ${isDark ? "bg-[#333]" : "bg-[#ddd]"} w-8`} />
-            <button
-              onClick={() => setIsGerman(!isGerman)}
-              className={`text-[10px] font-mono uppercase tracking-widest transition-colors ${theme.subtle} hover:${theme.accent}`}
-            >
-              [{isGerman ? "Translate" : "Original"}]
-            </button>
-          </div>
+          <button
+            onClick={() => setIsGerman(!isGerman)}
+            className={`text-[10px] font-mono uppercase tracking-widest mb-4 transition-colors ${theme.subtle}`}
+          >
+            [{isGerman ? "Translate" : "Original"}]
+          </button>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             <Quote
               text={isGerman
                 ? "Hat man sein wofür des Lebens, so verträgt man sich fast mit jedem wie."
