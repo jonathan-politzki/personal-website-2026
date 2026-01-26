@@ -81,11 +81,11 @@ export default function Credo() {
           </h2>
 
           <blockquote className={`border-l-2 ${theme.border} pl-6 mb-6`}>
-            <p className={`text-lg md:text-xl italic leading-relaxed font-[family-name:var(--font-serif)] ${theme.muted}`}>
-              "What distinguished the British economy was... an unfettered, if not rebellious, parsing of traditional knowledge... Irreverence is a key to progress."
+            <p className={`text-base italic leading-relaxed ${theme.muted}`}>
+              "If the culture is heavily infused with respect and worship of ancient wisdom so that any intellectual innovation is considered deviant and blasphemous, technological creativity will be similarly constrained. Irreverence is a key to progress."
             </p>
-            <cite className={`block mt-3 text-sm font-mono not-italic ${theme.subtle}`}>
-              — Joel Mokyr, <span className="italic">A Culture of Growth</span>
+            <cite className={`block mt-3 text-xs font-mono not-italic ${theme.subtle}`}>
+              — Joel Mokyr, A Culture of Growth
             </cite>
           </blockquote>
 
