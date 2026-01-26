@@ -4,7 +4,7 @@ const matter = require('gray-matter');
 
 const CONTENT_DIR = path.join(process.cwd(), 'src/content/writing');
 const OUTPUT_FILE = path.join(process.cwd(), 'src/data/corpus-analysis.json');
-const API_KEY = 'AIzaSyAJ2rvTsjyPE651ysAVKab3Ixi1zZAqPpg'; // Hardcoded for migration script
+const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyAJ2rvTsjyPE651ysAVKab3Ixi1zZAqPpg'; // Fallback for migration script
 
 async function analyzeCorpus() {
   console.log('Reading corpus...');

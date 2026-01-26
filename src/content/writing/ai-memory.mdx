@@ -120,7 +120,7 @@ While LLMs could now read from the internet, they could not access other data st
 
 **The Structured Output Problem**
 
-Early LLMs were not designed to produce or consume structured data reliably. Getting GPT-3 to output valid JSON quickly became a bottleneck in development. Models would hallucinate extra fields, break syntax with stray characters, or wrap JSON in conversational text (”Here’s the JSON you requested: {...}”).
+Early LLMs were not designed to produce or consume structured data reliably. Getting GPT-3 to output valid JSON quickly became a bottleneck in development. Models would hallucinate extra fields, break syntax with stray characters, or wrap JSON in conversational text ("Here's the JSON you requested: `{...}`").
 
 This created a chicken-and-egg problem for memory systems: you needed structured outputs to store memories systematically, but the models couldn’t reliably produce them. Early developers resorted to:
 

@@ -3,7 +3,7 @@ const path = require('path');
 
 const OUTPUT_FILE = path.join(process.cwd(), 'src/data/graph-data.json');
 const VECTOR_STORE_FILE = path.join(process.cwd(), 'src/data/vector-store.json');
-const API_KEY = 'AIzaSyAJ2rvTsjyPE651ysAVKab3Ixi1zZAqPpg'; 
+const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyAJ2rvTsjyPE651ysAVKab3Ixi1zZAqPpg'; 
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

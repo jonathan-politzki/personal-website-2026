@@ -99,9 +99,17 @@ function ConnectionLine() {
   );
 }
 
-function Node({ data, isSelected, onClick, onHover }) {
-  const meshRef = useRef(null);
-  const textRef = useRef(null);
+interface Writing {
+  id: string;
+  title: string;
+  date: string;
+  desc: string;
+  position: number[];
+  color: string;
+}
+
+function Node({ data, isSelected, onClick, onHover }: { data: Writing; isSelected: boolean; onClick: (d: Writing) => void; onHover: (d: Writing | null) => void }) {
+  const meshRef = useRef<THREE.Mesh>(null);
   const [hovered, setHovered] = useState(false);
 
   useFrame((state) => {
@@ -116,7 +124,7 @@ function Node({ data, isSelected, onClick, onHover }) {
     meshRef.current.rotation.z = Math.cos(t * 0.2) * 0.1;
   });
 
-  const handlePointerOver = (e) => {
+  const handlePointerOver = (e: { stopPropagation: () => void }) => {
     e.stopPropagation();
     setHovered(true);
     onHover(data);
@@ -163,9 +171,8 @@ function Node({ data, isSelected, onClick, onHover }) {
   );
 }
 
-function CameraController({ selectedNode }) {
+function CameraController({ selectedNode }: { selectedNode: Writing | null }) {
   const { camera } = useThree();
-  const vec = new THREE.Vector3();
 
   useFrame(() => {
     if (selectedNode) {
@@ -187,7 +194,7 @@ function CameraController({ selectedNode }) {
   return null;
 }
 
-function Scene({ onNodeSelect, selectedNode, onNodeHover }) {
+function Scene({ onNodeSelect, selectedNode, onNodeHover }: { onNodeSelect: (d: Writing | null) => void; selectedNode: Writing | null; onNodeHover: (d: Writing | null) => void }) {
   return (
     <>
       <ambientLight intensity={0.2} />
@@ -214,8 +221,8 @@ function Scene({ onNodeSelect, selectedNode, onNodeHover }) {
 }
 
 export default function EmbeddingsPage() {
-  const [selectedNode, setSelectedNode] = useState(null);
-  const [hoveredNode, setHoveredNode] = useState(null);
+  const [selectedNode, setSelectedNode] = useState<Writing | null>(null);
+  const [, setHoveredNode] = useState<Writing | null>(null);
 
   // Clear selection when clicking background
   const handleBackgroundClick = () => setSelectedNode(null);

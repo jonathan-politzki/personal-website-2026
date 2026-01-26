@@ -154,7 +154,7 @@ export function StructureBreakdownVis() {
     // 2. Crystal (Perfect Geometric Structure)
     // Hexagon radius
     const rHex = s * 0.6;
-    const crystal = [];
+    const crystal: { x: number; y: number }[] = [];
     // Outer Hexagon points
     for(let i=0; i<6; i++) {
         const angle = (i * 60 - 90) * Math.PI / 180;

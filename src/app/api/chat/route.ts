@@ -4,7 +4,7 @@ import path from "path";
 
 // --- 1. SETUP ---
 // We will use Gemini for both embedding (of the user query) and generation (the answer).
-const API_KEY = "AIzaSyAJ2rvTsjyPE651ysAVKab3Ixi1zZAqPpg"; 
+const API_KEY = process.env.GEMINI_API_KEY || "AIzaSyAJ2rvTsjyPE651ysAVKab3Ixi1zZAqPpg"; 
 
 // Only load the vector store once in memory if possible
 let VECTOR_STORE: any[] = [];
