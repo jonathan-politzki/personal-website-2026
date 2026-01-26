@@ -15,7 +15,7 @@ export default function ReadingLibrary() {
   const years = Object.keys(postsByYear).sort((a, b) => b.localeCompare(a));
 
   return (
-    <main className="min-h-screen bg-[#fafaf9] overflow-x-hidden">
+    <main className="min-h-screen w-full bg-[#fafaf9] text-[#1a1a1a] overflow-x-hidden">
 
       {/* Sidebar Navigation for Writing - Desktop only */}
       <aside className="w-64 border-r border-[#e0e0e0] hidden md:flex flex-col fixed top-0 bottom-0 left-0 pt-32 pb-8 px-6 bg-[#fafaf9] z-10">
@@ -40,7 +40,7 @@ export default function ReadingLibrary() {
       </aside>
 
       {/* Main Content Area */}
-      <div className="md:ml-64 pt-32 px-6 md:px-16 pb-32 w-full max-w-full">
+      <div className="min-h-screen md:ml-64 pt-32 px-6 md:px-16 pb-32 box-border">
 
         {/* Header */}
         <header className="mb-16 max-w-4xl">
