@@ -71,10 +71,10 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     <main className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans selection:bg-white selection:text-black">
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 p-8 z-40 pointer-events-none">
-        <Link href="/writing" className="pointer-events-auto group inline-flex items-center gap-2 text-[#666] hover:text-white transition-colors">
+      <nav className="fixed top-0 left-0 right-0 p-8 z-40 pointer-events-none mt-20 md:mt-24">
+        <Link href="/writing/read" className="pointer-events-auto group inline-flex items-center gap-2 text-[#666] hover:text-white transition-colors bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full border border-[#333]">
           <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          <span className="font-mono text-sm uppercase tracking-widest">Back</span>
+          <span className="font-mono text-sm uppercase tracking-widest">Library</span>
         </Link>
       </nav>
 

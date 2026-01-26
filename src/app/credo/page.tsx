@@ -21,7 +21,7 @@ export default function Credo() {
           
           <div className="mt-12 text-lg md:text-xl text-[#888] font-light leading-relaxed space-y-8 pl-9">
             <p>
-              As computational systems improve, we must think deeply about <Link href="/writing/politzkis-law" className="text-white border-b border-white/30 hover:border-white transition-colors">where humans still stand out</Link>.
+              As computational systems improve, we must think deeply about <Link href="/writing/politzkis-law" className="text-white border-b border-white/30 hover:border-white transition-colors">where humans still stand above machines</Link>.
             </p>
             <div className="text-sm md:text-base text-[#666] font-mono pl-4 border-l border-[#333]">
               // Politzki's Law: Humans excel at high complexity, low data tasks. <br/>
@@ -50,7 +50,7 @@ export default function Credo() {
                Irreverence isn't disrespect; it is the authentic independence required to assess the world as it is.
              </p>
              <p className="text-lg text-[#aaa] leading-relaxed">
-               We must allow ourselves to audit the status quo. Many institutional structures and procedures persist simply because they are established, even after they have decayed or ceased to be optimal. Identifying these obsolete frameworks is not an act of rebellion, but a necessary step to clear the way for innovations that were previously impossible.
+               Many institutions and procedures persist simply because they are established, even after they have decayed or ceased to be optimal. Identifying these obsolete frameworks is not an act of rebellion, but a necessary step to clear the way for innovations that were previously impossible.
              </p>
              <p className="text-lg text-[#aaa] leading-relaxed mt-6">
                True progress can only be achieved by navigating <strong className="text-white">out of distribution</strong>, into uncharted territory.

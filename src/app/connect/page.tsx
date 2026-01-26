@@ -21,10 +21,10 @@ export default function Connect() {
           <span className="text-xs font-mono uppercase tracking-widest text-[#444] block">Direct Line</span>
           <div>
             <a 
-              href="mailto:hello@jonathanpolitzki.com" 
+              href="mailto:jonathan.politzki@gmail.com" 
               className="text-2xl md:text-3xl font-mono text-white hover:text-[#888] transition-colors border-b border-[#333] hover:border-white pb-2"
             >
-              hello@jonathanpolitzki.com
+              jonathan.politzki@gmail.com
             </a>
           </div>
         </section>
@@ -33,25 +33,25 @@ export default function Connect() {
         <section className="space-y-8">
           <span className="text-xs font-mono uppercase tracking-widest text-[#444] block">Networks</span>
           <div className="flex flex-col gap-6">
-            <a href="#" className="group flex items-center justify-between border-b border-[#222] pb-4 hover:border-white transition-colors">
+            <a href="https://x.com/ITNAmatter" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between border-b border-[#222] pb-4 hover:border-white transition-colors">
               <span className="flex items-center gap-4 text-lg text-[#ccc] group-hover:text-white">
                 <Twitter className="w-5 h-5" /> Twitter / X
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#444] group-hover:text-white" />
             </a>
-            <a href="#" className="group flex items-center justify-between border-b border-[#222] pb-4 hover:border-white transition-colors">
+            <a href="https://www.linkedin.com/in/jonathan-politzki" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between border-b border-[#222] pb-4 hover:border-white transition-colors">
               <span className="flex items-center gap-4 text-lg text-[#ccc] group-hover:text-white">
                 <Linkedin className="w-5 h-5" /> LinkedIn
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#444] group-hover:text-white" />
             </a>
-            <a href="#" className="group flex items-center justify-between border-b border-[#222] pb-4 hover:border-white transition-colors">
+            <a href="https://github.com/jonathan-politzki" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between border-b border-[#222] pb-4 hover:border-white transition-colors">
               <span className="flex items-center gap-4 text-lg text-[#ccc] group-hover:text-white">
                 <Github className="w-5 h-5" /> GitHub
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#444] group-hover:text-white" />
             </a>
-            <a href="https://jonathanpolitzki.substack.com" className="group flex items-center justify-between border-b border-[#222] pb-4 hover:border-white transition-colors">
+            <a href="https://jonathanpolitzki.substack.com" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between border-b border-[#222] pb-4 hover:border-white transition-colors">
               <span className="flex items-center gap-4 text-lg text-[#ccc] group-hover:text-white">
                 <span className="w-5 h-5 bg-[#ff6719] rounded-sm flex items-center justify-center text-[10px] text-white font-bold">S</span> Substack
               </span>

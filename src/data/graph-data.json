@@ -1,0 +1,1102 @@
+[
+  {
+    "slug": "a-b",
+    "title": "A → B",
+    "date": "2025-04-28",
+    "summary": "Thinking and Doing, Reflexive Learning",
+    "attributes": {
+      "technicality": 0.24720265824470689,
+      "abstraction": 0.5381850175709268,
+      "futurism": 0.5648997007298036,
+      "personal": 0.20923187434356416,
+      "optimism": 0.3093384402998487,
+      "density": 0.7801980660802292
+    },
+    "pca": {
+      "x": 57.43027419715236,
+      "y": 65.37033241959256
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "a-new-religion",
+    "title": "A New Religion",
+    "date": "2022-05-24",
+    "summary": "What is Religion?",
+    "attributes": {
+      "technicality": 0.12892850187736493,
+      "abstraction": 0.6246688930846569,
+      "futurism": 0.45493922131847864,
+      "personal": 0.006689776744162934,
+      "optimism": 0.6879905191609705,
+      "density": 0.5100151538032154
+    },
+    "pca": {
+      "x": 73.33149568150561,
+      "y": 27.8819524804924
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "a-year-of-startups",
+    "title": "A Year of Startups",
+    "date": "2022-05-30",
+    "summary": "7 lessons learned from a year of startups.",
+    "attributes": {
+      "technicality": 0.5590909410110776,
+      "abstraction": 0.8790186553807489,
+      "futurism": 0.6312266363528214,
+      "personal": 0.39508225290672105,
+      "optimism": 0.5989088257455901,
+      "density": 0.9716074489064175
+    },
+    "pca": {
+      "x": 71.24384319923088,
+      "y": 80.06452470361951
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "ai-memory-future-outlook",
+    "title": "AI Memory: Future Outlook",
+    "date": "2025-12-11",
+    "summary": "A comprehensive review (part 4/4)",
+    "attributes": {
+      "technicality": 0.8761194355906772,
+      "abstraction": 0.8538992118177957,
+      "futurism": 0.0798030117250299,
+      "personal": 0.3786434745897791,
+      "optimism": 0.5496165716043511,
+      "density": 0.5782253110583633
+    },
+    "pca": {
+      "x": 14.755092209281058,
+      "y": 33.10275466834764
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "ai-memory-market-dynamics",
+    "title": "AI Memory: Market Dynamics",
+    "date": "2025-12-09",
+    "summary": "A comprehensive review (part 3/4)",
+    "attributes": {
+      "technicality": 0.1146296290342792,
+      "abstraction": 0.7394058946942736,
+      "futurism": 0.9226309415538541,
+      "personal": 0.366542226019422,
+      "optimism": 0.1907479172527884,
+      "density": 0.40103114194176825
+    },
+    "pca": {
+      "x": 7.23145392457967,
+      "y": 33.827828595773745
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "ai-memory-technical-foundations",
+    "title": "AI Memory: Technical Foundations",
+    "date": "2025-12-03",
+    "summary": "A comprehensive review (part 2/4)",
+    "attributes": {
+      "technicality": 0.8693184298293568,
+      "abstraction": 0.044909560756766,
+      "futurism": 0.7816336294305919,
+      "personal": 0.10960863503211282,
+      "optimism": 0.13069402677348574,
+      "density": 0.4899705946823927
+    },
+    "pca": {
+      "x": 5,
+      "y": 16.537953425291214
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "ai-memory",
+    "title": "AI Memory: Pre-History",
+    "date": "2025-09-30",
+    "summary": "A comprehensive review (part 1/4)",
+    "attributes": {
+      "technicality": 0.5194835480787019,
+      "abstraction": 0.5011535258264328,
+      "futurism": 0.8720223733900989,
+      "personal": 0.2875303136770162,
+      "optimism": 0.7867454736535846,
+      "density": 0.9828200914960814
+    },
+    "pca": {
+      "x": 8.104959440875604,
+      "y": 27.75821767607043
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "ambitions-unedited",
+    "title": "AMBITIONS (UNEDITED)",
+    "date": "2023-04-29",
+    "summary": "Your Life's Work",
+    "attributes": {
+      "technicality": 0.7815084433582979,
+      "abstraction": 0.31399052027563945,
+      "futurism": 0.30693767540374983,
+      "personal": 0.24816908011203687,
+      "optimism": 0.2090335211695864,
+      "density": 0.8417669373833865
+    },
+    "pca": {
+      "x": 93.18195312004669,
+      "y": 12.067033533084121
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "automating-the-world",
+    "title": "Automating the World",
+    "date": "2025-05-23",
+    "summary": "Transitioning everything from analog to digital. We are the bottleneck.",
+    "attributes": {
+      "technicality": 0.622754870713127,
+      "abstraction": 0.6265275368767413,
+      "futurism": 0.15890957026309604,
+      "personal": 0.5999069294659001,
+      "optimism": 0.8077973723236076,
+      "density": 0.7440112722977159
+    },
+    "pca": {
+      "x": 45.45410490344745,
+      "y": 69.08129033630661
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "b2c-memory-layer",
+    "title": "B2C Memory Layer",
+    "date": "2025-04-30",
+    "summary": "Trying something new here.",
+    "attributes": {
+      "technicality": 0.4235142603704203,
+      "abstraction": 0.37896999115889396,
+      "futurism": 0.3210725036306832,
+      "personal": 0.27807539147403815,
+      "optimism": 0.6739231020184187,
+      "density": 0.3257126476534684
+    },
+    "pca": {
+      "x": 21.451063922238394,
+      "y": 43.027770913307606
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "being-alone",
+    "title": "Being Alone",
+    "date": "2022-05-24",
+    "summary": "A Trend Towards Introversion...",
+    "attributes": {
+      "technicality": 0.5944778210397541,
+      "abstraction": 0.023365236217526508,
+      "futurism": 0.030129981405753847,
+      "personal": 0.07905186267707354,
+      "optimism": 0.20111130324784154,
+      "density": 0.2490680275747208
+    },
+    "pca": {
+      "x": 89.00018862054148,
+      "y": 18.994011115435526
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "biotech-update-04212023",
+    "title": "Biotech Update - 04.21.2023",
+    "date": "2023-04-21",
+    "summary": "Some interesting news in the woodwork",
+    "attributes": {
+      "technicality": 0.816731794583974,
+      "abstraction": 0.7041656200671886,
+      "futurism": 0.7994454698512132,
+      "personal": 0.8007470015758911,
+      "optimism": 0.28386107505987956,
+      "density": 0.6494234959064009
+    },
+    "pca": {
+      "x": 47.63786517804533,
+      "y": 64.83072819891015
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "biotech-week-in-review-02-17-2023",
+    "title": "Biotech Week in Review | 02-17-2023",
+    "date": "2023-02-17",
+    "summary": "This week in review",
+    "attributes": {
+      "technicality": 0.3849782405415607,
+      "abstraction": 0.46703323128609675,
+      "futurism": 0.5172954282895841,
+      "personal": 0.8988490206984758,
+      "optimism": 0.7056470917650133,
+      "density": 0.15884691201364376
+    },
+    "pca": {
+      "x": 42.87034085813563,
+      "y": 86.47269474817162
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "biotech-week-in-review-03-03-2023",
+    "title": "Biotech Week in Review | 03-03-2023",
+    "date": "2023-03-05",
+    "summary": "This week's innovations in review",
+    "attributes": {
+      "technicality": 0.42781769555997107,
+      "abstraction": 0.9398311030666018,
+      "futurism": 0.6306653304176724,
+      "personal": 0.6856257908194592,
+      "optimism": 0.474476631500069,
+      "density": 0.7121104452504787
+    },
+    "pca": {
+      "x": 45.618244562970574,
+      "y": 78.29065251564018
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "biotech-week-in-review-05-12-2023",
+    "title": "Biotech Week in Review - 05-12-2023",
+    "date": "2023-05-15",
+    "summary": "Computational Biotechnology Focus",
+    "attributes": {
+      "technicality": 0.41385956424578874,
+      "abstraction": 0.8076869330735719,
+      "futurism": 0.27883957341774845,
+      "personal": 0.8064229822910935,
+      "optimism": 0.26534161483609164,
+      "density": 0.8016350570458375
+    },
+    "pca": {
+      "x": 35.86589869484807,
+      "y": 54.97219016949282
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "boldness",
+    "title": "Boldness",
+    "date": "2025-09-12",
+    "summary": "Boldness and its costs",
+    "attributes": {
+      "technicality": 0.12589665449943555,
+      "abstraction": 0.12377857539595061,
+      "futurism": 0.8281958008038588,
+      "personal": 0.2920481569174087,
+      "optimism": 0.35061702459152966,
+      "density": 0.20471550869404576
+    },
+    "pca": {
+      "x": 74.86850536263934,
+      "y": 66.53076299632471
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "building-jean-memory",
+    "title": "Building Jean Memory",
+    "date": "2025-06-23",
+    "summary": "Converting Traction to Product",
+    "attributes": {
+      "technicality": 0.5088365003049997,
+      "abstraction": 0.08566625591860966,
+      "futurism": 0.27622423372628835,
+      "personal": 0.4116019280737586,
+      "optimism": 0.23207605839955692,
+      "density": 0.04933027857471428
+    },
+    "pca": {
+      "x": 14.036865897667681,
+      "y": 37.99212802137223
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "business-execution",
+    "title": "Business == Execution",
+    "date": "2022-06-23",
+    "summary": "“I’m not a businessman. I’m a business, man.” ",
+    "attributes": {
+      "technicality": 0.5508663332079067,
+      "abstraction": 0.9950423832599693,
+      "futurism": 0.26177778129462603,
+      "personal": 0.9286799803474035,
+      "optimism": 0.1804110410468711,
+      "density": 0.07343659613672848
+    },
+    "pca": {
+      "x": 70.81368651192638,
+      "y": 76.9404444912095
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "coming-soon",
+    "title": "Coming soon",
+    "date": "2022-03-07",
+    "summary": "",
+    "attributes": {
+      "technicality": 0.8989372080022191,
+      "abstraction": 0.3873520604210614,
+      "futurism": 0.31945441142079045,
+      "personal": 0.24981475487135163,
+      "optimism": 0.11377733344245833,
+      "density": 0.273229050975895
+    },
+    "pca": {
+      "x": 61.44179325514644,
+      "y": 24.53114447645185
+    },
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
+  },
+  {
+    "slug": "culture",
+    "title": "Culture",
+    "date": "2024-03-26",
+    "summary": "The Invisible Force of Every Company ",
+    "attributes": {
+      "technicality": 0.6214040255994024,
+      "abstraction": 0.43167623336963934,
+      "futurism": 0.08904515549842507,
+      "personal": 0.00523370184099603,
+      "optimism": 0.03314305836338449,
+      "density": 0.16048885893387488
+    },
+    "pca": {
+      "x": 78.53981954564165,
+      "y": 56.9549902343496
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "deep-learnings-future",
+    "title": "Deep Learning's Future",
+    "date": "2024-06-30",
+    "summary": "Reasonable Trends into 2035",
+    "attributes": {
+      "technicality": 0.8035154253500643,
+      "abstraction": 0.3480958629995605,
+      "futurism": 0.7101892388334123,
+      "personal": 0.6085632401964429,
+      "optimism": 0.7468953808723076,
+      "density": 0.4473499462398052
+    },
+    "pca": {
+      "x": 43.84839345491028,
+      "y": 32.237637652323066
+    },
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
+  },
+  {
+    "slug": "deep-user-understanding-from-day",
+    "title": "Deep User Understanding from Day One",
+    "date": "2024-11-22",
+    "summary": "Boost Revenue. The Great Unlock in Personalization.",
+    "attributes": {
+      "technicality": 0.622096934793887,
+      "abstraction": 0.5717094538845386,
+      "futurism": 0.18385777052558683,
+      "personal": 0.4375823804893053,
+      "optimism": 0.2403901082547064,
+      "density": 0.29476476040645205
+    },
+    "pca": {
+      "x": 13.872845258886446,
+      "y": 44.382470626787175
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "delta",
+    "title": "Project Delta ∆ ",
+    "date": "2024-08-24",
+    "summary": "Powering Self-Understanding and The Marketplace of Ideas",
+    "attributes": {
+      "technicality": 0.21768692195097916,
+      "abstraction": 0.45615399258051736,
+      "futurism": 0.1637015839017968,
+      "personal": 0.452417037914401,
+      "optimism": 0.8187217170749406,
+      "density": 0.5600000829915501
+    },
+    "pca": {
+      "x": 49.801216516134666,
+      "y": 29.60098148190522
+    },
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
+  },
+  {
+    "slug": "engineering-context",
+    "title": "Engineering Context",
+    "date": "2025-06-27",
+    "summary": "Coordinating Retrieval and Inference",
+    "attributes": {
+      "technicality": 0.8700477482939919,
+      "abstraction": 0.9405850922582804,
+      "futurism": 0.34104972763136976,
+      "personal": 0.2757655238345196,
+      "optimism": 0.6455549842585713,
+      "density": 0.3382786164340388
+    },
+    "pca": {
+      "x": 11.280290098872559,
+      "y": 29.780096504604305
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "entrepreneurial-risk",
+    "title": "Entrepreneurial Risk",
+    "date": "2024-06-15",
+    "summary": "Risk of Failure vs Risk of Never Doing Anything Meaningful",
+    "attributes": {
+      "technicality": 0.9164168952271423,
+      "abstraction": 0.29467749196286186,
+      "futurism": 0.6610354226076618,
+      "personal": 0.40978080532194316,
+      "optimism": 0.24533867792359865,
+      "density": 0.3802151938362328
+    },
+    "pca": {
+      "x": 81.3977423092418,
+      "y": 64.7716125420078
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "essay-10-abstraction-vs-first-principles",
+    "title": "ESSAY 10: ABSTRACTION VS FIRST PRINCIPLES",
+    "date": "2023-08-26",
+    "summary": "The path less (and most) traveled; the only answer is there is no answer",
+    "attributes": {
+      "technicality": 0.5806704513919798,
+      "abstraction": 0.8560219029152696,
+      "futurism": 0.538683387635627,
+      "personal": 0.3152196418694939,
+      "optimism": 0.7771738914919484,
+      "density": 0.03037089924471581
+    },
+    "pca": {
+      "x": 76.10428927395574,
+      "y": 49.38564677007592
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "essay-11-time",
+    "title": "ESSAY 11: TIME",
+    "date": "2023-11-20",
+    "summary": "The Hidden Variable",
+    "attributes": {
+      "technicality": 0.1680538552887918,
+      "abstraction": 0.9744066995068663,
+      "futurism": 0.9715858897226834,
+      "personal": 0.5894523370901938,
+      "optimism": 0.3862037716934623,
+      "density": 0.1503243233378595
+    },
+    "pca": {
+      "x": 72.46791609607777,
+      "y": 70.43518747667159
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "essay-8-ambitions-edited",
+    "title": "ESSAY 8: AMBITIONS (EDITED)",
+    "date": "2023-04-29",
+    "summary": "Your Life's Work",
+    "attributes": {
+      "technicality": 0.42726852454641806,
+      "abstraction": 0.2922470577947136,
+      "futurism": 0.037297985628383046,
+      "personal": 0.8130027742522175,
+      "optimism": 0.7009393474363697,
+      "density": 0.2907027198152585
+    },
+    "pca": {
+      "x": 82.52696255831312,
+      "y": 24.915278845573607
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "essay-9-value-society-money-and-work",
+    "title": "ESSAY 9: VALUE, SOCIETY, MONEY & WORK ",
+    "date": "2023-07-15",
+    "summary": "We may have forgotten why we work",
+    "attributes": {
+      "technicality": 0.6982282752375577,
+      "abstraction": 0.9618681738664534,
+      "futurism": 0.03410462114128454,
+      "personal": 0.6476928420755104,
+      "optimism": 0.8889084230103217,
+      "density": 0.025500923758355665
+    },
+    "pca": {
+      "x": 81.25387077386799,
+      "y": 59.25829213496482
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "everything-i-know-now",
+    "title": "△ - Everything I Know Now",
+    "date": "2023-12-26",
+    "summary": "2023 and 2024 recapped",
+    "attributes": {
+      "technicality": 0.9976664904676984,
+      "abstraction": 0.23460921921478883,
+      "futurism": 0.45799013522444487,
+      "personal": 0.12207941265878319,
+      "optimism": 0.35890724585467093,
+      "density": 0.5862614897575409
+    },
+    "pca": {
+      "x": 90.72635089672603,
+      "y": 12.111110788418593
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "general-personal-embeddings",
+    "title": "General Personal Embeddings",
+    "date": "2024-10-07",
+    "summary": "A trusted infrastructure for the age of AI",
+    "attributes": {
+      "technicality": 0.10492132192321924,
+      "abstraction": 0.6595988441587943,
+      "futurism": 0.8811246545926423,
+      "personal": 0.18960243173198776,
+      "optimism": 0.8666937410733253,
+      "density": 0.49902553231772595
+    },
+    "pca": {
+      "x": 54.97404597021034,
+      "y": 39.424856959182584
+    },
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
+  },
+  {
+    "slug": "going-to-california",
+    "title": "Going to California",
+    "date": "2022-03-07",
+    "summary": "My takes on visiting Silicon Valley.",
+    "attributes": {
+      "technicality": 0.868061481113847,
+      "abstraction": 0.28179465693123085,
+      "futurism": 0.04771919277470005,
+      "personal": 0.19880264575563444,
+      "optimism": 0.8147179997807639,
+      "density": 0.003084407536704026
+    },
+    "pca": {
+      "x": 74.34269121529158,
+      "y": 70.99242685319844
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "google-tear-down-this-wall",
+    "title": "“Google, Tear Down This Wall” ",
+    "date": "2024-11-18",
+    "summary": "A quick overview of where we are. Next, where we are going.",
+    "attributes": {
+      "technicality": 0.5144798232361132,
+      "abstraction": 0.786874552921893,
+      "futurism": 0.03665283492295113,
+      "personal": 0.5775274428492485,
+      "optimism": 0.0023900988274789814,
+      "density": 0.550158873002218
+    },
+    "pca": {
+      "x": 31.049656837310287,
+      "y": 49.56472157343452
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "have-convictions",
+    "title": "HAVE CONVICTIONS",
+    "date": "2022-11-12",
+    "summary": "What's stopping you from being you? Hint: It's you",
+    "attributes": {
+      "technicality": 0.9309587935431678,
+      "abstraction": 0.09844332734021632,
+      "futurism": 0.551333245946036,
+      "personal": 0.14896281911500808,
+      "optimism": 0.13717002054095695,
+      "density": 0.04540527548001427
+    },
+    "pca": {
+      "x": 77.39035478435414,
+      "y": 68.4596980551743
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "information-theory-of-startups",
+    "title": "Information Theory of Startups",
+    "date": "2024-06-13",
+    "summary": "The Hard Ramp",
+    "attributes": {
+      "technicality": 0.26833503516482127,
+      "abstraction": 0.5900088363064451,
+      "futurism": 0.24204908977446338,
+      "personal": 0.5831793843378206,
+      "optimism": 0.7224510984070347,
+      "density": 0.46803299822320876
+    },
+    "pca": {
+      "x": 75.55669803502555,
+      "y": 56.2702236493766
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "jean-memory-the-necessity-of-irreverence",
+    "title": "Jean Memory: The Necessity of Irreverence",
+    "date": "2025-05-29",
+    "summary": "This essay was written by jeanmemory.com",
+    "attributes": {
+      "technicality": 0.5664272746699597,
+      "abstraction": 0.03924964967213351,
+      "futurism": 0.4531178367086084,
+      "personal": 0.05949073600856991,
+      "optimism": 0.3939384334304876,
+      "density": 0.5410398102291007
+    },
+    "pca": {
+      "x": 52.650403356783656,
+      "y": 34.03467026715318
+    },
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
+  },
+  {
+    "slug": "jean-software-for-the-individual",
+    "title": "Jean - Software for the Individual",
+    "date": "2025-01-20",
+    "summary": "My Life's Work - Top-Down and Inside-Out",
+    "attributes": {
+      "technicality": 0.5269899855776725,
+      "abstraction": 0.22151579934144228,
+      "futurism": 0.9671300993215584,
+      "personal": 0.7855914860200908,
+      "optimism": 0.6403204935582267,
+      "density": 0.9257136015424507
+    },
+    "pca": {
+      "x": 36.41712832236989,
+      "y": 39.49878830082621
+    },
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
+  },
+  {
+    "slug": "launching-irreverent-capital",
+    "title": "Launching Irreverent Capital",
+    "date": "2024-09-28",
+    "summary": "A fund that builds important businesses.",
+    "attributes": {
+      "technicality": 0.5301477651237154,
+      "abstraction": 0.19033519735542126,
+      "futurism": 0.38465998576297267,
+      "personal": 0.7020704604112185,
+      "optimism": 0.28253169058080774,
+      "density": 0.46080274047251657
+    },
+    "pca": {
+      "x": 56.87649878184368,
+      "y": 78.32633589992933
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "mcp-a2a-and-the-future-of-ai-infra",
+    "title": "MCP, A2A, and the Future of AI Infra",
+    "date": "2025-04-29",
+    "summary": "Reassessing our priors.",
+    "attributes": {
+      "technicality": 0.19658244399750635,
+      "abstraction": 0.34955741411371033,
+      "futurism": 0.3119462900579173,
+      "personal": 0.9176915866754654,
+      "optimism": 0.9780101028317152,
+      "density": 0.94103334859492
+    },
+    "pca": {
+      "x": 18.335655573984226,
+      "y": 30.15744545411027
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "nephra-04212022",
+    "title": "Nephra - 04/21/2022",
+    "date": "2022-04-22",
+    "summary": "I haven't posted in a while. Decided I would just paste an email I sent recently to the team as a time capsule; it does still have relevant substance for this blog.",
+    "attributes": {
+      "technicality": 0.5130806611270275,
+      "abstraction": 0.6018990174215657,
+      "futurism": 0.16969289735378457,
+      "personal": 0.41302416886418825,
+      "optimism": 0.1485881082534375,
+      "density": 0.5553313203131094
+    },
+    "pca": {
+      "x": 53.52367694103442,
+      "y": 95
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "outsiders",
+    "title": "Outsiders",
+    "date": "2025-09-27",
+    "summary": "Insiders vs Outsiders. Tal's uniqueness and the nature of innovation.",
+    "attributes": {
+      "technicality": 0.7038256060592492,
+      "abstraction": 0.3682244290906904,
+      "futurism": 0.7738801447911323,
+      "personal": 0.7766324722030631,
+      "optimism": 0.8757525538043285,
+      "density": 0.12364092156131967
+    },
+    "pca": {
+      "x": 66.81352314066493,
+      "y": 71.91922804755843
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "politzkis-law",
+    "title": "Politzki’s Law",
+    "date": "2024-12-16",
+    "summary": "Maximizing Your Human Potential in a Likely World",
+    "attributes": {
+      "technicality": 0.3211515758325527,
+      "abstraction": 0.47155978770764473,
+      "futurism": 0.05786504054948782,
+      "personal": 0.43201447694560446,
+      "optimism": 0.08439808610196065,
+      "density": 0.00038760672538029617
+    },
+    "pca": {
+      "x": 61.095182003546526,
+      "y": 52.36563176963631
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "project-delta",
+    "title": "Project Delta (∆)",
+    "date": "2024-04-13",
+    "summary": "A Tool to Decode Yourself",
+    "attributes": {
+      "technicality": 0.014823804742369884,
+      "abstraction": 0.749770371306868,
+      "futurism": 0.738390923122803,
+      "personal": 0.3196548610633594,
+      "optimism": 0.020791187035713588,
+      "density": 0.9416208587249371
+    },
+    "pca": {
+      "x": 54.02640146862591,
+      "y": 37.660554799792706
+    },
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
+  },
+  {
+    "slug": "reflections-on-a-quarter-century",
+    "title": "Reflections on a Quarter Century of Life",
+    "date": "2024-12-16",
+    "summary": "A Belief in the Individual",
+    "attributes": {
+      "technicality": 0.18772372804654336,
+      "abstraction": 0.8437957880157236,
+      "futurism": 0.18622729537544558,
+      "personal": 0.2877572467652463,
+      "optimism": 0.022288607292275664,
+      "density": 0.40942193792039894
+    },
+    "pca": {
+      "x": 72.12290781799292,
+      "y": 36.50105070456911
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "return",
+    "title": "Return",
+    "date": "2024-09-11",
+    "summary": "Return to the Self and Other Interests",
+    "attributes": {
+      "technicality": 0.22351781477314958,
+      "abstraction": 0.09783783973461269,
+      "futurism": 0.5297199076307593,
+      "personal": 0.3104274058282148,
+      "optimism": 0.873906265645279,
+      "density": 0.8402301407648118
+    },
+    "pca": {
+      "x": 53.99791450207884,
+      "y": 65.84345192850041
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "self-healing-software",
+    "title": "Self-Healing Software",
+    "date": "2025-05-23",
+    "summary": "The future of software bug reproduction.",
+    "attributes": {
+      "technicality": 0.19075539356774618,
+      "abstraction": 0.6908326554513573,
+      "futurism": 0.3707970226605346,
+      "personal": 0.6274667152160482,
+      "optimism": 0.2828771724161445,
+      "density": 0.1483465196533167
+    },
+    "pca": {
+      "x": 38.40736682159624,
+      "y": 66.74348258727578
+    },
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
+  },
+  {
+    "slug": "self-reliance",
+    "title": "Self-Determination",
+    "date": "2025-12-30",
+    "summary": "2025",
+    "attributes": {
+      "technicality": 0.6378497848536686,
+      "abstraction": 0.9765853270385743,
+      "futurism": 0.6461366397024335,
+      "personal": 0.015193386257707608,
+      "optimism": 0.27531515105850524,
+      "density": 0.12464706340738774
+    },
+    "pca": {
+      "x": 77.53060846972774,
+      "y": 21.875280548924298
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "structure-people-and-chaos",
+    "title": "Structure, People, and Chaos",
+    "date": "2024-12-07",
+    "summary": "Your Ideal Structure",
+    "attributes": {
+      "technicality": 0.3982858939087901,
+      "abstraction": 0.7359494895096952,
+      "futurism": 0.0745545376691048,
+      "personal": 0.7354639858061169,
+      "optimism": 0.29345487258765934,
+      "density": 0.3323081295436272
+    },
+    "pca": {
+      "x": 83.28528484236794,
+      "y": 25.922701695019928
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "the-cemetery",
+    "title": "The Cemetery",
+    "date": "2022-03-07",
+    "summary": "An exploration of legacy, purpose, and death",
+    "attributes": {
+      "technicality": 0.02855457051677246,
+      "abstraction": 0.6726777546169673,
+      "futurism": 0.1817011264945685,
+      "personal": 0.7197506702336356,
+      "optimism": 0.6675651353573662,
+      "density": 0.000032433610963611414
+    },
+    "pca": {
+      "x": 84.9410778463565,
+      "y": 30.54952096223527
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "the-irreverent-act",
+    "title": "The Irreverent Act",
+    "date": "2025-03-18",
+    "summary": "The Singularity",
+    "attributes": {
+      "technicality": 0.42453977758369366,
+      "abstraction": 0.7924034178545771,
+      "futurism": 0.4175598381865506,
+      "personal": 0.6049721515171642,
+      "optimism": 0.8124189673700333,
+      "density": 0.9083095479929271
+    },
+    "pca": {
+      "x": 80.15060840552096,
+      "y": 60.05791759041277
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "the-jean-manifesto",
+    "title": "The Jean Manifesto",
+    "date": "2025-08-11",
+    "summary": "Announcing Jean Connect",
+    "attributes": {
+      "technicality": 0.8348234830385151,
+      "abstraction": 0.8374134205817247,
+      "futurism": 0.599718880987729,
+      "personal": 0.43005086571863727,
+      "optimism": 0.9052943067251285,
+      "density": 0.9444422088858762
+    },
+    "pca": {
+      "x": 11.297307703274141,
+      "y": 35.06610173147014
+    },
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
+  },
+  {
+    "slug": "the-logos",
+    "title": "THE LOGOS",
+    "date": "2022-11-01",
+    "summary": "The Network State",
+    "attributes": {
+      "technicality": 0.031442775411063995,
+      "abstraction": 0.3860289580641385,
+      "futurism": 0.21814684431254783,
+      "personal": 0.13029962234175163,
+      "optimism": 0.42736643361560245,
+      "density": 0.12894671281937597
+    },
+    "pca": {
+      "x": 83.28580100188414,
+      "y": 28.67914955739188
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "vacations",
+    "title": "Vacations",
+    "date": "2025-01-05",
+    "summary": "Taking Steps Back",
+    "attributes": {
+      "technicality": 0.33096696104463863,
+      "abstraction": 0.26870038427535015,
+      "futurism": 0.6611610321308279,
+      "personal": 0.9762560224113046,
+      "optimism": 0.24855797693344006,
+      "density": 0.31723804375443576
+    },
+    "pca": {
+      "x": 65.529577507362,
+      "y": 59.442195551156345
+    },
+    "cluster": 2,
+    "clusterLabel": "Cluster 3"
+  },
+  {
+    "slug": "what-is-life",
+    "title": "What is life?",
+    "date": "2023-02-18",
+    "summary": "Essay (1 of 3) ",
+    "attributes": {
+      "technicality": 0.4286746993501158,
+      "abstraction": 0.38148943946447234,
+      "futurism": 0.7646062466396475,
+      "personal": 0.48586035171760367,
+      "optimism": 0.9767866459779617,
+      "density": 0.4662700822570005
+    },
+    "pca": {
+      "x": 87.6467694359151,
+      "y": 14.114710108999288
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  },
+  {
+    "slug": "which-direction-to-live-it",
+    "title": "Which direction to live it.",
+    "date": "2023-02-18",
+    "summary": "Essay (2 of 3)",
+    "attributes": {
+      "technicality": 0.8489922676308299,
+      "abstraction": 0.8400896159487028,
+      "futurism": 0.11823988706496924,
+      "personal": 0.48153408713063395,
+      "optimism": 0.916411109081201,
+      "density": 0.41064488561181167
+    },
+    "pca": {
+      "x": 95,
+      "y": 5
+    },
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
+  }
+]

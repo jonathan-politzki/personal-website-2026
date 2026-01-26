@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useMemo } from "react";
 import { motion, useSpring } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
@@ -58,6 +59,19 @@ export default function Home() {
       {/* --- RIGHT SIDE VISUALIZATION (Explicitly positioned) --- */}
       <div className="absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden pointer-events-none z-0">
         
+        {/* User Photo - Faded Background Layer */}
+        <div className="absolute inset-0 z-[-1] opacity-30 mix-blend-screen">
+            <Image 
+                src="/hero-bg.png" 
+                alt="Visualization Background" 
+                fill
+                className="object-cover translate-x-16"
+                priority
+            />
+            {/* Gradient Overlay to fade it into the blackness at the bottom/left */}
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#050505]/20 to-[#050505]" />
+        </div>
+
         {/* The "Storm" Container */}
         {isMounted && (
           <motion.div 
@@ -140,7 +154,7 @@ export default function Home() {
               I am interested in ideas and engineering the future that should exist.
             </p>
             <p>
-              Across my website you will find my <strong className="text-white font-normal bg-white/10 px-1">guiding philosophy</strong>, my <strong className="text-white font-normal bg-white/10 px-1">writing</strong> as a form of mapping the world, and my <strong className="text-white font-normal bg-white/10 px-1">work</strong> that is the instantiation of my beliefs in the marketplace.
+              Across my website you will find my <strong className="text-white font-normal bg-white/10 px-1">guiding creed</strong>, my <strong className="text-white font-normal bg-white/10 px-1">writing</strong> as a form of mapping the world, and my <strong className="text-white font-normal bg-white/10 px-1">work</strong> that is the instantiation of my beliefs in the marketplace.
             </p>
           </motion.div>
 

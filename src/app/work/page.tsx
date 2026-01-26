@@ -11,8 +11,7 @@ export default function Work() {
           Irreverent Capital
         </h1>
         <p className="text-xl md:text-2xl text-[#888] font-light leading-relaxed">
-          I try to work on unlikely, non-linear, important things.
-          Irreverent Capital builds businesses that address unaddressed societal fractures.
+          Builds important, unlikely technology businesses.
         </p>
       </section>
 
@@ -20,42 +19,36 @@ export default function Work() {
       <section className="space-y-24 border-l border-[#222] pl-8 md:pl-16">
         
         {/* Jean Memory */}
-        <div className="group">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#444] mb-2 block">Flagship // AI Infrastructure</span>
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-4">
-            <h2 className="text-4xl md:text-5xl font-medium text-white group-hover:text-[#ccc] transition-colors">
-              Jean Memory
-            </h2>
+        <div className="group border border-[#222] bg-[#0a0a0a] p-8 hover:border-[#444] transition-colors max-w-2xl">
+          <div className="flex justify-between items-start mb-6">
+            <div>
+              <h2 className="text-3xl font-medium text-white mb-2">
+                Jean Memory
+              </h2>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#555]">
+                Founded 2024 // Infrastructure
+              </span>
+            </div>
             <a 
               href="https://jeanmemory.com" 
               target="_blank"
-              className="hidden md:flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-[#666] hover:text-white transition-colors"
+              className="p-2 border border-[#333] hover:bg-white hover:text-black transition-colors"
             >
-              [Launch Terminal] <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
-          <p className="text-lg text-[#888] leading-relaxed max-w-2xl mb-8">
-            The universal memory layer for machine intelligence. We build the infrastructure that allows AI to retain context, understand users, and evolve over time.
-          </p>
-          <div className="flex flex-wrap gap-4 text-xs font-mono text-[#555] uppercase tracking-widest">
-             <span className="border border-[#222] px-2 py-1">Founded 2024</span>
-             <span className="border border-[#222] px-2 py-1">Venture Backed</span>
-             <span className="border border-[#222] px-2 py-1">Infrastructure</span>
+          
+          <div className="space-y-6 text-[#888] leading-relaxed">
+            <p>
+              We build AI memory systems that encode, store, forget, and recall information for AI applications and agents.
+            </p>
+            <div className="text-sm border-t border-[#222] pt-4">
+              <strong className="text-[#ccc] font-normal block mb-2">Research: Beyond Memory</strong>
+              <p>
+                We are researching how to build representations of user context. After we have built up context on a user, it is theoretically possible to build systems that can match individuals to find people that are the most similar or compatible in the world.
+              </p>
+            </div>
           </div>
-        </div>
-
-        {/* Advisory / Other Work */}
-        <div>
-          <span className="text-xs font-mono uppercase tracking-widest text-[#444] mb-2 block">Collaboration</span>
-          <h2 className="text-3xl font-medium text-white mb-4">
-            Thematic Investing & Advisory
-          </h2>
-          <p className="text-[#888] leading-relaxed max-w-2xl mb-6">
-            I collaborate with entrepreneurs, companies, and thematic investors who are building the future of cognition and human agency.
-          </p>
-          <a href="mailto:hello@jonathanpolitzki.com" className="text-sm font-mono uppercase tracking-widest text-[#666] hover:text-white transition-colors border-b border-[#333] hover:border-white pb-1">
-            Initiate Contact
-          </a>
         </div>
 
       </section>

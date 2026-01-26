@@ -1,0 +1,450 @@
+[
+  {
+    "slug": "coming-soon",
+    "title": "Coming soon",
+    "date": "2022-03-07",
+    "words": 13,
+    "tokens": 24,
+    "summary": "This introductory post announces \"Engineering the Future,\" a series dedicated to exploring truth and understanding."
+  },
+  {
+    "slug": "going-to-california",
+    "title": "Going to California",
+    "date": "2022-03-07",
+    "words": 566,
+    "tokens": 782,
+    "summary": "The author reflects on a trip to San Francisco, realizing his unsuitability for private equity and his desire to work on the fringes of change."
+  },
+  {
+    "slug": "the-cemetery",
+    "title": "The Cemetery",
+    "date": "2022-03-07",
+    "words": 772,
+    "tokens": 1070,
+    "summary": "Reflecting on a visit to a graveyard, the author questions the purpose of gravestones as status symbols and reminders of mortality."
+  },
+  {
+    "slug": "nephra-04212022",
+    "title": "Nephra - 04/21/2022",
+    "date": "2022-04-22",
+    "words": 589,
+    "tokens": 822,
+    "summary": "An update to a team about the Nephra startup, discussing market opportunity, funding challenges, and the need for product development and grants."
+  },
+  {
+    "slug": "a-new-religion",
+    "title": "A New Religion",
+    "date": "2022-05-24",
+    "words": 820,
+    "tokens": 1207,
+    "summary": "The author discusses religion with a friend, concluding that religions serve as societal rulebooks and questioning the existence of God."
+  },
+  {
+    "slug": "being-alone",
+    "title": "Being Alone",
+    "date": "2022-05-24",
+    "words": 506,
+    "tokens": 759,
+    "summary": "The author explores the enjoyment of solitude, contrasting it with societal notions of fun and happiness, and linking it to purpose-seeking."
+  },
+  {
+    "slug": "a-year-of-startups",
+    "title": "A Year of Startups",
+    "date": "2022-05-30",
+    "words": 3622,
+    "tokens": 5246,
+    "summary": "This extensive essay details lessons learned over a year of founding a quantitative investment manager and a medical device startup, emphasizing entrepreneurship as a learned mindset."
+  },
+  {
+    "slug": "business-execution",
+    "title": "Business == Execution",
+    "date": "2022-06-23",
+    "words": 958,
+    "tokens": 1426,
+    "summary": "The author argues that business is fundamentally about execution, criticizing traditional business education and highlighting the importance of doing."
+  },
+  {
+    "slug": "the-logos",
+    "title": "THE LOGOS",
+    "date": "2022-11-01",
+    "words": 6672,
+    "tokens": 10408,
+    "summary": "The author explores the concept of \"The Logos\" as an underlying truth of the Universe, advocating for a return to philosophical thinking and scientific progress."
+  },
+  {
+    "slug": "have-convictions",
+    "title": "HAVE CONVICTIONS",
+    "date": "2022-11-12",
+    "words": 2974,
+    "tokens": 4664,
+    "summary": "Drawing inspiration from Steve Jobs, the author encourages readers to challenge existing structures, define their own lives, and pursue their unique interests."
+  },
+  {
+    "slug": "biotech-week-in-review-02-17-2023",
+    "title": "Biotech Week in Review | 02-17-2023",
+    "date": "2023-02-17",
+    "words": 1421,
+    "tokens": 2708,
+    "summary": "This review discusses trends in biotech startup funding, the potential for more founder-led ventures, and the challenges posed by FDA regulations and Eroom’s law."
+  },
+  {
+    "slug": "what-is-life",
+    "title": "What is life?",
+    "date": "2023-02-18",
+    "words": 2957,
+    "tokens": 4627,
+    "summary": "The author begins a series on life's purpose, urging readers to question meaning and values from first principles to avoid regret."
+  },
+  {
+    "slug": "which-direction-to-live-it",
+    "title": "Which direction to live it.",
+    "date": "2023-02-18",
+    "words": 8815,
+    "tokens": 12656,
+    "summary": "Continuing the exploration of life's purpose, this essay delves deeper into fundamental questions about human existence and the path one should take."
+  },
+  {
+    "slug": "biotech-week-in-review-03-03-2023",
+    "title": "Biotech Week in Review | 03-03-2023",
+    "date": "2023-03-05",
+    "words": 669,
+    "tokens": 1478,
+    "summary": "This review covers AI applications in medical diagnosis (e.g., hypertrophic cardiomyopathy) and discusses the challenges of non-invasive glucose monitoring."
+  },
+  {
+    "slug": "biotech-update-04212023",
+    "title": "Biotech Update - 04.21.2023",
+    "date": "2023-04-21",
+    "words": 420,
+    "tokens": 1219,
+    "summary": "The author discusses contagious cancers in Tasmanian devils, tumor evolution, and the potential for therapeutic development based on such phenomena."
+  },
+  {
+    "slug": "ambitions-unedited",
+    "title": "AMBITIONS (UNEDITED)",
+    "date": "2023-04-29",
+    "words": 3610,
+    "tokens": 5129,
+    "summary": "The author uses Nietzsche's metamorphoses (camel, lion, child) to illustrate personal growth through overcoming, freedom, and creation."
+  },
+  {
+    "slug": "essay-8-ambitions-edited",
+    "title": "ESSAY 8: AMBITIONS (EDITED)",
+    "date": "2023-04-29",
+    "words": 1513,
+    "tokens": 2484,
+    "summary": "An edited version of the previous essay, it discusses Nietzsche's metamorphoses as stages of personal growth and the challenge of finding purpose in adulthood."
+  },
+  {
+    "slug": "biotech-week-in-review-05-12-2023",
+    "title": "Biotech Week in Review - 05-12-2023",
+    "date": "2023-05-15",
+    "words": 474,
+    "tokens": 1280,
+    "summary": "This review highlights DNA storage as a potential data solution and the significance of mapping the human pangenome for understanding genetic diversity."
+  },
+  {
+    "slug": "essay-9-value-society-money-and-work",
+    "title": "ESSAY 9: VALUE, SOCIETY, MONEY & WORK ",
+    "date": "2023-07-15",
+    "words": 2755,
+    "tokens": 4017,
+    "summary": "The author explores the concept of work as a fundamental human drive for survival and thriving, linking it to societal innovation and investment."
+  },
+  {
+    "slug": "essay-10-abstraction-vs-first-principles",
+    "title": "ESSAY 10: ABSTRACTION VS FIRST PRINCIPLES",
+    "date": "2023-08-26",
+    "words": 1884,
+    "tokens": 2823,
+    "summary": "This essay contrasts abstraction (pattern recognition) with first principles thinking (questioning fundamental assumptions) as necessary modes for human thought."
+  },
+  {
+    "slug": "essay-11-time",
+    "title": "ESSAY 11: TIME",
+    "date": "2023-11-20",
+    "words": 4435,
+    "tokens": 6731,
+    "summary": "The author reflects on time as the most crucial universal constraint, emphasizing its importance in planning and maximizing personal output."
+  },
+  {
+    "slug": "everything-i-know-now",
+    "title": "△ - Everything I Know Now",
+    "date": "2023-12-26",
+    "words": 8343,
+    "tokens": 12236,
+    "summary": "A comprehensive reflection on life experiences, advocating for focusing on immediate growth (\"cultivate our garden\") rather than solely abstract problems."
+  },
+  {
+    "slug": "culture",
+    "title": "Culture",
+    "date": "2024-03-26",
+    "words": 4920,
+    "tokens": 7564,
+    "summary": "The author traces his evolving understanding of culture from superficial rituals to a company's underlying behaviors, principles, and values."
+  },
+  {
+    "slug": "project-delta",
+    "title": "Project Delta (∆)",
+    "date": "2024-04-13",
+    "words": 1963,
+    "tokens": 3246,
+    "summary": "The author proposes \"Project Delta\" to use long-form writing and LLMs to extract an individual's \"ideological fingerprint\" for self-understanding."
+  },
+  {
+    "slug": "information-theory-of-startups",
+    "title": "Information Theory of Startups",
+    "date": "2024-06-13",
+    "words": 1418,
+    "tokens": 2136,
+    "summary": "Applying Claude Shannon's information theory, the author argues that \"unlikely information\" and doing \"unlikely things\" hold significant value in entrepreneurship."
+  },
+  {
+    "slug": "entrepreneurial-risk",
+    "title": "Entrepreneurial Risk",
+    "date": "2024-06-15",
+    "words": 1806,
+    "tokens": 2599,
+    "summary": "The author challenges conventional risk models in entrepreneurship, advocating for trusting human instincts and navigating complexity with limited data."
+  },
+  {
+    "slug": "deep-learnings-future",
+    "title": "Deep Learning's Future",
+    "date": "2024-06-30",
+    "words": 5081,
+    "tokens": 8839,
+    "summary": "This essay provides an overview of deep learning's foundational principles, framing the future through derived principles and philosophical takes on AI's impact."
+  },
+  {
+    "slug": "delta",
+    "title": "Project Delta ∆ ",
+    "date": "2024-08-24",
+    "words": 2619,
+    "tokens": 4752,
+    "summary": "A refined version of \"Project Delta,\" emphasizing the use of AI to help individuals understand their identity and life trajectory."
+  },
+  {
+    "slug": "return",
+    "title": "Return",
+    "date": "2024-09-11",
+    "words": 2957,
+    "tokens": 4850,
+    "summary": "The author reflects on the \"things you return to\" in life, linking this concept to self-understanding and the inspiration behind Project Delta."
+  },
+  {
+    "slug": "launching-irreverent-capital",
+    "title": "Launching Irreverent Capital",
+    "date": "2024-09-28",
+    "words": 941,
+    "tokens": 1559,
+    "summary": "The author announces \"Irreverent Capital,\" a fund dedicated to building important businesses and fostering innovation by challenging existing wisdom."
+  },
+  {
+    "slug": "general-personal-embeddings",
+    "title": "General Personal Embeddings",
+    "date": "2024-10-07",
+    "words": 7514,
+    "tokens": 12885,
+    "summary": "The author argues for a universal, neutral infrastructure for personal embeddings, enabling machines to understand individuals deeply while protecting data ownership."
+  },
+  {
+    "slug": "google-tear-down-this-wall",
+    "title": "“Google, Tear Down This Wall” ",
+    "date": "2024-11-18",
+    "words": 1203,
+    "tokens": 1924,
+    "summary": "The author critiques the current state of personalization driven by Big Tech, advocating for user-owned digital identities and a new era of AI-driven understanding."
+  },
+  {
+    "slug": "deep-user-understanding-from-day",
+    "title": "Deep User Understanding from Day One",
+    "date": "2024-11-22",
+    "words": 302,
+    "tokens": 645,
+    "summary": "This post describes a product vision for instant, deep user understanding via AI, enabling personalized experiences from the moment a user signs up."
+  },
+  {
+    "slug": "structure-people-and-chaos",
+    "title": "Structure, People, and Chaos",
+    "date": "2024-12-07",
+    "words": 5199,
+    "tokens": 7769,
+    "summary": "The author explores the human struggle against entropy, advocating for embracing chaos and irreverence to foster creativity within an over-structured world."
+  },
+  {
+    "slug": "politzkis-law",
+    "title": "Politzki’s Law",
+    "date": "2024-12-16",
+    "words": 685,
+    "tokens": 1173,
+    "summary": "The author proposes \"Politzki’s Law,\" stating that humans maintain an advantage over computers in navigating indeterminate, ambiguous, and complex problems with sparse data."
+  },
+  {
+    "slug": "reflections-on-a-quarter-century",
+    "title": "Reflections on a Quarter Century of Life",
+    "date": "2024-12-16",
+    "words": 16155,
+    "tokens": 24491,
+    "summary": "A comprehensive reflection on 25 years of life, emphasizing the difficulty and importance of self-understanding and navigating the world with purpose."
+  },
+  {
+    "slug": "vacations",
+    "title": "Vacations",
+    "date": "2025-01-05",
+    "words": 983,
+    "tokens": 1452,
+    "summary": "The author re-evaluates vacations, finding their value in providing a necessary reset from the pressures of work, whether over-structured or overly abstract."
+  },
+  {
+    "slug": "jean-software-for-the-individual",
+    "title": "Jean - Software for the Individual",
+    "date": "2025-01-20",
+    "words": 1097,
+    "tokens": 1774,
+    "summary": "The author introduces \"Jean,\" a portfolio company focused on personal software that uses LLMs to map individual belief systems and values, aligning with a vision of individualism."
+  },
+  {
+    "slug": "the-irreverent-act",
+    "title": "The Irreverent Act",
+    "date": "2025-03-18",
+    "words": 18751,
+    "tokens": 27844,
+    "summary": "This extensive essay frames starting a new company as a creative act and a test of identity, emphasizing the cultural biases and irreverence needed for technological progress."
+  },
+  {
+    "slug": "a-b",
+    "title": "A → B",
+    "date": "2025-04-28",
+    "words": 2332,
+    "tokens": 3464,
+    "summary": "The author discusses business as the process of moving from A to B, stressing the importance of strategic thinking and knowing \"what,\" \"why,\" and \"how\" before execution."
+  },
+  {
+    "slug": "mcp-a2a-and-the-future-of-ai-infra",
+    "title": "MCP, A2A, and the Future of AI Infra",
+    "date": "2025-04-29",
+    "words": 3639,
+    "tokens": 6069,
+    "summary": "The author discusses the evolving landscape of AI infrastructure, including MCP and A2A, and how it informs the development of Jean as a \"universal gas station for user understanding.\""
+  },
+  {
+    "slug": "b2c-memory-layer",
+    "title": "B2C Memory Layer",
+    "date": "2025-04-30",
+    "words": 2329,
+    "tokens": 4018,
+    "summary": "The author outlines a vision for a B2C memory layer that protects individual data rights, iterating on solutions based on market learnings for Jean."
+  },
+  {
+    "slug": "automating-the-world",
+    "title": "Automating the World",
+    "date": "2025-05-23",
+    "words": 1664,
+    "tokens": 2565,
+    "summary": "The author posits that most work will be automated, drawing parallels with biotech's slowness to adopt AI, and emphasizing the human bottleneck to technological distribution."
+  },
+  {
+    "slug": "self-healing-software",
+    "title": "Self-Healing Software",
+    "date": "2025-05-23",
+    "words": 1729,
+    "tokens": 2762,
+    "summary": "The author discusses the advent of self-healing software, inspired by Claude Shannon's error-correcting codes, as a way to automate bug reproduction and free up human focus."
+  },
+  {
+    "slug": "jean-memory-the-necessity-of-irreverence",
+    "title": "Jean Memory: The Necessity of Irreverence",
+    "date": "2025-05-29",
+    "words": 1296,
+    "tokens": 2107,
+    "summary": "This essay, purportedly written by Jean Memory itself, introduces the product and argues for the necessity of irreverence to overcome societal stagnation and foster genuine creation."
+  },
+  {
+    "slug": "building-jean-memory",
+    "title": "Building Jean Memory",
+    "date": "2025-06-23",
+    "words": 2159,
+    "tokens": 3182,
+    "summary": "The author details the soft launch and initial success of Jean Memory, reiterating its vision to build infrastructure for computers to understand humans deeply."
+  },
+  {
+    "slug": "engineering-context",
+    "title": "Engineering Context",
+    "date": "2025-06-27",
+    "words": 1869,
+    "tokens": 2890,
+    "summary": "The author explores the theoretical and practical aspects of \"AI Memory\" and \"context engineering,\" aiming to provide relevant personal context for AI inference."
+  },
+  {
+    "slug": "the-jean-manifesto",
+    "title": "The Jean Manifesto",
+    "date": "2025-08-11",
+    "words": 1191,
+    "tokens": 2079,
+    "summary": "This manifesto asserts that computers now understand humans, advocating for AI infrastructure that provides personal context to applications while protecting individual data."
+  },
+  {
+    "slug": "boldness",
+    "title": "Boldness",
+    "date": "2025-09-12",
+    "words": 4610,
+    "tokens": 6509,
+    "summary": "The author reflects on the power of simple action and boldness, drawing on Francis Bacon's observations and linking it to the entrepreneurial spirit and the \"perfect pivot.\""
+  },
+  {
+    "slug": "outsiders",
+    "title": "Outsiders",
+    "date": "2025-09-27",
+    "words": 3155,
+    "tokens": 4703,
+    "summary": "The author re-examines Mikhail Tal's chess genius, linking his \"unlikely moves\" to a unique outsider's understanding of the game and the freedom to challenge the status quo."
+  },
+  {
+    "slug": "ai-memory",
+    "title": "AI Memory: Pre-History",
+    "date": "2025-09-30",
+    "words": 2476,
+    "tokens": 4516,
+    "summary": "This is the first part of a comprehensive report, providing a pre-history of AI Memory and asserting that good context is more valuable than a good model."
+  },
+  {
+    "slug": "ai-memory-technical-foundations",
+    "title": "AI Memory: Technical Foundations",
+    "date": "2025-12-03",
+    "words": 7137,
+    "tokens": 12507,
+    "summary": "The second part of the AI Memory report, it delves into advanced memory architectures, design principles, and argues that RAG is a transitional technology."
+  },
+  {
+    "slug": "ai-memory-market-dynamics",
+    "title": "AI Memory: Market Dynamics",
+    "date": "2025-12-09",
+    "words": 3028,
+    "tokens": 5288,
+    "summary": "The third part of the AI Memory report, it reviews current use cases (B2C, B2B2C, B2B) and market providers, analyzing where value will accrue."
+  },
+  {
+    "slug": "ai-memory-future-outlook",
+    "title": "AI Memory: Future Outlook",
+    "date": "2025-12-11",
+    "words": 1530,
+    "tokens": 2468,
+    "summary": "The final part of the AI Memory report synthesizes previous sections into four forward-looking theses, predicting the evolution from RAG to agentic memory and the flow of value."
+  },
+  {
+    "slug": "self-reliance",
+    "title": "Self-Determination",
+    "date": "2025-12-30",
+    "words": 2108,
+    "tokens": 3313,
+    "summary": "The author explores \"Innerlichkeit\" (inwardness) through Nietzsche and Freud, discussing how natural instincts are sublimated inwards when constrained by external forces."
+  },
+  {
+    "slug": "memory-report",
+    "title": "The State of AI Memory Infrastructure: 2026 Report",
+    "date": "2026-01-15",
+    "words": 343,
+    "tokens": 574,
+    "summary": "This executive summary of the \"State of AI Memory Infrastructure: 2026 Report\" highlights the \"Context Crisis\" in LLMs and proposes a unified standard for user understanding."
+  }
+]

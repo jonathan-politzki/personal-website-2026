@@ -1,7 +1,13 @@
-export default function Laboratory() {
-  return (
-    <main className="min-h-screen pt-32 px-8 md:px-24 flex items-center justify-center text-[#444] font-mono uppercase tracking-widest">
-      [Laboratory - Comparative Analysis Tool]
-    </main>
-  );
+import { getAllPosts } from "@/lib/mdx";
+import LaboratoryClient from "@/components/laboratory-client";
+
+export default function LaboratoryPage() {
+  const posts = getAllPosts();
+  
+  const serializedPosts = posts.map(post => ({
+    slug: post.slug,
+    title: post.metadata.title,
+  }));
+
+  return <LaboratoryClient posts={serializedPosts} />;
 }

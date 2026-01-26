@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-01-25T23:09:29.759Z",
+  "stats": {
+    "total_essays": 55,
+    "total_words": 170634,
+    "total_tokens": 267738,
+    "avg_words": 3102,
+    "date_range": {
+      "earliest": "2022-03-07",
+      "latest": "2025-12-30"
+    }
+  },
+  "summary": "The author writes about personal philosophy, entrepreneurship, and the evolving landscape of AI. Earlier work focused on self-discovery, early startup challenges, and reflections on life's purpose. Later, the focus shifted significantly towards the development of AI infrastructure, particularly 'AI Memory' and 'personal embeddings,' aiming to enable deep user understanding while advocating for individual data sovereignty.",
+  "themes": [
+    {
+      "name": "Entrepreneurship & Venture Building",
+      "score": 90,
+      "description": "This theme covers the author's journey through founding companies, learning from failures, and building new ventures with a specific focus on innovation."
+    },
+    {
+      "name": "Philosophy & Self-Understanding",
+      "score": 85,
+      "description": "This theme delves into fundamental questions about purpose, personal growth, the nature of reality, and the quest for self-knowledge."
+    },
+    {
+      "name": "AI & Personal Data Infrastructure",
+      "score": 95,
+      "description": "This theme explores the technical and conceptual framework for AI to deeply understand individuals, emphasizing data ownership and new infrastructure."
+    },
+    {
+      "name": "Innovation & Challenging Norms",
+      "score": 80,
+      "description": "This theme highlights the importance of questioning dogma, taking risks, and fostering a culture that enables genuinely new creations."
+    },
+    {
+      "name": "Human vs. Machine Intelligence",
+      "score": 75,
+      "description": "This theme examines the unique strengths of human cognition in complex, ambiguous environments compared to the evolving capabilities of machines."
+    }
+  ]
+}
