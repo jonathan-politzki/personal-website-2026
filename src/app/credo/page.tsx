@@ -28,7 +28,7 @@ export default function Credo() {
               // In other words, what is not known.
             </div>
             <p>
-              Once we recognize this, the <Link href="/writing/hfot" className="text-white border-b border-white/30 hover:border-white transition-colors">Human Focus Optimization Theory</Link> demands we direct our focus away from likely tasks and towards <strong className="text-white font-normal">unlikely truth</strong>, where we can truly leverage our human capabilities.
+              Once we recognize this, the <Link href="/writing/politzkis-law" className="text-white border-b border-white/30 hover:border-white transition-colors">Human Focus Optimization Theory</Link> demands we direct our focus away from likely tasks and towards <strong className="text-white font-normal">unlikely truth</strong>, where we can truly leverage our human capabilities.
             </p>
           </div>
         </header>
@@ -50,7 +50,7 @@ export default function Credo() {
                Irreverence isn't disrespect; it is the authentic independence required to assess the world as it is.
              </p>
              <p className="text-lg text-[#aaa] leading-relaxed">
-               Many institutions and procedures persist simply because they are established, even after they have decayed or ceased to be optimal. Identifying these obsolete frameworks is not an act of rebellion, but a necessary step to clear the way for innovations that were previously impossible.
+               Many institutions and procedures persist simply because they are established, even after they have decayed or ceased to be optimal. Identifying obsolete structures is a necessary step to clear the way for innovations that were previously impossible.
              </p>
              <p className="text-lg text-[#aaa] leading-relaxed mt-6">
                True progress can only be achieved by navigating <strong className="text-white">out of distribution</strong>, into uncharted territory.
@@ -110,10 +110,10 @@ export default function Credo() {
               source="Twilight of the Idols"
             />
             
-            <Quote 
-              text={isGerman 
-                ? "Wer immer strebend sich bemüht, den können wir erlösen." 
-                : "He who strives and lives to strive can earn redemption still."}
+            <Quote
+              text={isGerman
+                ? "Wer immer strebend sich bemüht,\nden können wir erlösen."
+                : "He who strives and lives to strive,\ncan earn redemption still."}
               author="Johann Wolfgang von Goethe"
               source="Faust, Part II"
             />

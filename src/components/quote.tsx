@@ -20,7 +20,7 @@ export default function Quote({ text, author, source }: QuoteProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="text-sm md:text-base italic font-serif text-[#555] leading-relaxed"
+            className="text-sm md:text-base italic font-serif text-[#555] leading-relaxed whitespace-pre-line"
           >
             "{text}"
           </motion.div>
