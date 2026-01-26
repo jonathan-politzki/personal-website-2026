@@ -68,43 +68,43 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   // --- STANDARD / ESSAY VIEW ---
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans selection:bg-white selection:text-black">
+    <main className="min-h-screen bg-[#fafaf9] text-[#1a1a1a] font-[family-name:var(--font-serif)] selection:bg-black selection:text-white">
 
       <article className="max-w-2xl mx-auto pt-24 pb-32 px-6">
 
         {/* Back to Library - static at top, below logo */}
         <nav className="mb-8 pt-2">
-          <Link href="/writing/read" className="group inline-flex items-center gap-2 text-[#666] hover:text-white transition-colors">
+          <Link href="/writing/read" className="group inline-flex items-center gap-2 text-[#666] hover:text-[#1a1a1a] transition-colors">
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             <span className="font-mono text-sm uppercase tracking-widest">Library</span>
           </Link>
         </nav>
-        
+
         {/* Header */}
-        <header className="mb-16 border-b border-[#222] pb-8">
+        <header className="mb-16 border-b border-[#e0e0e0] pb-8">
           <div className="flex flex-col gap-4 mb-8">
-             <div className="flex items-center gap-4 text-xs font-mono uppercase tracking-widest text-[#555]">
+             <div className="flex items-center gap-4 text-xs font-mono uppercase tracking-widest text-[#888]">
                 <time>{post.metadata.publishedAt}</time>
                 <span>/</span>
-                <span className="text-[#888]">{post.metadata.type || 'Essay'}</span>
+                <span className="text-[#666]">{post.metadata.type || 'Essay'}</span>
              </div>
-             <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-white leading-tight">
+             <h1 className="text-4xl md:text-5xl font-light tracking-tight text-[#1a1a1a] leading-tight font-[family-name:var(--font-serif)]">
                {post.metadata.title}
              </h1>
           </div>
-          <p className="text-xl text-[#888] font-light leading-relaxed">
+          <p className="text-xl text-[#555] font-light leading-relaxed">
             {post.metadata.summary}
           </p>
         </header>
 
         {/* Content */}
-        <div className="prose prose-invert prose-lg prose-neutral max-w-none 
-          prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-white
-          prose-p:text-[#aaa] prose-p:leading-8 prose-p:font-light
-          prose-strong:text-white prose-strong:font-medium
-          prose-a:text-white prose-a:underline prose-a:decoration-[#444] prose-a:underline-offset-4 hover:prose-a:decoration-white prose-a:transition-all
-          prose-li:text-[#aaa] prose-ul:my-6
-          prose-blockquote:border-l-2 prose-blockquote:border-white prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-[#888]
+        <div className="prose prose-lg prose-neutral max-w-none
+          prose-headings:font-normal prose-headings:tracking-tight prose-headings:text-[#1a1a1a] prose-headings:font-[family-name:var(--font-serif)]
+          prose-p:text-[#1a1a1a] prose-p:leading-8 prose-p:font-light
+          prose-strong:text-[#1a1a1a] prose-strong:font-medium
+          prose-a:text-[#1a1a1a] prose-a:underline prose-a:decoration-[#ccc] prose-a:underline-offset-4 hover:prose-a:decoration-[#1a1a1a] prose-a:transition-all
+          prose-li:text-[#1a1a1a] prose-ul:my-6
+          prose-blockquote:border-l-2 prose-blockquote:border-[#1a1a1a] prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-[#555]
         ">
           {content}
         </div>

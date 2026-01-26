@@ -1,32 +1,87 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Logo } from "@/components/logo";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isWritingOpen, setIsWritingOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
+
+  // Check if we're on an essay page (individual essay, not the tools)
+  const isEssayPage = pathname.startsWith("/writing/") &&
+    !pathname.includes("/graph") &&
+    !pathname.includes("/dashboard") &&
+    !pathname.includes("/chat") &&
+    !pathname.includes("/compare") &&
+    !pathname.includes("/read") &&
+    pathname !== "/writing";
+
+  // Check if we're on any writing/reading page that uses light theme
+  const isLightTheme = isEssayPage || pathname === "/writing/read";
+
+  // Hide nav on scroll for essay pages
+  useEffect(() => {
+    if (!isEssayPage) {
+      setIsHidden(false);
+      return;
+    }
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY, isEssayPage]);
 
   return (
     <>
       {/* Explicitly ensure z-index is highest and fixed positioning works */}
-      <div className="fixed top-0 right-0 p-6 md:p-8 z-[100] pointer-events-none flex justify-between w-full items-start">
+      <motion.div
+        className="fixed top-0 right-0 p-6 md:p-8 z-[100] pointer-events-none flex justify-between w-full items-start"
+        initial={false}
+        animate={{
+          y: isHidden ? -100 : 0,
+          opacity: isHidden ? 0 : 1
+        }}
+        transition={{ duration: 0.3 }}
+      >
         {/* Logo - Top Left */}
-        <Link href="/" className="pointer-events-auto p-2 text-white/80 hover:text-white transition-colors">
+        <Link href="/" className={`pointer-events-auto p-2 transition-colors ${
+          isLightTheme
+            ? "text-[#1a1a1a]/80 hover:text-[#1a1a1a]"
+            : "text-white/80 hover:text-white"
+        }`}>
           <Logo className="w-8 h-8" />
         </Link>
 
         {/* Hamburger Menu Trigger - Top Right */}
-        <button 
+        <button
           onClick={() => setIsOpen(true)}
-          className="pointer-events-auto p-2 hover:bg-white/10 text-white/50 hover:text-white transition-colors rounded-md bg-black/20 backdrop-blur-sm md:bg-transparent"
+          className={`pointer-events-auto p-2 transition-colors rounded-md ${
+            isLightTheme
+              ? "hover:bg-black/10 text-[#1a1a1a]/50 hover:text-[#1a1a1a] bg-white/50 backdrop-blur-sm md:bg-transparent"
+              : "hover:bg-white/10 text-white/50 hover:text-white bg-black/20 backdrop-blur-sm md:bg-transparent"
+          }`}
         >
           <Menu className="w-5 h-5" />
         </button>
-      </div>
+      </motion.div>
 
       {/* Side Drawer Overlay */}
       <AnimatePresence>

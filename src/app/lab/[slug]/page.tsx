@@ -20,6 +20,9 @@ type ThemeOption = "dark" | "light" | "sepia";
 type WeightOption = "light" | "regular" | "medium";
 type ContrastOption = "muted" | "normal" | "high";
 type SizeOption = "base" | "large" | "xl";
+type TitleWeightOption = "light" | "medium" | "bold";
+type AccentOption = "mono" | "warm" | "cool";
+type SpacingOption = "normal" | "generous";
 
 const fontClasses: Record<FontOption, string> = {
   sans: "font-sans",
@@ -39,6 +42,12 @@ const weightClasses: Record<WeightOption, string> = {
   medium: "font-medium",
 };
 
+const titleWeightClasses: Record<TitleWeightOption, string> = {
+  light: "font-light",
+  medium: "font-medium",
+  bold: "font-semibold",
+};
+
 const contrastClasses: Record<ContrastOption, Record<ThemeOption, string>> = {
   muted: { dark: "text-[#aaa]", light: "text-[#555]", sepia: "text-[#5a4a3a]" },
   normal: { dark: "text-[#ccc]", light: "text-[#333]", sepia: "text-[#3d3222]" },
@@ -49,6 +58,18 @@ const sizeClasses: Record<SizeOption, string> = {
   base: "text-base leading-7",
   large: "text-lg leading-8",
   xl: "text-xl leading-9",
+};
+
+// Substack-inspired accent colors for blockquotes
+const accentColors: Record<AccentOption, Record<ThemeOption, string>> = {
+  mono: { dark: "#ededed", light: "#1a1a1a", sepia: "#3d3222" },
+  warm: { dark: "#f59e0b", light: "#ea580c", sepia: "#c2410c" }, // Gold/Orange
+  cool: { dark: "#60a5fa", light: "#2563eb", sepia: "#1d4ed8" }, // Blue
+};
+
+const spacingClasses: Record<SpacingOption, string> = {
+  normal: "space-y-6",
+  generous: "space-y-8",
 };
 
 export default function ReadingLab({ params }: { params: Promise<{ slug: string }> }) {
@@ -62,6 +83,9 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
   const [weight, setWeight] = useState<WeightOption>("light");
   const [contrast, setContrast] = useState<ContrastOption>("muted");
   const [size, setSize] = useState<SizeOption>("large");
+  const [titleWeight, setTitleWeight] = useState<TitleWeightOption>("light");
+  const [accent, setAccent] = useState<AccentOption>("mono");
+  const [spacing, setSpacing] = useState<SpacingOption>("normal");
 
   // Resolve params
   useEffect(() => {
@@ -211,10 +235,73 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
             </div>
           </div>
 
+          {/* Title Weight - Substack-inspired */}
+          <div className="mb-4">
+            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Title</label>
+            <div className="flex gap-1">
+              {(["light", "medium", "bold"] as TitleWeightOption[]).map((tw) => (
+                <button
+                  key={tw}
+                  onClick={() => setTitleWeight(tw)}
+                  className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
+                    titleWeight === tw
+                      ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
+                      : theme === "dark" ? "bg-white/10" : "bg-black/10"
+                  }`}
+                >
+                  {tw}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Accent Color - Substack-inspired */}
+          <div className="mb-4">
+            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Accent</label>
+            <div className="flex gap-1">
+              {(["mono", "warm", "cool"] as AccentOption[]).map((a) => (
+                <button
+                  key={a}
+                  onClick={() => setAccent(a)}
+                  className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
+                    accent === a
+                      ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
+                      : theme === "dark" ? "bg-white/10" : "bg-black/10"
+                  }`}
+                >
+                  {a}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Spacing */}
+          <div className="mb-4">
+            <label className="block text-xs font-mono uppercase tracking-wider mb-2 opacity-60">Spacing</label>
+            <div className="flex gap-1">
+              {(["normal", "generous"] as SpacingOption[]).map((sp) => (
+                <button
+                  key={sp}
+                  onClick={() => setSpacing(sp)}
+                  className={`flex-1 py-1.5 px-2 text-xs font-mono rounded ${
+                    spacing === sp
+                      ? theme === "dark" ? "bg-white text-black" : "bg-black text-white"
+                      : theme === "dark" ? "bg-white/10" : "bg-black/10"
+                  }`}
+                >
+                  {sp}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Current combo display */}
           <div className={`mt-4 pt-4 border-t ${theme === "dark" ? "border-[#333]" : "border-[#ccc]"}`}>
             <div className="text-[10px] font-mono opacity-40">
               {font} / {theme} / {weight} / {contrast} / {size}
+            </div>
+            <div className="text-[10px] font-mono opacity-40 mt-1">
+              title: {titleWeight} / accent: {accent} / {spacing}
             </div>
           </div>
         </div>
@@ -241,7 +328,7 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
               <span>/</span>
               <span>Reading Lab</span>
             </div>
-            <h1 className={`text-4xl md:text-5xl font-medium tracking-tight leading-tight ${fontClasses[font]}`}>
+            <h1 className={`text-4xl md:text-5xl tracking-tight leading-tight ${fontClasses[font]} ${titleWeightClasses[titleWeight]}`}>
               {post.metadata.title}
             </h1>
           </div>
@@ -257,10 +344,25 @@ export default function ReadingLab({ params }: { params: Promise<{ slug: string 
             ${weightClasses[weight]}
             ${textContrast}
             ${sizeClasses[size]}
-            space-y-6
+            ${spacingClasses[spacing]}
           `}
+          style={{
+            // Apply accent color to blockquotes via CSS custom property
+            ["--accent-color" as string]: accentColors[accent][theme],
+          }}
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+
+        {/* Accent color styles for blockquotes */}
+        <style jsx global>{`
+          article blockquote {
+            border-left: 3px solid var(--accent-color, currentColor);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            opacity: 0.9;
+          }
+        `}</style>
       </article>
     </main>
   );
