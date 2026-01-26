@@ -113,7 +113,7 @@ export default function Credo() {
             <Quote 
               text={isGerman 
                 ? "Wer immer strebend sich bemüht, den können wir erlösen." 
-                : "He who strives and lives to strive can earn redemption still."}
+                : "He who strives and lives to strive\ncan earn redemption still."}
               author="Johann Wolfgang von Goethe"
               source="Faust, Part II"
             />
