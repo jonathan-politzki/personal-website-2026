@@ -28,7 +28,7 @@ export default function Credo() {
               // In other words, what is not known.
             </div>
             <p>
-              Once we recognize this, the <Link href="/writing/politzkis-law#human-focus-optimization-theory" className="text-white border-b border-white/30 hover:border-white transition-colors">Human Focus Optimization Theory</Link> demands we direct our focus away from likely tasks and towards <strong className="text-white font-normal">unlikely truth</strong>, where we can truly leverage our human capabilities.
+              Once we recognize this, the <Link href="/writing/politzkis-law" className="text-white border-b border-white/30 hover:border-white transition-colors">Human Focus Optimization Theory</Link> demands we direct our focus away from likely tasks and towards <strong className="text-white font-normal">unlikely truth</strong>, where we can truly leverage our human capabilities.
             </p>
           </div>
         </header>
