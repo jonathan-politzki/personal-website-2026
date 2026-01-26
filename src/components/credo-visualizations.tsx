@@ -2,7 +2,11 @@
 
 import React, { useEffect, useRef } from "react";
 
-export function OutOfDistributionVis() {
+interface VisProps {
+  isDark?: boolean;
+}
+
+export function OutOfDistributionVis({ isDark = true }: VisProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -13,6 +17,21 @@ export function OutOfDistributionVis() {
 
     let width = canvas.width = canvas.offsetWidth;
     let height = canvas.height = canvas.offsetHeight;
+
+    // Theme colors (matches Credo page theme)
+    const colors = isDark ? {
+      bg: "#0a0a0a",
+      cloudFill: (layer: number) => `rgba(100, 100, 100, ${0.03 + layer * 0.01})`,
+      cloudStroke: (layer: number) => `rgba(150, 150, 150, ${0.05 + layer * 0.02})`,
+      label: "#444",
+      accent: "#fff",
+    } : {
+      bg: "#fafaf9",
+      cloudFill: (layer: number) => `rgba(100, 100, 100, ${0.05 + layer * 0.02})`,
+      cloudStroke: (layer: number) => `rgba(80, 80, 80, ${0.1 + layer * 0.03})`,
+      label: "#888",
+      accent: "#1a1a1a",
+    };
 
     // --- CONFIGURATION ---
     // The "Map" (Known Distribution) covers most of the screen
@@ -30,7 +49,7 @@ export function OutOfDistributionVis() {
     let time = 0;
 
     const animate = () => {
-      ctx.fillStyle = "#0d0d0d";
+      ctx.fillStyle = colors.bg;
       ctx.fillRect(0, 0, width, height);
       time += 0.005;
 
@@ -42,8 +61,8 @@ export function OutOfDistributionVis() {
       for (let layer = 0; layer < 4; layer++) {
         ctx.beginPath();
         const layerOffset = layer * 10;
-        ctx.fillStyle = `rgba(100, 100, 100, ${0.03 + layer * 0.01})`; // Very faint
-        ctx.strokeStyle = `rgba(150, 150, 150, ${0.05 + layer * 0.02})`;
+        ctx.fillStyle = colors.cloudFill(layer);
+        ctx.strokeStyle = colors.cloudStroke(layer);
         ctx.lineWidth = 1;
 
         for (let angle = 0; angle <= Math.PI * 2; angle += 0.05) {
@@ -53,12 +72,12 @@ export function OutOfDistributionVis() {
           const n3 = Math.sin(angle * 29) * 5;
           // Add gentle breathing to the whole mass
           const breath = Math.sin(time + layer) * 2;
-          
+
           const r = baseRadius - layerOffset + n1 + n2 + n3 + breath;
-          
+
           const x = r * Math.cos(angle);
           const y = r * Math.sin(angle);
-          
+
           if (angle === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
         }
@@ -69,21 +88,21 @@ export function OutOfDistributionVis() {
       ctx.restore();
 
       // Label for Known
-      ctx.fillStyle = "#444";
+      ctx.fillStyle = colors.label;
       ctx.font = "10px monospace";
       ctx.fillText("KNOWN DISTRIBUTION", 20, height - 20);
 
       // 2. Draw "Unknown" Point (Close Outlier)
-      ctx.fillStyle = "#fff";
+      ctx.fillStyle = colors.accent;
       ctx.shadowBlur = 10;
-      ctx.shadowColor = "#fff";
+      ctx.shadowColor = colors.accent;
       ctx.beginPath();
       ctx.arc(targetX, targetY, 3, 0, Math.PI * 2);
       ctx.fill();
       ctx.shadowBlur = 0;
 
       // Label for Unknown
-      ctx.fillStyle = "#fff";
+      ctx.fillStyle = colors.accent;
       ctx.fillText("UNLIKELY TRUTH", targetX + 10, targetY + 4);
 
       // 3. Vector Arrow (Short, bridge the gap)
@@ -92,10 +111,10 @@ export function OutOfDistributionVis() {
       const edgeR = baseRadius + noiseAtAngle;
       const startX = centerX + edgeR * Math.cos(targetAngle);
       const startY = centerY + edgeR * Math.sin(targetAngle);
-      
-      ctx.strokeStyle = "#fff";
+
+      ctx.strokeStyle = colors.accent;
       ctx.lineWidth = 1.5;
-      
+
       ctx.beginPath();
       ctx.moveTo(startX, startY);
       ctx.lineTo(targetX - 8, targetY); // Stop just before dot
@@ -107,7 +126,7 @@ export function OutOfDistributionVis() {
       ctx.moveTo(targetX - 8, targetY);
       ctx.lineTo(targetX - 8 - 6 * Math.cos(angle - Math.PI / 6), targetY - 6 * Math.sin(angle - Math.PI / 6));
       ctx.lineTo(targetX - 8 - 6 * Math.cos(angle + Math.PI / 6), targetY - 6 * Math.sin(angle + Math.PI / 6));
-      ctx.fillStyle = "#fff";
+      ctx.fillStyle = colors.accent;
       ctx.fill();
 
       requestAnimationFrame(animate);
@@ -115,12 +134,17 @@ export function OutOfDistributionVis() {
 
     const animId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animId);
-  }, []);
+  }, [isDark]);
 
-  return <canvas ref={canvasRef} className="w-full h-full bg-[#0d0d0d] border border-[#222]" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className={`w-full h-full ${isDark ? "bg-[#0a0a0a] border-[#333]" : "bg-[#fafaf9] border-[#e0e0e0]"} border`}
+    />
+  );
 }
 
-export function StructureBreakdownVis() {
+export function StructureBreakdownVis({ isDark = true }: VisProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -132,6 +156,17 @@ export function StructureBreakdownVis() {
     let width = canvas.width = canvas.offsetWidth;
     let height = canvas.height = canvas.offsetHeight;
 
+    // Theme colors (matches Credo page theme)
+    const colors = isDark ? {
+      bg: "#0a0a0a",
+      stroke: (opacity: number) => `rgba(255, 255, 255, ${opacity})`,
+      label: "#666",
+    } : {
+      bg: "#fafaf9",
+      stroke: (opacity: number) => `rgba(26, 26, 26, ${opacity})`,
+      label: "#888",
+    };
+
     // --- GEOMETRY ---
     // 1. Delta (Triangle) - TRUE EQUILATERAL
     // Side length s
@@ -139,11 +174,11 @@ export function StructureBreakdownVis() {
     const h = s * Math.sqrt(3) / 2;
     const cx = 0.5 * width;
     const cy = 0.5 * height;
-    
+
     // Centroid offsets: Top is 2/3 h from centroid? No, centroid divides median 2:1
     // Distance from center to vertex = s / sqrt(3)
-    const rTri = s / Math.sqrt(3); 
-    
+    const rTri = s / Math.sqrt(3);
+
     const triangle = [
       {x: cx, y: cy - rTri}, // Top
       {x: cx - s/2, y: cy + rTri/2}, // Bottom Left
@@ -169,7 +204,8 @@ export function StructureBreakdownVis() {
     let cycle = 0;
 
     const animate = () => {
-      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = colors.bg;
+      ctx.fillRect(0, 0, width, height);
       cycle += 0.002; // Pace check
       if (cycle > 1) cycle = 0;
 
@@ -178,7 +214,7 @@ export function StructureBreakdownVis() {
 
       // PHASE 1: STABLE TRIANGLE (0.0 - 0.2)
       if (cycle < 0.2) {
-         ctx.strokeStyle = "rgba(255, 255, 255, 0.9)";
+         ctx.strokeStyle = colors.stroke(0.9);
          ctx.beginPath();
          ctx.moveTo(triangle[0].x, triangle[0].y);
          for(let i=1; i<triangle.length; i++) ctx.lineTo(triangle[i].x, triangle[i].y);
@@ -189,8 +225,8 @@ export function StructureBreakdownVis() {
       else if (cycle < 0.5) {
          const p = (cycle - 0.2) * 3.33; // 0 to 1
          // Fade out
-         ctx.strokeStyle = `rgba(255, 255, 255, ${0.9 - p * 0.7})`;
-         
+         ctx.strokeStyle = colors.stroke(0.9 - p * 0.7);
+
          ctx.beginPath();
          for(let i=0; i<triangle.length-1; i++) {
              const p1 = triangle[i];
@@ -198,7 +234,7 @@ export function StructureBreakdownVis() {
              // Fragment center drifts
              const driftX = (Math.random()-0.5) * 50 * p;
              const driftY = p * 50; // Fall down
-             
+
              // Draw the segment drifting away
              ctx.moveTo(p1.x + driftX, p1.y + driftY);
              ctx.lineTo(p2.x + driftX, p2.y + driftY);
@@ -209,17 +245,17 @@ export function StructureBreakdownVis() {
       // PHASE 3: REBUILD (0.5 - 0.8)
       else if (cycle < 0.8) {
          const p = (cycle - 0.5) * 3.33; // 0 to 1
-         ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 + p * 0.8})`;
-         
+         ctx.strokeStyle = colors.stroke(0.2 + p * 0.8);
+
          // Particles assembling into crystal nodes
          crystal.forEach(pt => {
              // Start from scattered random positions
              const startX = pt.x + (Math.sin(pt.y) * 100);
              const startY = pt.y + 100;
-             
+
              const currX = startX + (pt.x - startX) * p;
              const currY = startY + (pt.y - startY) * p;
-             
+
              ctx.beginPath();
              ctx.arc(currX, currY, 2, 0, Math.PI*2);
              ctx.stroke();
@@ -228,14 +264,14 @@ export function StructureBreakdownVis() {
       }
       // PHASE 4: STABLE CRYSTAL (0.8 - 1.0)
       else {
-         ctx.strokeStyle = "rgba(255, 255, 255, 1)";
+         ctx.strokeStyle = colors.stroke(1);
          ctx.beginPath();
          const center = crystal[6];
          // Hexagon loop
          ctx.moveTo(crystal[0].x, crystal[0].y);
          for(let i=1; i<6; i++) ctx.lineTo(crystal[i].x, crystal[i].y);
          ctx.lineTo(crystal[0].x, crystal[0].y);
-         
+
          // Spokes
          for(let i=0; i<6; i++) {
              ctx.moveTo(crystal[i].x, crystal[i].y);
@@ -245,7 +281,7 @@ export function StructureBreakdownVis() {
          label = "NEW ARCHITECTURE";
       }
 
-      ctx.fillStyle = "#666";
+      ctx.fillStyle = colors.label;
       ctx.font = "10px monospace";
       ctx.fillText(label, 20, 20);
 
@@ -254,7 +290,12 @@ export function StructureBreakdownVis() {
 
     const animId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animId);
-  }, []);
+  }, [isDark]);
 
-  return <canvas ref={canvasRef} className="w-full h-full bg-[#0d0d0d] border border-[#222]" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className={`w-full h-full ${isDark ? "bg-[#0a0a0a] border-[#333]" : "bg-[#fafaf9] border-[#e0e0e0]"} border`}
+    />
+  );
 }
