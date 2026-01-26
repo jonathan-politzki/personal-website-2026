@@ -77,8 +77,9 @@ async function labelCluster(essaysInCluster) {
     
     Titles: ${titles}
     
-    Task: Provide a short, 1-3 word label for this cluster (e.g. "AI Philosophy", "Personal Growth", "Biotech News").
-    Return ONLY the label text.
+    Task: Provide a highly specific, thematic label for this cluster (e.g., "AI Infrastructure", "Personal Philosophy", "Biotech Ventures").
+    Avoid generic terms like "Technology" or "Miscellaneous".
+    Return ONLY the label text (max 3 words).
     `;
 
     try {

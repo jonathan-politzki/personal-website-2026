@@ -342,46 +342,23 @@ export default function WritingGraph({ posts }: { posts: Post[] }) {
                           setHoveredCluster(null);
                       }}
                     >
-                      {/* Tooltip - positioned dynamically based on node location */}
+                      {/* Tooltip - compact */}
                       <div
-                        className={`absolute w-max max-w-[250px] bg-[#0a0a0a] border border-[#333] p-4 pointer-events-none transition-all duration-200 shadow-2xl
+                        className={`absolute w-max max-w-[180px] bg-[#0a0a0a] border border-[#333] px-3 py-2 pointer-events-none transition-all duration-200 shadow-xl
                           ${hoveredPost === node.slug ? 'opacity-100' : 'opacity-0'}`}
                         style={{
-                          // Position tooltip based on where node is on graph
-                          // If node is in top 30% of graph (y > 70), show below; otherwise above
                           ...(node.y > 70
-                            ? { top: '100%', marginTop: '12px' }
-                            : { bottom: '100%', marginBottom: '12px' }
+                            ? { top: '100%', marginTop: '8px' }
+                            : { bottom: '100%', marginBottom: '8px' }
                           ),
-                          // Horizontal positioning: shift left/right if near edges
                           left: node.x < 15 ? '0' : node.x > 85 ? 'auto' : '50%',
                           right: node.x > 85 ? '0' : 'auto',
                           transform: node.x < 15 || node.x > 85 ? 'none' : 'translateX(-50%)',
                           zIndex: 9999,
                         }}
                       >
-                        <p className="text-xs font-bold text-white mb-1 leading-tight">{node.title}</p>
-                        <p className="text-[10px] text-[#666] mb-3">{node.date}</p>
-                        
-                        {node.clusterLabel && viewMode === "SEMANTIC" && (
-                            <div className="mb-3">
-                                <span className="text-[9px] uppercase tracking-widest text-[#888] border border-[#333] px-1.5 py-0.5 rounded">
-                                    {node.clusterLabel}
-                                </span>
-                            </div>
-                        )}
-
-                        {/* Mini Stats in Tooltip */}
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                          {node.attributes && Object.entries(node.attributes).slice(0, 6).map(([key, val]) => (
-                            <div key={key} className="flex justify-between items-center text-[9px] text-[#888] gap-2">
-                               <span className="uppercase tracking-wider opacity-70">{key.slice(0,4)}</span>
-                               <div className="w-12 h-1 bg-[#222] rounded-full overflow-hidden">
-                                 <div className="h-full bg-[#666]" style={{ width: `${val * 100}%` }} />
-                               </div>
-                            </div>
-                          ))}
-                        </div>
+                        <p className="text-[11px] font-medium text-white leading-tight">{node.title}</p>
+                        <p className="text-[9px] text-[#555] mt-1">{node.date}</p>
                       </div>
                     </motion.div>
                   </Link>

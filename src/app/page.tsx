@@ -154,7 +154,7 @@ export default function Home() {
               I am interested in ideas and engineering the future that should exist.
             </p>
             <p>
-              Across my website you will find my <strong className="text-white font-normal bg-white/10 px-1">guiding creed</strong>, my <strong className="text-white font-normal bg-white/10 px-1">writing</strong> as a form of mapping the world, and my <strong className="text-white font-normal bg-white/10 px-1">work</strong> that is the instantiation of my beliefs in the marketplace.
+              Across my website you will find my <strong className="text-white font-normal bg-white/10 px-1">guiding credo</strong>, my <strong className="text-white font-normal bg-white/10 px-1">writing</strong> as a form of mapping the world, and my <strong className="text-white font-normal bg-white/10 px-1">work</strong> that is the instantiation of my beliefs in the marketplace.
             </p>
           </motion.div>
 

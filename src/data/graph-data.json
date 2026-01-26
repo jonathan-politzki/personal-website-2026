@@ -16,8 +16,8 @@
       "x": 57.43027419715236,
       "y": 65.37033241959256
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "a-new-religion",
@@ -36,8 +36,8 @@
       "x": 73.33149568150561,
       "y": 27.8819524804924
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "a-year-of-startups",
@@ -76,8 +76,8 @@
       "x": 14.755092209281058,
       "y": 33.10275466834764
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "ai-memory-market-dynamics",
@@ -96,8 +96,8 @@
       "x": 7.23145392457967,
       "y": 33.827828595773745
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "ai-memory-technical-foundations",
@@ -116,8 +116,8 @@
       "x": 5,
       "y": 16.537953425291214
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "ai-memory",
@@ -136,8 +136,8 @@
       "x": 8.104959440875604,
       "y": 27.75821767607043
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "ambitions-unedited",
@@ -156,8 +156,8 @@
       "x": 93.18195312004669,
       "y": 12.067033533084121
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "automating-the-world",
@@ -176,8 +176,8 @@
       "x": 45.45410490344745,
       "y": 69.08129033630661
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "b2c-memory-layer",
@@ -196,8 +196,8 @@
       "x": 21.451063922238394,
       "y": 43.027770913307606
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "being-alone",
@@ -216,8 +216,8 @@
       "x": 89.00018862054148,
       "y": 18.994011115435526
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "biotech-update-04212023",
@@ -236,8 +236,8 @@
       "x": 47.63786517804533,
       "y": 64.83072819891015
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "biotech-week-in-review-02-17-2023",
@@ -256,8 +256,8 @@
       "x": 42.87034085813563,
       "y": 86.47269474817162
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "biotech-week-in-review-03-03-2023",
@@ -276,8 +276,8 @@
       "x": 45.618244562970574,
       "y": 78.29065251564018
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "biotech-week-in-review-05-12-2023",
@@ -336,8 +336,8 @@
       "x": 14.036865897667681,
       "y": 37.99212802137223
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "business-execution",
@@ -376,8 +376,8 @@
       "x": 61.44179325514644,
       "y": 24.53114447645185
     },
-    "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "culture",
@@ -416,8 +416,8 @@
       "x": 43.84839345491028,
       "y": 32.237637652323066
     },
-    "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
   },
   {
     "slug": "deep-user-understanding-from-day",
@@ -436,8 +436,8 @@
       "x": 13.872845258886446,
       "y": 44.382470626787175
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "delta",
@@ -456,8 +456,8 @@
       "x": 49.801216516134666,
       "y": 29.60098148190522
     },
-    "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
   },
   {
     "slug": "engineering-context",
@@ -476,8 +476,8 @@
       "x": 11.280290098872559,
       "y": 29.780096504604305
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "entrepreneurial-risk",
@@ -556,8 +556,8 @@
       "x": 82.52696255831312,
       "y": 24.915278845573607
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "essay-9-value-society-money-and-work",
@@ -596,8 +596,8 @@
       "x": 90.72635089672603,
       "y": 12.111110788418593
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "general-personal-embeddings",
@@ -616,8 +616,8 @@
       "x": 54.97404597021034,
       "y": 39.424856959182584
     },
-    "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
   },
   {
     "slug": "going-to-california",
@@ -656,8 +656,8 @@
       "x": 31.049656837310287,
       "y": 49.56472157343452
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
   },
   {
     "slug": "have-convictions",
@@ -716,8 +716,8 @@
       "x": 52.650403356783656,
       "y": 34.03467026715318
     },
-    "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
   },
   {
     "slug": "jean-software-for-the-individual",
@@ -736,8 +736,8 @@
       "x": 36.41712832236989,
       "y": 39.49878830082621
     },
-    "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
   },
   {
     "slug": "launching-irreverent-capital",
@@ -756,8 +756,8 @@
       "x": 56.87649878184368,
       "y": 78.32633589992933
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "mcp-a2a-and-the-future-of-ai-infra",
@@ -776,8 +776,8 @@
       "x": 18.335655573984226,
       "y": 30.15744545411027
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "nephra-04212022",
@@ -796,8 +796,8 @@
       "x": 53.52367694103442,
       "y": 95
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "outsiders",
@@ -856,8 +856,8 @@
       "x": 54.02640146862591,
       "y": 37.660554799792706
     },
-    "cluster": 4,
-    "clusterLabel": "Cluster 5"
+    "cluster": 3,
+    "clusterLabel": "Cluster 4"
   },
   {
     "slug": "reflections-on-a-quarter-century",
@@ -876,8 +876,8 @@
       "x": 72.12290781799292,
       "y": 36.50105070456911
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "return",
@@ -896,8 +896,8 @@
       "x": 53.99791450207884,
       "y": 65.84345192850041
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "self-healing-software",
@@ -916,8 +916,8 @@
       "x": 38.40736682159624,
       "y": 66.74348258727578
     },
-    "cluster": 3,
-    "clusterLabel": "Cluster 4"
+    "cluster": 0,
+    "clusterLabel": "Cluster 1"
   },
   {
     "slug": "self-reliance",
@@ -936,8 +936,8 @@
       "x": 77.53060846972774,
       "y": 21.875280548924298
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "structure-people-and-chaos",
@@ -956,8 +956,8 @@
       "x": 83.28528484236794,
       "y": 25.922701695019928
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "the-cemetery",
@@ -976,8 +976,8 @@
       "x": 84.9410778463565,
       "y": 30.54952096223527
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "the-irreverent-act",
@@ -1016,8 +1016,8 @@
       "x": 11.297307703274141,
       "y": 35.06610173147014
     },
-    "cluster": 1,
-    "clusterLabel": "Cluster 2"
+    "cluster": 4,
+    "clusterLabel": "Cluster 5"
   },
   {
     "slug": "the-logos",
@@ -1036,8 +1036,8 @@
       "x": 83.28580100188414,
       "y": 28.67914955739188
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "vacations",
@@ -1076,8 +1076,8 @@
       "x": 87.6467694359151,
       "y": 14.114710108999288
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   },
   {
     "slug": "which-direction-to-live-it",
@@ -1096,7 +1096,7 @@
       "x": 95,
       "y": 5
     },
-    "cluster": 0,
-    "clusterLabel": "Cluster 1"
+    "cluster": 1,
+    "clusterLabel": "Cluster 2"
   }
 ]
