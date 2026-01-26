@@ -80,9 +80,14 @@ export default function Credo() {
             Irreverence as a Virtue
           </h2>
 
-          <p className={`text-sm italic mb-5 leading-relaxed ${theme.subtle}`}>
-            "Irreverence is a key to progress." <span className="text-xs font-mono not-italic">— Joel Mokyr</span>
-          </p>
+          <blockquote className={`border-l-2 ${theme.border} pl-6 mb-6`}>
+            <p className={`text-lg md:text-xl italic leading-relaxed font-[family-name:var(--font-serif)] ${theme.muted}`}>
+              "What distinguished the British economy was... an unfettered, if not rebellious, parsing of traditional knowledge... Irreverence is a key to progress."
+            </p>
+            <cite className={`block mt-3 text-sm font-mono not-italic ${theme.subtle}`}>
+              — Joel Mokyr, <span className="italic">A Culture of Growth</span>
+            </cite>
+          </blockquote>
 
           <div className={`space-y-4 font-[family-name:var(--font-serif)] ${theme.muted}`}>
             <p className="text-base leading-relaxed">
