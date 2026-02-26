@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { motion, useSpring } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
@@ -151,10 +152,10 @@ export default function Home() {
               My name is Jonathan Alexander Politzki.
             </p>
             <p className="mb-8">
-              I am interested in ideas and engineering the future that should exist.
+              I am interested in ideas and innovation.
             </p>
             <p>
-              Across my website you will find my <strong className="text-white font-normal bg-white/10 px-1">guiding credo</strong>, my <strong className="text-white font-normal bg-white/10 px-1">writing</strong> as a form of mapping the world, and my <strong className="text-white font-normal bg-white/10 px-1">work</strong> that is the instantiation of my beliefs in the marketplace.
+              Across my website you will find <Link href="/credo"><strong className="text-white font-normal bg-white/10 px-1">my credo</strong></Link>, <Link href="/writing"><strong className="text-white font-normal bg-white/10 px-1">my writing</strong></Link>, and <Link href="/work"><strong className="text-white font-normal bg-white/10 px-1">my work</strong></Link>.
             </p>
           </motion.div>
 
