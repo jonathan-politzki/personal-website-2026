@@ -207,6 +207,89 @@ export default function Interests() {
 
       </section>
 
+      {/* Research & Publications */}
+      <section className="mt-32 border-t border-[#222] pt-16">
+        <div className="mb-12">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#444] block mb-2">03 // Research</span>
+          <h2 className="text-2xl font-light text-white">Publications</h2>
+        </div>
+
+        <div className="space-y-0">
+          {/* Published papers */}
+          {[
+            {
+              type: "Paper",
+              date: "2026",
+              title: "AI Memory: A Landscape Review",
+              description: "Academic survey of the AI memory space — encoding, storage, retrieval, and the technical tradeoffs between context injection, fine-tuning, and memory-augmented generation.",
+              href: "https://www.jeanmemory.com/AI_Memory.pdf",
+            },
+            {
+              type: "Report",
+              date: "Jan 2026",
+              title: "The State of AI Memory 2026",
+              description: "Industry report on the current landscape, from RAG to long-context windows and beyond.",
+              href: "https://www.jeanmemory.com/ai-memory-landscape-review.pdf",
+            },
+            {
+              type: "Paper",
+              date: "2026",
+              title: "On the Implicit Encoding of Human Psychology in Large Language Model Representations",
+              description: "Politzki, J. — LLMs trained on text have implicitly learned structured representations of human psychological traits.",
+              href: "https://www.jeanmemory.com/GPE.pdf",
+            },
+          ].map((pub) => (
+            <a
+              key={pub.title}
+              href={pub.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block border-t border-[#222] py-8 group hover:bg-white/[0.02] transition-colors -mx-4 px-4"
+            >
+              <div className="flex items-baseline gap-3 mb-2">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#555]">{pub.type}</span>
+                <span className="text-[10px] font-mono text-[#444]">{pub.date}</span>
+              </div>
+              <h3 className="text-base text-[#ccc] group-hover:text-white transition-colors mb-1">{pub.title}</h3>
+              <p className="text-sm font-mono text-[#555] leading-relaxed">{pub.description}</p>
+              <span className="text-xs font-mono text-[#444] group-hover:text-[#888] transition-colors mt-2 inline-block">View PDF &rarr;</span>
+            </a>
+          ))}
+
+          {/* Upcoming preprints */}
+          {[
+            {
+              title: "Towards Universal Human Embeddings",
+              description: "Exploring unified representations of human-relevant concepts across domains.",
+            },
+            {
+              title: "Mapping Representations Across Representation Spaces",
+              description: "A survey drawing on the Platonic Representation Hypothesis — how different embedding spaces converge on shared geometric structure.",
+            },
+            {
+              title: "Local Drift-Adapters: Mixture-of-Expert Embedding Translation for Heterogeneous Vector Databases",
+              description: "Mixture-of-experts framework that clusters the embedding space and trains dedicated adapters per cluster.",
+            },
+            {
+              title: "Latent Space Alignment via Manifold Projection",
+              description: "Politzki, J. et al. — Exploring zero-shot transfer capabilities across disjoint latent spaces.",
+            },
+          ].map((pub) => (
+            <div
+              key={pub.title}
+              className="border-t border-[#222] py-8 -mx-4 px-4 opacity-50"
+            >
+              <div className="flex items-baseline gap-3 mb-2">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#555]">Preprint</span>
+                <span className="text-[10px] font-mono text-[#444]">Coming Soon</span>
+              </div>
+              <h3 className="text-base text-[#ccc] mb-1">{pub.title}</h3>
+              <p className="text-sm font-mono text-[#555] leading-relaxed">{pub.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </main>
   );
 }
