@@ -86,12 +86,6 @@ export default function Credo() {
 
           <div className={`space-y-4 font-[family-name:var(--font-serif)] ${theme.muted}`}>
             <p className="text-base leading-relaxed">
-              Irreverence isn't disrespect; it is the authentic independence required to assess the world as it is.
-            </p>
-            <p className="text-base leading-relaxed">
-              Many institutions persist simply because they are established, even after they have decayed. Identifying obsolete structures is necessary to clear the way for innovations that were previously impossible.
-            </p>
-            <p className="text-base leading-relaxed">
               True progress can only be achieved by navigating <strong className={theme.accent}>out of distribution</strong>, into uncharted territory.
             </p>
           </div>
