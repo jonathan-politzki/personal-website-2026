@@ -238,6 +238,13 @@ export default function Interests() {
               description: "Politzki, J. — LLMs trained on text have implicitly learned structured representations of human psychological traits.",
               href: "https://www.jeanmemory.com/GPE.pdf",
             },
+            {
+              type: "Paper",
+              date: "2026",
+              title: "Local Drift-Adapters: Mixture-of-Expert Embedding Translation for Heterogeneous Vector Databases",
+              description: "Mixture-of-experts framework that clusters the embedding space and trains dedicated adapters per cluster.",
+              href: "https://www.jeanmemory.com/Local_Drift_Adapters.pdf",
+            },
           ].map((pub) => (
             <a
               key={pub.title}
@@ -265,10 +272,6 @@ export default function Interests() {
             {
               title: "Mapping Representations Across Representation Spaces",
               description: "A survey drawing on the Platonic Representation Hypothesis — how different embedding spaces converge on shared geometric structure.",
-            },
-            {
-              title: "Local Drift-Adapters: Mixture-of-Expert Embedding Translation for Heterogeneous Vector Databases",
-              description: "Mixture-of-experts framework that clusters the embedding space and trains dedicated adapters per cluster.",
             },
             {
               title: "Latent Space Alignment via Manifold Projection",
