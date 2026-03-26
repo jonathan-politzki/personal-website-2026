@@ -80,7 +80,7 @@ export default function Interests() {
             </AnimatePresence>
           </div>
           <p className="text-sm font-mono text-[#555] mt-6">
-            Most of my interests sprung out of my original essay, <a href="https://jonathanpolitzki.substack.com/p/general-personal-embeddings" target="_blank" rel="noopener noreferrer" className="text-[#888] hover:text-white transition-colors underline underline-offset-4">General Personal Embeddings</a>.
+            Most of my interests sprung out of my original essay, <a href="/writing/general-personal-embeddings" className="text-[#888] hover:text-white transition-colors underline underline-offset-4">General Personal Embeddings</a>.
           </p>
         </div>
 
