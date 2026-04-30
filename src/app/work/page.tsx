@@ -40,12 +40,15 @@ export default function Work() {
           
           <div className="space-y-6 text-[#888] leading-relaxed">
             <p>
-              We build AI memory systems that encode, store, forget, and recall information for AI applications and agents.
+              AI memory across your applications in five lines of code. A persistent, intelligent memory layer that lets AI applications and agents understand users with deep, personal context.
+            </p>
+            <p>
+              React, Python, and Node SDKs sit on an orchestration layer that decides what to encode, what to forget, and what context to surface at inference. An MCP server brings the same memory into Claude, Cursor, and other coding agents.
             </p>
             <div className="text-sm border-t border-[#222] pt-4">
               <strong className="text-[#ccc] font-normal block mb-2">Research: Beyond Memory</strong>
               <p>
-                We are researching how to build representations of user context. After we have built up context on a user, it is theoretically possible to build systems that can match individuals to find people that are the most similar or compatible in the world.
+                Building general personal embeddings — representations of user context rich enough that, once you have them, it becomes possible to match individuals to the people they are most similar or compatible with in the world.
               </p>
             </div>
           </div>
