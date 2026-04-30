@@ -23,10 +23,10 @@ export default function Work() {
           <div className="flex justify-between items-start mb-6">
             <div>
               <h2 className="text-3xl font-medium text-white mb-2">
-                Jean Memory
+                Jean
               </h2>
               <span className="text-xs font-mono uppercase tracking-widest text-[#555]">
-                Founded 2024 // Infrastructure
+                Founded 2024 // Person Embeddings
               </span>
             </div>
             <a 
@@ -40,15 +40,15 @@ export default function Work() {
           
           <div className="space-y-6 text-[#888] leading-relaxed">
             <p>
-              AI memory across your applications in five lines of code. A persistent, intelligent memory layer that lets AI applications and agents understand users with deep, personal context.
+              A universal matching engine. Jean builds person embeddings — high-fidelity representations of who someone is — and the infrastructure to match them, at scale, against the people, opportunities, and ideas they are most compatible with in the world.
             </p>
             <p>
-              React, Python, and Node SDKs sit on an orchestration layer that decides what to encode, what to forget, and what context to surface at inference. An MCP server brings the same memory into Claude, Cursor, and other coding agents.
+              The translation layer between humans and AI: capture enough of a person to render them as a vector, then let any application — agent, marketplace, social graph — query against it.
             </p>
             <div className="text-sm border-t border-[#222] pt-4">
-              <strong className="text-[#ccc] font-normal block mb-2">Research: Beyond Memory</strong>
+              <strong className="text-[#ccc] font-normal block mb-2">From memory to matching</strong>
               <p>
-                Building general personal embeddings — representations of user context rich enough that, once you have them, it becomes possible to match individuals to the people they are most similar or compatible with in the world.
+                Jean started as an AI memory layer. The same representations that let an AI remember a user turn out to be the substrate for precision matchmaking — once a person is encoded, similarity and compatibility are just queries.
               </p>
             </div>
           </div>
