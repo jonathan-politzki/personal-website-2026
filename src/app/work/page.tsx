@@ -23,10 +23,10 @@ export default function Work() {
           <div className="flex justify-between items-start mb-6">
             <div>
               <h2 className="text-3xl font-medium text-white mb-2">
-                Jean Memory
+                Jean
               </h2>
               <span className="text-xs font-mono uppercase tracking-widest text-[#555]">
-                Founded 2024 // Infrastructure
+                Founded 2024 // The Universal Matching Engine
               </span>
             </div>
             <a 
@@ -40,14 +40,8 @@ export default function Work() {
           
           <div className="space-y-6 text-[#888] leading-relaxed">
             <p>
-              We build AI memory systems that encode, store, forget, and recall information for AI applications and agents.
+              The universal matching engine.
             </p>
-            <div className="text-sm border-t border-[#222] pt-4">
-              <strong className="text-[#ccc] font-normal block mb-2">Research: Beyond Memory</strong>
-              <p>
-                We are researching how to build representations of user context. After we have built up context on a user, it is theoretically possible to build systems that can match individuals to find people that are the most similar or compatible in the world.
-              </p>
-            </div>
           </div>
         </div>
 
