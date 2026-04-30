@@ -26,7 +26,7 @@ export default function Work() {
                 Jean
               </h2>
               <span className="text-xs font-mono uppercase tracking-widest text-[#555]">
-                Founded 2024 // The Universal Matching Engine
+                The Universal Matching Engine
               </span>
             </div>
             <a 
@@ -40,7 +40,7 @@ export default function Work() {
           
           <div className="space-y-6 text-[#888] leading-relaxed">
             <p>
-              The universal matching engine.
+              Builds a representation of who a person is from their context and interests, then matches them to whatever they're looking for — products, content, people, ideas.
             </p>
           </div>
         </div>
