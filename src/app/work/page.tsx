@@ -26,7 +26,7 @@ export default function Work() {
                 Jean
               </h2>
               <span className="text-xs font-mono uppercase tracking-widest text-[#555]">
-                Founded 2024 // Person Embeddings
+                Founded 2024 // The Universal Matching Engine
               </span>
             </div>
             <a 
@@ -40,17 +40,8 @@ export default function Work() {
           
           <div className="space-y-6 text-[#888] leading-relaxed">
             <p>
-              A universal matching engine. Jean builds person embeddings — high-fidelity representations of who someone is — and the infrastructure to match them, at scale, against the people, opportunities, and ideas they are most compatible with in the world.
+              The universal matching engine.
             </p>
-            <p>
-              The translation layer between humans and AI: capture enough of a person to render them as a vector, then let any application — agent, marketplace, social graph — query against it.
-            </p>
-            <div className="text-sm border-t border-[#222] pt-4">
-              <strong className="text-[#ccc] font-normal block mb-2">From memory to matching</strong>
-              <p>
-                Jean started as an AI memory layer. The same representations that let an AI remember a user turn out to be the substrate for precision matchmaking — once a person is encoded, similarity and compatibility are just queries.
-              </p>
-            </div>
           </div>
         </div>
 
