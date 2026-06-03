@@ -24,10 +24,7 @@ export default function ReadingLibrary() {
           <nav className="flex flex-col gap-3 font-mono text-sm text-[#666]">
              <Link href="/writing" className="hover:text-[#1a1a1a] transition-colors hover:pl-2 hover:border-l-2 hover:border-[#ccc] -ml-3 pl-3 duration-200">Overview</Link>
              <Link href="/writing/read" className="text-[#1a1a1a] border-l-2 border-[#1a1a1a] pl-3 -ml-3">Library</Link>
-             <Link href="/writing/graph" className="hover:text-[#1a1a1a] transition-colors hover:pl-2 hover:border-l-2 hover:border-[#ccc] -ml-3 pl-3 duration-200">The Graph</Link>
              <Link href="/writing/dashboard" className="hover:text-[#1a1a1a] transition-colors hover:pl-2 hover:border-l-2 hover:border-[#ccc] -ml-3 pl-3 duration-200">Dashboard</Link>
-             <Link href="/writing/chat" className="hover:text-[#1a1a1a] transition-colors hover:pl-2 hover:border-l-2 hover:border-[#ccc] -ml-3 pl-3 duration-200">Chat</Link>
-             <Link href="/writing/compare" className="hover:text-[#1a1a1a] transition-colors hover:pl-2 hover:border-l-2 hover:border-[#ccc] -ml-3 pl-3 duration-200">Laboratory</Link>
           </nav>
         </div>
 

@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 interface WritingSidebarProps {
-  currentPage: "overview" | "library" | "graph" | "dashboard" | "chat" | "laboratory";
+  currentPage: "overview" | "library" | "dashboard";
   footer?: React.ReactNode;
 }
 
@@ -11,10 +11,7 @@ export default function WritingSidebar({ currentPage, footer }: WritingSidebarPr
   const links = [
     { href: "/writing", label: "Overview", key: "overview" },
     { href: "/writing/read", label: "Library", key: "library" },
-    { href: "/writing/graph", label: "The Graph", key: "graph" },
     { href: "/writing/dashboard", label: "Dashboard", key: "dashboard" },
-    { href: "/writing/chat", label: "Chat", key: "chat" },
-    { href: "/writing/compare", label: "Laboratory", key: "laboratory" },
   ];
 
   return (

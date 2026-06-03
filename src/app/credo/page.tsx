@@ -63,13 +63,10 @@ export default function Credo() {
 
           <div className={`text-base leading-relaxed space-y-4 font-[family-name:var(--font-serif)] ${theme.muted}`}>
             <p>
-              As computational systems improve, we must think deeply about <Link href="/writing/politzkis-law" className={`${theme.accent} border-b ${isDark ? "border-white/30 hover:border-white" : "border-black/30 hover:border-black"} transition-colors`}>where humans still stand above machines</Link>.
-            </p>
-            <p className={`text-sm font-mono ${theme.subtle}`}>
-              Politzki's Law: Humans excel at high complexity, low data tasks—in other words, what is not known.
+              As machines get better at what is already known, human attention matters most at the edges, on the high-complexity, low-data problems where there is no precedent to learn from. I call this <Link href="/writing/politzkis-law" className={`${theme.accent} border-b ${isDark ? "border-white/30 hover:border-white" : "border-black/30 hover:border-black"} transition-colors`}>Politzki's Law</Link>.
             </p>
             <p>
-              Once we recognize this, the <Link href="/writing/politzkis-law" className={`${theme.accent} border-b ${isDark ? "border-white/30 hover:border-white" : "border-black/30 hover:border-black"} transition-colors`}>Human Focus Optimization Theory</Link> demands we direct our focus away from likely tasks and towards <strong className={theme.accent}>unlikely truth</strong>.
+              So I try to spend my focus there: away from likely tasks, toward <strong className={theme.accent}>unlikely truth</strong>.
             </p>
           </div>
         </section>

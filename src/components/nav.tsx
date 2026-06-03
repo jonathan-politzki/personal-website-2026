@@ -18,10 +18,7 @@ export default function Nav() {
 
   // Check if we're on an essay page (individual essay, not the tools)
   const isEssayPage = pathname.startsWith("/writing/") &&
-    !pathname.includes("/graph") &&
     !pathname.includes("/dashboard") &&
-    !pathname.includes("/chat") &&
-    !pathname.includes("/compare") &&
     !pathname.includes("/read") &&
     pathname !== "/writing";
 
@@ -154,20 +151,11 @@ export default function Nav() {
                         <Link onClick={() => setIsOpen(false)} href="/writing" className="text-xs font-mono uppercase tracking-widest text-[#555] hover:text-white py-1 block">
                           Overview
                         </Link>
-                        <Link onClick={() => setIsOpen(false)} href="/writing/graph" className="text-xs font-mono uppercase tracking-widest text-[#555] hover:text-white py-1 block">
-                          The Graph
-                        </Link>
-                        <Link onClick={() => setIsOpen(false)} href="/writing/dashboard" className="text-xs font-mono uppercase tracking-widest text-[#555] hover:text-white py-1 block">
-                          Dashboard
-                        </Link>
                         <Link onClick={() => setIsOpen(false)} href="/writing/read" className="text-xs font-mono uppercase tracking-widest text-[#555] hover:text-white py-1 block">
                           Library
                         </Link>
-                        <Link onClick={() => setIsOpen(false)} href="/writing/chat" className="text-xs font-mono uppercase tracking-widest text-[#555] hover:text-white py-1 block">
-                          Chat
-                        </Link>
-                        <Link onClick={() => setIsOpen(false)} href="/writing/compare" className="text-xs font-mono uppercase tracking-widest text-[#555] hover:text-white py-1 block">
-                          Laboratory
+                        <Link onClick={() => setIsOpen(false)} href="/writing/dashboard" className="text-xs font-mono uppercase tracking-widest text-[#555] hover:text-white py-1 block">
+                          Dashboard
                         </Link>
                       </motion.div>
                     )}
