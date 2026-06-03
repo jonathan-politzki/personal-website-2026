@@ -63,7 +63,7 @@ export default function Credo() {
 
           <div className={`text-base leading-relaxed space-y-4 font-[family-name:var(--font-serif)] ${theme.muted}`}>
             <p>
-              As machines get better at what is already known, human attention matters most at the edges—the high-complexity, low-data problems where there is no precedent to learn from. I call this <Link href="/writing/politzkis-law" className={`${theme.accent} border-b ${isDark ? "border-white/30 hover:border-white" : "border-black/30 hover:border-black"} transition-colors`}>Politzki's Law</Link>.
+              As machines get better at what is already known, human attention matters most at the edges, on the high-complexity, low-data problems where there is no precedent to learn from. I call this <Link href="/writing/politzkis-law" className={`${theme.accent} border-b ${isDark ? "border-white/30 hover:border-white" : "border-black/30 hover:border-black"} transition-colors`}>Politzki's Law</Link>.
             </p>
             <p>
               So I try to spend my focus there: away from likely tasks, toward <strong className={theme.accent}>unlikely truth</strong>.
