@@ -13,6 +13,7 @@ export type Post = {
     image?: string;
     tags?: string[];
     type?: 'essay' | 'report' | 'treatise' | 'note'; // Added 'type'
+    hidden?: boolean; // Exclude from listings (e.g. the Library)
   };
   content: string;
 };
@@ -38,6 +39,8 @@ export function getAllPosts(): Post[] {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
+    // Hide posts flagged as hidden in their frontmatter
+    .filter((post) => !post.metadata.hidden)
     // Sort posts by date in descending order
     .sort((post1, post2) => (post1.metadata.publishedAt > post2.metadata.publishedAt ? -1 : 1));
   return posts;
