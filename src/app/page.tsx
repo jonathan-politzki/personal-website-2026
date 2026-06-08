@@ -155,7 +155,7 @@ export default function Home() {
               I am interested in ideas and innovation.
             </p>
             <p>
-              Across my website you will find <Link href="/credo"><strong className="text-white font-normal bg-white/10 px-1">my credo</strong></Link>, <Link href="/writing"><strong className="text-white font-normal bg-white/10 px-1">my writing</strong></Link>, and <Link href="/work"><strong className="text-white font-normal bg-white/10 px-1">my work</strong></Link>.
+              Across my website you will find <Link href="/credo"><strong className="text-white font-normal bg-white/10 px-1">my credo</strong></Link>, <Link href="/writing/read"><strong className="text-white font-normal bg-white/10 px-1">my writing</strong></Link>, and <Link href="/work"><strong className="text-white font-normal bg-white/10 px-1">my work</strong></Link>.
             </p>
           </motion.div>
 

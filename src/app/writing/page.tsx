@@ -28,7 +28,7 @@ export default function WritingOverview() {
             </h1>
             <div className="text-lg text-[#aaa] font-light leading-relaxed space-y-6">
               <p>
-                I use writing to map and compress my belief system. It is a process of collecting signals, structuring them into frameworks, and compressing them into models of how things work.
+                I use writing to map and compress my belief system.
               </p>
             </div>
           </header>
