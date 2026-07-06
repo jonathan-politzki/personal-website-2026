@@ -2,9 +2,9 @@
 
 import { useEffect, useRef } from "react";
 
-const COUNT = 36;
-const MAX_SPEED = 0.12;
-const LINK_DISTANCE = 110;
+const COUNT = 48;
+const MAX_SPEED = 0.18;
+const LINK_DISTANCE = 120;
 
 type Particle = { x: number; y: number; vx: number; vy: number; r: number };
 
@@ -38,7 +38,7 @@ export default function Particles() {
       y: Math.random() * height,
       vx: (Math.random() - 0.5) * MAX_SPEED * 2,
       vy: (Math.random() - 0.5) * MAX_SPEED * 2,
-      r: 1 + Math.random() * 1.5,
+      r: 0.6 + Math.random() * 0.6,
     }));
 
     const step = () => {
@@ -52,7 +52,7 @@ export default function Particles() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(31, 30, 27, 0.08)";
+        ctx.fillStyle = "rgba(31, 30, 27, 0.25)";
         ctx.fill();
       }
 
@@ -65,8 +65,8 @@ export default function Particles() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(31, 30, 27, ${0.05 * (1 - dist / LINK_DISTANCE)})`;
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = `rgba(31, 30, 27, ${0.12 * (1 - dist / LINK_DISTANCE)})`;
+            ctx.lineWidth = 0.5;
             ctx.stroke();
           }
         }
