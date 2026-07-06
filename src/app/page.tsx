@@ -50,7 +50,7 @@ export default function Home() {
           <p>
             My name is Jonathan Alexander Politzki. I grew up in the NW
             suburbs of Chicago. I studied finance with a minor in engineering
-            at the University of Illinois, where I was first exposed to
+            at the University of Illinois, where I fell in love with
             technology and I founded my first &ldquo;startups&rdquo; (
             <a
               href="https://www.quantillinois.com/"
