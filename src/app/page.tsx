@@ -30,7 +30,7 @@ const quotes = [
 const connect = [
   { label: "jonathan.politzki@gmail.com", href: "mailto:jonathan.politzki@gmail.com" },
   { label: "X", href: "https://x.com/ITNAmatter" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/jonathan-politzki" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/jonathanpolitzki/" },
   { label: "GitHub", href: "https://github.com/jonathan-politzki" },
   { label: "Substack", href: "https://jonathanpolitzki.substack.com" },
 ];
