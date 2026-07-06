@@ -24,26 +24,26 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   }
 
   return (
-    <main>
-      <article className="mx-auto w-full max-w-2xl px-6 pb-24 pt-8">
-        <nav className="mb-10">
+    <main className="mx-auto w-full max-w-3xl px-6 pb-24 pt-10 md:px-12">
+      <article>
+        <nav className="mb-8 text-[15px]">
           <Link
             href="/writing"
-            className="font-mono text-xs uppercase tracking-[0.15em] text-muted transition-colors hover:text-ink"
+            className="text-accent transition-all hover:underline hover:underline-offset-4"
           >
-            &larr; Writing
+            &larr; All writing
           </Link>
         </nav>
 
-        <header className="mb-12 border-b border-rule pb-8">
-          <time className="mb-4 block font-mono text-xs uppercase tracking-[0.15em] text-muted">
-            {post.metadata.publishedAt}
-          </time>
-          <h1 className="mb-4 text-3xl font-light leading-tight tracking-tight md:text-4xl">
+        <header className="mb-10 border-b border-rule pb-6">
+          <h1 className="mb-3 text-3xl font-medium leading-tight">
             {post.metadata.title}
           </h1>
+          <time className="text-sm text-muted">
+            {post.metadata.publishedAt}
+          </time>
           {post.metadata.summary && (
-            <p className="text-lg font-light leading-relaxed text-muted">
+            <p className="mt-4 text-lg italic leading-relaxed text-muted">
               {post.metadata.summary}
             </p>
           )}
@@ -51,10 +51,9 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
         <div
           className="prose prose-neutral max-w-none
-            prose-headings:font-normal prose-headings:tracking-tight prose-headings:text-ink
-            prose-p:font-light prose-p:leading-7 prose-p:text-ink
-            prose-strong:font-medium prose-strong:text-ink
-            prose-a:text-ink prose-a:underline prose-a:decoration-rule prose-a:underline-offset-4 hover:prose-a:decoration-ink
+            prose-headings:font-medium prose-headings:text-ink
+            prose-p:text-ink
+            prose-strong:font-semibold prose-strong:text-ink
             prose-li:text-ink prose-ul:my-6"
         >
           <MDXRemote

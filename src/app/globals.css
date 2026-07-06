@@ -3,12 +3,12 @@
 
 @theme {
   --font-serif: var(--font-source-serif), Georgia, serif;
-  --font-mono: var(--font-geist-mono), monospace;
 
-  --color-paper: #fafaf7;
-  --color-ink: #1f1e1b;
-  --color-muted: #6b675e;
-  --color-rule: #e7e4dc;
+  --color-paper: #fcfcfa;
+  --color-ink: #333333;
+  --color-muted: #757068;
+  --color-rule: #e2e0da;
+  --color-accent: #4c6bc0;
 }
 
 body {
@@ -17,19 +17,19 @@ body {
 }
 
 ::selection {
-  background: var(--color-ink);
+  background: var(--color-accent);
   color: var(--color-paper);
 }
 
 /* --- Essay typography --- */
 .prose {
-  line-height: 1.8;
-  letter-spacing: 0.01em;
+  line-height: 1.75;
+  letter-spacing: 0.005em;
 }
 
 .prose p {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
 }
 
 .prose img {
@@ -41,13 +41,13 @@ body {
   height: auto;
   max-height: 600px;
   object-fit: contain;
-  background: #f2f1ec;
+  background: #f4f3ef;
 }
 
 .prose blockquote {
   font-style: italic;
   border-left-width: 2px;
-  border-left-color: var(--color-ink);
+  border-left-color: var(--color-rule);
   padding-left: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -58,17 +58,17 @@ body {
 .prose h2,
 .prose h3 {
   color: var(--color-ink);
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  line-height: 1.2;
+  margin-top: 2.2em;
+  margin-bottom: 0.8em;
+  line-height: 1.25;
 }
 
 .prose a {
-  text-decoration-color: var(--color-rule);
-  text-underline-offset: 4px;
-  transition: all 0.2s;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: all 0.15s;
 }
 .prose a:hover {
-  color: var(--color-ink);
-  text-decoration-color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
