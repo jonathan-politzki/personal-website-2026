@@ -98,8 +98,9 @@ export default function Home() {
             .
           </p>
           <p>
-            My interests center on how computers understand and represent
-            humans: representation learning, contrastive learning, AI memory,
+            In this vein, my interests center on how computers understand and
+            represent humans: representation learning, contrastive learning,
+            AI memory,
             context engineering, embedding systems, user models, and emotion
             vectors. Most of them sprung out of my original essay,{" "}
             <Link href="/writing/general-personal-embeddings" className={a}>
