@@ -44,8 +44,9 @@ export default function Home() {
       <div className="mt-8 flex flex-col-reverse gap-8 md:flex-row md:items-start">
         <div className="flex-1 space-y-5 leading-relaxed">
           <p>
-            My name is Jonathan Alexander Politzki. I studied finance with a
-            minor in engineering at the University of Illinois, where I founded
+            My name is Jonathan Alexander Politzki. I grew up in the NW
+            suburbs of Chicago. I studied finance with a minor in engineering
+            at the University of Illinois, where I founded
             my first startups (
             <a
               href="https://www.quantillinois.com/"
