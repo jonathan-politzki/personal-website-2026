@@ -52,13 +52,18 @@ export default function Home() {
       <div className="mt-8 flex flex-col-reverse gap-8 md:flex-row md:items-start">
         <div className="flex-1 space-y-5 leading-relaxed">
           <p>
-            My name is Jonathan Alexander Politzki. I am interested in ideas
-            and innovation.
+            My name is Jonathan Alexander Politzki. I studied finance with a
+            minor in engineering at the University of Illinois, where I founded
+            my first startups. Since university I have been building in or
+            around AI, and I consider it my main area of expertise. I am
+            interested in innovation and in building technology companies where
+            the bottlenecks to progress are difficult technical problems.
           </p>
           <p>
-            I am guided by self-determination and I try to work on important,
-            unlikely things. As machines get better at what is already known,
-            human attention matters most at the edges — on high-complexity,
+            I believe human focus is the most misallocated resource on earth,
+            and that we can use AI to elevate ourselves and save people from
+            repetitive and boring work. As machines get better at what is
+            already known, human attention matters most on high-complexity,
             low-data problems with no precedent to learn from. I call this{" "}
             <Link href="/writing/politzkis-law" className={a}>
               Politzki&apos;s Law
@@ -66,10 +71,8 @@ export default function Home() {
             , and I try to spend my own focus accordingly.
           </p>
           <p>
-            I run{" "}
-            <span className="font-medium">Irreverent Capital</span>, which
-            builds important, unlikely technology businesses. Its first company
-            is{" "}
+            I also believe the arrival of computers that understand humans will
+            be the most important technology of my lifetime. That is what{" "}
             <a
               href="https://jeanmemory.com"
               target="_blank"
@@ -78,16 +81,17 @@ export default function Home() {
             >
               Jean
             </a>
-            , the universal matching engine: it builds a representation of who
-            a person is from their context and interests, then matches them to
-            whatever they&apos;re looking for — products, content, people,
-            ideas.
+            , the first company of{" "}
+            <span className="font-medium">Irreverent Capital</span>, is
+            building: a representation of who a person is from their context
+            and interests, matched to whatever they are looking for, whether
+            products, content, people, or ideas.
           </p>
           <p>
-            AI models learn to understand the world by training on vast
-            corpora of text. Since text is often a projection of our minds,
-            these models have implicitly learned to understand us. Most of my
-            interests sprung out of my original essay,{" "}
+            My interests center on how computers understand and represent
+            humans: representation learning, contrastive learning, AI memory,
+            context engineering, embedding systems, user models, and emotion
+            vectors. Most of them sprung out of my original essay,{" "}
             <Link href="/writing/general-personal-embeddings" className={a}>
               General Personal Embeddings
             </Link>
@@ -124,7 +128,7 @@ export default function Home() {
             <p className="leading-relaxed">&ldquo;{quote.en}&rdquo;</p>
             <p className="mt-1 text-[15px] italic text-muted">{quote.de}</p>
             <footer className="mt-2 text-sm text-muted">
-              — {quote.author},{" "}
+              {quote.author},{" "}
               <cite className="not-italic">{quote.source}</cite>
             </footer>
           </blockquote>
