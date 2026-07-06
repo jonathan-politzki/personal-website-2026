@@ -78,10 +78,13 @@ export default function Home() {
           <p>
             I believe human focus is the most misallocated resource on earth,
             and that we can use AI to elevate ourselves and save people from
-            repetitive and boring work. As machines commoditize existing
-            knowledge, human creativity at the edges and working on important,
-            unlikely problems is where I want to add the most value to the
-            world. I call this{" "}
+            repetitive and boring work. Most of this technology is already
+            here but it is just not evenly distributed yet. One vector of
+            progress I am focused on is simply helping companies absorb this
+            technology. As machines commoditize existing knowledge, human
+            creativity at the edges and working on important, unlikely
+            problems is where I want to add the most value to the world. I
+            call this{" "}
             <Link href="/writing/politzkis-law" className={a}>
               Politzki&apos;s Law
             </Link>{" "}
