@@ -34,14 +34,6 @@ const connect = [
 const a =
   "text-accent transition-all hover:underline hover:underline-offset-4";
 
-function SectionHeading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="mb-6 mt-14 border-b border-rule pb-3 text-2xl font-medium">
-      {children}
-    </h2>
-  );
-}
-
 export default function Home() {
   return (
     <main className="w-full px-6 pb-24 pt-10 md:px-12 lg:px-16">
@@ -108,7 +100,7 @@ export default function Home() {
 
         <div className="shrink-0 md:pt-1">
           <Image
-            src="/portrait.jpg"
+            src="/profile.jpg"
             alt="Jonathan Politzki"
             width={224}
             height={224}
@@ -118,22 +110,24 @@ export default function Home() {
         </div>
       </div>
 
-      <SectionHeading>Quotes</SectionHeading>
-      <div className="space-y-8">
-        {quotes.map((quote) => (
-          <blockquote
-            key={quote.source}
-            className="border-l-2 border-rule pl-5"
-          >
-            <p className="leading-relaxed">&ldquo;{quote.en}&rdquo;</p>
-            <p className="mt-1 text-[15px] italic text-muted">{quote.de}</p>
-            <footer className="mt-2 text-sm text-muted">
-              {quote.author},{" "}
-              <cite className="not-italic">{quote.source}</cite>
-            </footer>
-          </blockquote>
-        ))}
-      </div>
+      <section className="mt-16 border-t border-rule pt-8">
+        <h2 className="mb-5 text-sm font-medium uppercase tracking-wide text-muted">
+          Quotes
+        </h2>
+        <div className="space-y-5">
+          {quotes.map((quote) => (
+            <blockquote key={quote.source} className="text-sm text-muted">
+              <p className="leading-relaxed">
+                &ldquo;{quote.en}&rdquo;{" "}
+                <span className="italic">({quote.de})</span>
+              </p>
+              <footer className="mt-0.5 text-xs">
+                {quote.author}, <cite className="not-italic">{quote.source}</cite>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
+      </section>
 
       <footer className="mt-16 border-t border-rule pt-6">
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[15px]">
