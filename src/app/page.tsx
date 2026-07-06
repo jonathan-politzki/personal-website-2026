@@ -64,10 +64,11 @@ export default function Home() {
             >
               Nephra
             </a>
-            ). Over time I effectively became an engineer after realizing it is
-            the most important skill in building technology businesses. Since
-            university I have been building in or around AI, and I consider it
-            my main area of expertise.
+            ). After university, I started my career in investment banking at
+            Leerink Partners in NYC, then worked at Shaper Capital, and now
+            work on AI, which I consider my main area of expertise. Over time I
+            effectively became an engineer after realizing it is the most
+            important skill in building technology businesses.
           </p>
           <p>
             I believe human focus is the most misallocated resource on earth,
