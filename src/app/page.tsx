@@ -46,10 +46,12 @@ export default function Home() {
           <p>
             My name is Jonathan Alexander Politzki. I studied finance with a
             minor in engineering at the University of Illinois, where I founded
-            my first startups. Since university I have been building in or
-            around AI, and I consider it my main area of expertise. I am
-            interested in innovation and in building technology companies where
-            the bottlenecks to progress are difficult technical problems.
+            my first startups. Over time I effectively became an engineer after
+            realizing it is the most important skill in building technology
+            businesses. Since university I have been building in or around AI,
+            and I consider it my main area of expertise. I am interested in
+            innovation and in building technology companies where the
+            bottlenecks to progress are difficult technical problems.
           </p>
           <p>
             I believe human focus is the most misallocated resource on earth,
