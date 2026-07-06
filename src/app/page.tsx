@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AskMyWriting from "@/components/ask-my-writing";
 import Image from "next/image";
 
 const papers = [
@@ -68,7 +69,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 pb-24 pt-10 md:px-12">
+    <main className="w-full px-6 pb-24 pt-10 md:px-12 lg:px-16">
       <h1 className="mb-4 border-b border-rule pb-4 text-3xl font-medium">
         Welcome
       </h1>
@@ -137,6 +138,13 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <SectionHeading>Ask my writing</SectionHeading>
+      <p className="mb-6 leading-relaxed text-muted">
+        Everything I&apos;ve written is loaded into a model that answers on my
+        behalf, citing the essays it draws from.
+      </p>
+      <AskMyWriting />
 
       <SectionHeading>Papers</SectionHeading>
       <ul className="list-disc space-y-2.5 pl-5 leading-relaxed marker:text-rule">
