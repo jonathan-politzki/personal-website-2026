@@ -85,8 +85,8 @@ export default function Home() {
           </p>
           <p>
             I also believe the arrival of computers that understand humans will
-            be the most important technology of my lifetime. This is what we
-            are building at{" "}
+            be the most important technology of my lifetime and perhaps my
+            life&apos;s work. This is what we are building at{" "}
             <a
               href="https://jeanmemory.com"
               target="_blank"
