@@ -81,14 +81,7 @@ export default function Home() {
             repetitive and boring work. Most of this technology is already
             here but it is just not evenly distributed yet. One vector of
             progress I am focused on is simply helping companies absorb this
-            technology. As machines commoditize existing knowledge, human
-            creativity at the edges and working on important, unlikely
-            problems is where I want to add the most value to the world. I
-            call this{" "}
-            <Link href="/writing/politzkis-law" className={a}>
-              Politzki&apos;s Law
-            </Link>{" "}
-            (because we should all have a law, right?).
+            technology.
           </p>
           <p>
             I also believe the arrival of computers that understand humans will
@@ -102,10 +95,7 @@ export default function Home() {
             >
               Jean
             </a>
-            .
-          </p>
-          <p>
-            In this vein, my interests center on how computers understand and
+            . In this vein, my interests center on how computers understand and
             represent humans: representation learning, contrastive learning,
             AI memory,
             context engineering, embedding systems, user models, and emotion
