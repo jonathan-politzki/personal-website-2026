@@ -64,7 +64,8 @@ export default function Home() {
           </p>
           <p>
             I also believe the arrival of computers that understand humans will
-            be the most important technology of my lifetime. That is what{" "}
+            be the most important technology of my lifetime. This is what we
+            are building at{" "}
             <a
               href="https://jeanmemory.com"
               target="_blank"
@@ -73,11 +74,7 @@ export default function Home() {
             >
               Jean
             </a>
-            , the first company of{" "}
-            <span className="font-medium">Irreverent Capital</span>, is
-            building: a representation of who a person is from their context
-            and interests, matched to whatever they are looking for, whether
-            products, content, people, or ideas.
+            .
           </p>
           <p>
             My interests center on how computers understand and represent
@@ -88,13 +85,6 @@ export default function Home() {
               General Personal Embeddings
             </Link>
             .
-          </p>
-          <p>
-            I use{" "}
-            <Link href="/writing" className={a}>
-              writing
-            </Link>{" "}
-            to map and compress my belief system.
           </p>
         </div>
 
@@ -112,7 +102,7 @@ export default function Home() {
 
       <section className="mt-16 border-t border-rule pt-8">
         <h2 className="mb-5 text-sm font-medium uppercase tracking-wide text-muted">
-          Quotes
+          Guiding quotes
         </h2>
         <div className="space-y-5">
           {quotes.map((quote) => (
