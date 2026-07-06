@@ -72,8 +72,8 @@ export default function Home() {
             ). After university, I started my career in investment banking at
             Leerink Partners in NYC, then worked at Shaper Capital, and now
             work on AI, which I consider my main area of expertise. Many
-            textbooks, projects, and products later, I&apos;m now more of an
-            engineer.
+            textbooks, projects, and products later, I consider myself more of
+            an engineer than anything else.
           </p>
           <p>
             I believe human focus is the most misallocated resource on earth,
