@@ -80,8 +80,8 @@ export default function Home() {
             world. I call this{" "}
             <Link href="/writing/politzkis-law" className={a}>
               Politzki&apos;s Law
-            </Link>
-            .
+            </Link>{" "}
+            (because we should all have a law, right?).
           </p>
           <p>
             I also believe the arrival of computers that understand humans will
