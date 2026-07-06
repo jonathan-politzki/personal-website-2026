@@ -19,7 +19,7 @@ export default function Writing() {
           <li key={post.slug}>
             <Link
               href={`/writing/${post.slug}`}
-              className="text-accent transition-all hover:underline hover:underline-offset-4"
+              className="text-ink underline decoration-rule underline-offset-4 transition-colors hover:decoration-ink"
             >
               {post.metadata.title}
             </Link>{" "}
