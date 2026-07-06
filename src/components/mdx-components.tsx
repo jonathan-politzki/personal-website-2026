@@ -4,39 +4,42 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export const Note = ({ children }: { children: React.ReactNode }) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, x: 20 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
-    className="my-6 p-4 bg-yellow-900/20 border-l-4 border-yellow-500 text-yellow-200 text-sm font-mono rounded-r-lg"
+    className="my-6 rounded-r-lg border-l-4 border-rule bg-[#f2f1ec] p-4 font-mono text-sm text-muted"
   >
-    <span className="block font-bold text-yellow-500 mb-1 uppercase text-xs tracking-wider">Note</span>
+    <span className="mb-1 block text-xs font-bold uppercase tracking-wider text-muted">Note</span>
     {children}
   </motion.div>
 );
 
 export const JeanLink = () => (
-  <a href="https://jeanmemory.com" className="inline-flex items-center px-1.5 py-0.5 rounded bg-blue-900/30 text-blue-300 hover:bg-blue-900/50 transition-colors mx-1 text-sm font-medium border border-blue-800">
+  <a
+    href="https://jeanmemory.com"
+    className="mx-1 inline-flex items-center rounded border border-rule bg-[#f2f1ec] px-1.5 py-0.5 text-sm font-medium text-ink transition-colors hover:border-ink"
+  >
     Jean Memory 🧠
   </a>
 );
 
-export const InteractiveGraph = ({ data }: { data: any[] }) => (
-  <div className="my-8 p-6 bg-neutral-900 border border-neutral-800 rounded-xl">
-    <h4 className="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-4">Focus Efficiency Index</h4>
-    <div className="flex items-end gap-4 h-32">
+export const InteractiveGraph = ({ data }: { data: { name: string; value: number }[] }) => (
+  <div className="my-8 rounded-xl border border-rule bg-[#f2f1ec] p-6">
+    <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-muted">Focus Efficiency Index</h4>
+    <div className="flex h-32 items-end gap-4">
       {data.map((d, i) => (
-        <div key={i} className="flex-1 flex flex-col justify-end gap-2 group">
-          <div className="text-center text-xs text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div key={i} className="group flex flex-1 flex-col justify-end gap-2">
+          <div className="text-center text-xs text-muted opacity-0 transition-opacity group-hover:opacity-100">
             {d.value}%
           </div>
-          <motion.div 
+          <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: `${d.value}%` }}
             transition={{ duration: 1, delay: i * 0.2 }}
-            className="w-full bg-lime-500/20 border-t-2 border-lime-500 rounded-t-sm group-hover:bg-lime-500/40 transition-colors"
+            className="w-full rounded-t-sm border-t-2 border-ink bg-ink/10 transition-colors group-hover:bg-ink/20"
           />
-          <div className="text-center text-[10px] md:text-xs font-mono uppercase text-neutral-500 truncate">
+          <div className="truncate text-center font-mono text-[10px] uppercase text-muted md:text-xs">
             {d.name}
           </div>
         </div>

@@ -2,40 +2,27 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-calligraphy: var(--font-calligraphy);
-  --font-type: var(--font-courier);
-  --font-reading: var(--font-serif);
-}
+  --font-serif: var(--font-source-serif), Georgia, serif;
+  --font-mono: var(--font-geist-mono), monospace;
 
-:root {
-  --background: #050505;
-  --foreground: #e5e5e5;
+  --color-paper: #fafaf7;
+  --color-ink: #1f1e1b;
+  --color-muted: #6b675e;
+  --color-rule: #e7e4dc;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
 }
 
-/* Texture & Effects */
-.paper-texture {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  pointer-events: none;
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
 }
 
-/* Signal styles removed - scanline.css not found */
-
-/* --- TYPOGRAPHY UTILS --- */
-/* Custom prose styling to fix the 'wall of text' issue */
+/* --- Essay typography --- */
 .prose {
-  /* Increase base line height and tracking */
   line-height: 1.8;
   letter-spacing: 0.01em;
 }
@@ -45,45 +32,43 @@ body {
   margin-bottom: 1.5em;
 }
 
-/* Fix image sizing in prose */
 .prose img {
   border-radius: 4px;
-  border: 1px solid #333;
+  border: 1px solid var(--color-rule);
   margin-top: 2em;
   margin-bottom: 2em;
   width: 100%;
   height: auto;
-  max-height: 600px; /* Prevent gigantic vertical images */
-  object-fit: contain; /* Ensure images don't stretch weirdly */
-  background: #111; /* Background for transparent PNGs */
+  max-height: 600px;
+  object-fit: contain;
+  background: #f2f1ec;
 }
 
-/* Blockquotes */
 .prose blockquote {
   font-style: italic;
   border-left-width: 2px;
-  border-left-color: #444;
+  border-left-color: var(--color-ink);
   padding-left: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
-  color: #888;
+  color: var(--color-muted);
 }
 
-/* Headers */
-.prose h1, .prose h2, .prose h3 {
-  color: #fff;
+.prose h1,
+.prose h2,
+.prose h3 {
+  color: var(--color-ink);
   margin-top: 2.5em;
   margin-bottom: 1em;
   line-height: 1.2;
 }
 
-/* Links */
 .prose a {
-  text-decoration-color: #444;
+  text-decoration-color: var(--color-rule);
   text-underline-offset: 4px;
   transition: all 0.2s;
 }
 .prose a:hover {
-  color: #fff;
-  text-decoration-color: #fff;
+  color: var(--color-ink);
+  text-decoration-color: var(--color-ink);
 }

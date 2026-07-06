@@ -1,167 +1,218 @@
-"use client";
-
-import React, { useEffect, useState, useMemo } from "react";
-import { motion, useSpring } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
-  const [isMounted, setIsMounted] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  
-  // Springs for the visualization reaction
-  const jitterX = useSpring(0, { stiffness: 300, damping: 20 });
-  const jitterY = useSpring(0, { stiffness: 300, damping: 20 });
-  const noiseIntensity = useSpring(0, { stiffness: 200, damping: 10 });
+const papers = [
+  {
+    title: "AI Memory: A Landscape Review",
+    year: "2026",
+    href: "https://www.jeanmemory.com/AI_Memory.pdf",
+  },
+  {
+    title: "The State of AI Memory 2026",
+    year: "2026",
+    href: "https://www.jeanmemory.com/ai-memory-landscape-review.pdf",
+  },
+  {
+    title:
+      "On the Implicit Encoding of Human Psychology in Large Language Model Representations",
+    year: "2026",
+    href: "https://www.jeanmemory.com/GPE.pdf",
+  },
+  {
+    title:
+      "Local Drift-Adapters: Mixture-of-Expert Embedding Translation for Heterogeneous Vector Databases",
+    year: "2026",
+    href: "https://www.jeanmemory.com/Local_Drift_Adapters.pdf",
+  },
+];
 
-  // Generate random values only once per mount to avoid hydration mismatch
-  const scanlines = useMemo(() => Array.from({ length: 60 }).map(() => ({
-    width: Math.random() * 80 + 20,
-    marginLeft: Math.random() * 40,
-    xOffset: Math.random() * 50 - 25,
-    duration: 0.1 + Math.random() * 0.2
-  })), []);
+const quotes = [
+  {
+    en: "He who has a why to live can bear almost any how.",
+    de: "Hat man sein wofür des Lebens, so verträgt man sich fast mit jedem wie.",
+    author: "Friedrich Nietzsche",
+    source: "Twilight of the Idols",
+  },
+  {
+    en: "He who strives and lives to strive, can earn redemption still.",
+    de: "Wer immer strebend sich bemüht, den können wir erlösen.",
+    author: "Johann Wolfgang von Goethe",
+    source: "Faust, Part II",
+  },
+  {
+    en: "Only he who is constantly changing is my kin.",
+    de: "Nur wer sich wandelt, bleibt mit mir verwandt.",
+    author: "Friedrich Nietzsche",
+    source: "Posthumous Fragments",
+  },
+];
 
-  const vectors = useMemo(() => Array.from({ length: 15 }).map(() => ({
-    top: Math.random() * 100,
-    right: Math.random() * 50,
-    width: Math.random() * 200 + 50,
-    rotate: Math.random() * 180,
-    duration: 0.5 + Math.random(),
-    delay: Math.random() * 2
-  })), []);
+const links = [
+  { label: "Email", href: "mailto:jonathan.politzki@gmail.com" },
+  { label: "X", href: "https://x.com/ITNAmatter" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/jonathan-politzki" },
+  { label: "GitHub", href: "https://github.com/jonathan-politzki" },
+  { label: "Substack", href: "https://jonathanpolitzki.substack.com" },
+];
 
-  useEffect(() => {
-    setIsMounted(true);
-    const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth) * 2 - 1; // -1 to 1
-      const y = (e.clientY / window.innerHeight) * 2 - 1; // -1 to 1
-
-      setMousePosition({ x: e.clientX, y: e.clientY });
-      
-      // The right side of the screen triggers more intensity
-      const isRightSide = x > 0;
-      
-      jitterX.set(x * 20); // Stronger movement
-      jitterY.set(y * 20);
-      noiseIntensity.set(isRightSide ? 1 : 0.2); // More noise when on the right
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [jitterX, jitterY, noiseIntensity]);
-
+function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <main className="min-h-screen relative flex items-center justify-center p-8 md:p-16 overflow-hidden bg-[#050505]">
-      
-      {/* Paper Texture Overlay */}
-      <div className="paper-texture" />
+    <h2 className="mb-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted">
+      {children}
+    </h2>
+  );
+}
 
-      {/* --- RIGHT SIDE VISUALIZATION (Explicitly positioned) --- */}
-      <div className="absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden pointer-events-none z-0">
-        
-        {/* User Photo - Faded Background Layer */}
-        <div className="absolute inset-0 z-[-1] opacity-30 mix-blend-screen">
-            <Image 
-                src="/hero-bg.png" 
-                alt="Visualization Background" 
-                fill
-                className="object-cover translate-x-16"
-                priority
-            />
-            {/* Gradient Overlay to fade it into the blackness at the bottom/left */}
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#050505]/20 to-[#050505]" />
+export default function Home() {
+  return (
+    <main className="mx-auto w-full max-w-2xl px-6 pb-24 pt-12">
+      {/* Overview */}
+      <section className="space-y-5 text-[1.05rem] font-light leading-relaxed">
+        <p>
+          My name is Jonathan Alexander Politzki. I am interested in ideas and
+          innovation.
+        </p>
+        <p>
+          I am guided by self-determination and I try to work on important,
+          unlikely things. Human focus is the most misallocated resource on
+          Earth — as machines get better at what is already known, human
+          attention matters most at the edges, on high-complexity, low-data
+          problems with no precedent to learn from. I call this{" "}
+          <Link
+            href="/writing/politzkis-law"
+            className="underline decoration-rule underline-offset-4 transition-colors hover:decoration-ink"
+          >
+            Politzki&apos;s Law
+          </Link>
+          .
+        </p>
+        <p>
+          You can read more of what I think in{" "}
+          <Link
+            href="/writing"
+            className="underline decoration-rule underline-offset-4 transition-colors hover:decoration-ink"
+          >
+            my writing
+          </Link>
+          .
+        </p>
+      </section>
+
+      {/* Work */}
+      <section className="mt-16 border-t border-rule pt-10">
+        <SectionLabel>Work</SectionLabel>
+        <p className="mb-8 text-sm italic text-muted">
+          &ldquo;Irreverence is a key to progress.&rdquo;{" "}
+          <span className="font-mono text-xs not-italic">— Joel Mokyr</span>
+        </p>
+        <div className="space-y-6 font-light leading-relaxed">
+          <p>
+            <span className="font-medium">Irreverent Capital</span> builds
+            important, unlikely technology businesses.
+          </p>
+          <p>
+            Its first company is{" "}
+            <a
+              href="https://jeanmemory.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-rule underline-offset-4 transition-colors hover:decoration-ink"
+            >
+              Jean
+            </a>
+            , the universal matching engine. Jean builds a representation of
+            who a person is from their context and interests, then matches them
+            to whatever they&apos;re looking for — products, content, people,
+            ideas.
+          </p>
+        </div>
+      </section>
+
+      {/* Interests */}
+      <section className="mt-16 border-t border-rule pt-10">
+        <SectionLabel>Interests</SectionLabel>
+        <div className="space-y-6 font-light leading-relaxed">
+          <p>
+            AI models learn to understand the world by training on vast corpora
+            of text. Since text is often a projection of our minds, these
+            models have implicitly learned to understand us.
+          </p>
+          <p>
+            Most of my interests sprung out of my original essay,{" "}
+            <Link
+              href="/writing/general-personal-embeddings"
+              className="underline decoration-rule underline-offset-4 transition-colors hover:decoration-ink"
+            >
+              General Personal Embeddings
+            </Link>
+            . I work on AI memory and context — systems that learn from what
+            you do and say, so software can act on your behalf because it
+            understands your history — and on latent representations:
+            translating a human being into the high-dimensional map these
+            models think in, and aligning different maps so they can talk to
+            each other.
+          </p>
         </div>
 
-        {/* The "Storm" Container */}
-        {isMounted && (
-          <motion.div 
-            className="relative w-full h-full"
-            style={{ x: jitterX, y: jitterY }}
-          >
-             {/* Dense "Scanline" Cloud */}
-             <div className="absolute inset-0 flex flex-col justify-center opacity-40 mix-blend-screen">
-               {scanlines.map((line, i) => (
-                 <motion.div
-                   key={`line-${i}`}
-                   className="w-full bg-white h-[1px] my-[2px] opacity-20"
-                   style={{ 
-                     width: `${line.width}%`,
-                     marginLeft: `${line.marginLeft}%`
-                   }}
-                   animate={{
-                     x: [0, line.xOffset, 0],
-                     opacity: [0.1, 0.4, 0.1]
-                   }}
-                   transition={{
-                     duration: line.duration,
-                     repeat: Infinity,
-                     repeatType: "reverse",
-                     ease: "linear"
-                   }}
-                 />
-               ))}
-             </div>
-
-             {/* "Crackling" Vectors */}
-             {vectors.map((vec, i) => (
-                <motion.div
-                  key={`vector-${i}`}
-                  className="absolute bg-white/60 h-[2px]"
-                  style={{
-                    top: `${vec.top}%`,
-                    right: `${vec.right}%`,
-                    width: `${vec.width}px`,
-                    rotate: `${vec.rotate}deg`
-                  }}
-                  animate={{
-                     opacity: [0, 1, 0],
-                     pathLength: [0, 1],
-                     scale: [1, 1.2, 1]
-                  }}
-                  transition={{
-                    duration: vec.duration,
-                    repeat: Infinity,
-                    repeatDelay: vec.delay
-                  }}
-                />
-             ))}
-
-             {/* Top "Glitch" Cap */}
-             <div className="absolute top-0 right-0 w-full h-64 bg-gradient-to-b from-white/5 to-transparent mix-blend-overlay" />
-          </motion.div>
-        )}
-        
-        {/* Vignette to blend it into the black background on the left edge of this container */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/50 to-transparent" />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-6xl relative z-20">
-        
-        {/* Left: Content */}
-        <div className="flex flex-col justify-center space-y-8">
-          
-          {/* Textual Overview */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 1 }}
-            className="font-[family-name:var(--font-type)] text-lg md:text-xl text-[#ccc] max-w-lg leading-loose"
-          >
-            <p className="mb-8">
-              My name is Jonathan Alexander Politzki.
-            </p>
-            <p className="mb-8">
-              I am interested in ideas and innovation.
-            </p>
-            <p>
-              Across my website you will find <Link href="/credo"><strong className="text-white font-normal bg-white/10 px-1">my credo</strong></Link>, <Link href="/writing/read"><strong className="text-white font-normal bg-white/10 px-1">my writing</strong></Link>, and <Link href="/work"><strong className="text-white font-normal bg-white/10 px-1">my work</strong></Link>.
-            </p>
-          </motion.div>
-
+        <div className="mt-10">
+          <h3 className="mb-4 font-mono text-[11px] uppercase tracking-[0.15em] text-muted">
+            Papers
+          </h3>
+          <ul className="space-y-2">
+            {papers.map((paper) => (
+              <li key={paper.title} className="flex items-baseline gap-3">
+                <span className="shrink-0 font-mono text-xs text-muted">
+                  {paper.year}
+                </span>
+                <a
+                  href={paper.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-light underline decoration-rule underline-offset-4 transition-colors hover:decoration-ink"
+                >
+                  {paper.title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
+      </section>
 
-      </div>
+      {/* Quotes */}
+      <section className="mt-16 border-t border-rule pt-10">
+        <SectionLabel>Quotes</SectionLabel>
+        <div className="space-y-10">
+          {quotes.map((quote) => (
+            <blockquote key={quote.author + quote.source}>
+              <p className="font-light leading-relaxed">
+                &ldquo;{quote.en}&rdquo;
+              </p>
+              <p className="mt-1 text-sm font-light italic text-muted">
+                {quote.de}
+              </p>
+              <footer className="mt-2 font-mono text-xs text-muted">
+                — {quote.author}, <cite className="not-italic">{quote.source}</cite>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+
+      {/* Connect */}
+      <footer className="mt-20 border-t border-rule pt-8">
+        <nav className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-muted">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-ink"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </footer>
     </main>
   );
 }
