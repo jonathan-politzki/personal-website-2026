@@ -4,6 +4,10 @@ import Image from "next/image";
 
 const quotes = [
   {
+    en: "What are the important problems of your field, and why aren't you working on them?",
+    author: "Richard Hamming",
+  },
+  {
     en: "He who has a why to live can bear almost any how.",
     de: "Hat man sein wofür des Lebens, so verträgt man sich fast mit jedem wie.",
     author: "Friedrich Nietzsche",
@@ -40,12 +44,6 @@ export default function Home() {
       <h1 className="mb-4 border-b border-rule pb-4 text-3xl font-medium">
         Welcome
       </h1>
-
-      <blockquote className="mt-6 text-sm italic text-muted">
-        &ldquo;What are the important problems of your field, and why
-        aren&apos;t you working on them?&rdquo;{" "}
-        <span className="not-italic">Richard Hamming</span>
-      </blockquote>
 
       <div className="mt-8 flex flex-col-reverse gap-8 md:flex-row md:items-start">
         <div className="flex-1 space-y-5 leading-relaxed">
@@ -134,13 +132,18 @@ export default function Home() {
         </h2>
         <div className="space-y-5">
           {quotes.map((quote) => (
-            <blockquote key={quote.source} className="text-sm text-muted">
+            <blockquote key={quote.en} className="text-sm text-muted">
               <p className="leading-relaxed">
-                &ldquo;{quote.en}&rdquo;{" "}
-                <span className="italic">({quote.de})</span>
+                &ldquo;{quote.en}&rdquo;
+                {quote.de && <span className="italic"> ({quote.de})</span>}
               </p>
               <footer className="mt-0.5 text-xs">
-                {quote.author}, <cite className="not-italic">{quote.source}</cite>
+                {quote.author}
+                {quote.source && (
+                  <>
+                    , <cite className="not-italic">{quote.source}</cite>
+                  </>
+                )}
               </footer>
             </blockquote>
           ))}
