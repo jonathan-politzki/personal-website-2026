@@ -1,31 +1,6 @@
 import Link from "next/link";
-import AskMyWriting from "@/components/ask-my-writing";
 import Image from "next/image";
 
-const papers = [
-  {
-    title: "AI Memory: A Landscape Review",
-    year: "2026",
-    href: "https://www.jeanmemory.com/AI_Memory.pdf",
-  },
-  {
-    title: "The State of AI Memory 2026",
-    year: "2026",
-    href: "https://www.jeanmemory.com/ai-memory-landscape-review.pdf",
-  },
-  {
-    title:
-      "On the Implicit Encoding of Human Psychology in Large Language Model Representations",
-    year: "2026",
-    href: "https://www.jeanmemory.com/GPE.pdf",
-  },
-  {
-    title:
-      "Local Drift-Adapters: Mixture-of-Expert Embedding Translation for Heterogeneous Vector Databases",
-    year: "2026",
-    href: "https://www.jeanmemory.com/Local_Drift_Adapters.pdf",
-  },
-];
 
 const quotes = [
   {
@@ -138,30 +113,6 @@ export default function Home() {
           />
         </div>
       </div>
-
-      <SectionHeading>Ask my writing</SectionHeading>
-      <p className="mb-6 leading-relaxed text-muted">
-        Everything I&apos;ve written is loaded into a model that answers on my
-        behalf, citing the essays it draws from.
-      </p>
-      <AskMyWriting />
-
-      <SectionHeading>Papers</SectionHeading>
-      <ul className="list-disc space-y-2.5 pl-5 leading-relaxed marker:text-rule">
-        {papers.map((paper) => (
-          <li key={paper.title}>
-            <a
-              href={paper.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={a}
-            >
-              {paper.title}
-            </a>{" "}
-            <span className="text-sm text-muted">({paper.year})</span>
-          </li>
-        ))}
-      </ul>
 
       <SectionHeading>Quotes</SectionHeading>
       <div className="space-y-8">
