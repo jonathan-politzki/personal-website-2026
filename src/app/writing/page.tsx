@@ -10,11 +10,7 @@ export default function Writing() {
 
   return (
     <main className="w-full px-6 pb-24 pt-10 md:px-12 lg:px-16">
-      <h1 className="mb-4 border-b border-rule pb-4 text-3xl font-medium">
-        I write to understand the world.
-      </h1>
-
-      <ul className="mt-8 list-disc space-y-2.5 pl-5 leading-relaxed marker:text-rule">
+      <ul className="list-disc space-y-2.5 pl-5 leading-relaxed marker:text-rule">
         {posts.map((post) => (
           <li key={post.slug}>
             <Link
