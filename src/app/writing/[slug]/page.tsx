@@ -1,7 +1,6 @@
 import { getPostBySlug, getAllPosts } from '@/lib/mdx';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
-import * as Components from '@/components/mdx-components';
 import { notFound } from 'next/navigation';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -58,7 +57,6 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         >
           <MDXRemote
             source={post.content}
-            components={Components}
             options={{
               mdxOptions: {
                 rehypePlugins: [

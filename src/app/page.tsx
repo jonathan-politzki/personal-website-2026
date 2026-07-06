@@ -41,6 +41,12 @@ export default function Home() {
         Welcome
       </h1>
 
+      <blockquote className="mt-6 text-sm italic text-muted">
+        &ldquo;What are the important problems of your field, and why
+        aren&apos;t you working on them?&rdquo;{" "}
+        <span className="not-italic">Richard Hamming</span>
+      </blockquote>
+
       <div className="mt-8 flex flex-col-reverse gap-8 md:flex-row md:items-start">
         <div className="flex-1 space-y-5 leading-relaxed">
           <p>
@@ -67,9 +73,9 @@ export default function Home() {
             </a>
             ). After university, I started my career in investment banking at
             Leerink Partners in NYC, then worked at Shaper Capital, and now
-            work on AI, which I consider my main area of expertise. Over time I
-            effectively became an engineer after realizing it is the most
-            important skill in building technology businesses.
+            work on AI, which I consider my main area of expertise. Many
+            textbooks, projects, and products later, I have effectively become
+            an engineer.
           </p>
           <p>
             I believe human focus is the most misallocated resource on earth,

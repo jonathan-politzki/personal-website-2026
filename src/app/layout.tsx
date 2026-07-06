@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Source_Serif_4 } from "next/font/google";
 import Sidebar from "@/components/sidebar";
+import Particles from "@/components/particles";
 import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <body className={`${sourceSerif.variable} bg-paper font-serif text-ink`}>
+        <Particles />
         <Sidebar />
         <div className="md:pl-56">{children}</div>
       </body>
