@@ -46,6 +46,29 @@ A universe of sub-pages for exploring my corpus.
 ### 6. Connect (`/connect`)
 *   **Hub:** Centralized links for Email, Twitter, LinkedIn, GitHub.
 
+## Content Workflow: Syncing from Substack
+
+Essays live as MDX files in `src/content/writing/` — one file per post, filename = slug. The `/writing` index is derived from that folder at build time (`src/lib/mdx.ts`), so adding a file is all it takes to publish here.
+
+**After publishing a new post on Substack, run:**
+
+```bash
+npm run import:substack
+```
+
+This fetches the RSS feed (`jonathanpolitzki.substack.com/feed`), converts any post not already in `src/content/writing/` to MDX, and writes it with the standard frontmatter (`title`, `publishedAt`, `summary`, `tags: ["substack"]`, `type: "essay"`).
+
+**Rules the script follows:**
+
+*   **Existing files are never overwritten.** Local edits to previously imported posts are safe — the script skips any slug that already has a file.
+*   To deliberately re-import one post (discarding local edits to it): `npm run import:substack -- --force <slug>`
+*   Preview without writing: `npm run import:substack -- --dry-run`
+*   Substack subscribe widgets/buttons and the "Thanks for reading… Subscribe" boilerplate are stripped during conversion.
+
+**Limitations:** the RSS feed only carries the ~20 most recent posts. Older posts were migrated once from a full HTML export (Jan 2026) and now exist only in this repo — treat the repo as the source of truth for anything edited locally. Imported images still point at Substack's CDN.
+
+The script is `scripts/import-substack.mjs` (plain Node, no dependencies).
+
 ## Recent Updates (Jan 2026)
 *   **Substack Migration:** Successfully migrated ~50 essays from HTML export to local MDX content.
 *   **Visual Overhaul:** Switched to a strict Black/White/Grey palette with "Wireframe/Engineer" aesthetics.
