@@ -1,6 +1,5 @@
 import { getPostBySlug, getAllPosts } from '@/lib/mdx';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -24,29 +23,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   return (
     <main className="min-h-screen bg-[#fafaf9] font-[family-name:var(--font-source-serif),Georgia,serif] text-[#1a1a1a] selection:bg-black selection:text-white">
-      <article className="mx-auto max-w-2xl px-6 pb-32 pt-24">
-        <nav className="mb-8 pt-2">
-          <Link
-            href="/writing"
-            className="group inline-flex items-center gap-2 text-[#666] transition-colors hover:text-[#1a1a1a]"
-          >
-            <svg
-              className="h-4 w-4 transition-transform group-hover:-translate-x-1"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="m12 19-7-7 7-7" />
-              <path d="M19 12H5" />
-            </svg>
-            <span className="font-[family-name:var(--font-geist-mono),monospace] text-sm uppercase tracking-widest">Writing</span>
-          </Link>
-        </nav>
-
+      <article className="mx-auto max-w-2xl px-6 pb-32 pt-10">
         <header className="mb-16 border-b border-[#e0e0e0] pb-8">
           <div className="mb-8 flex flex-col gap-4">
             <div className="flex items-center gap-4 font-[family-name:var(--font-geist-mono),monospace] text-xs uppercase tracking-widest text-[#888]">
