@@ -16,25 +16,28 @@ body {
   color: var(--color-ink);
 }
 
-::selection {
-  background: var(--color-accent);
-  color: var(--color-paper);
+/* In @layer base so page-level selection: utilities (essay pages) can override */
+@layer base {
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-paper);
+  }
 }
 
-/* --- Essay typography --- */
+/* --- Essay typography (reading-optimized style from the pre-redesign site) --- */
 .prose {
-  line-height: 1.75;
-  letter-spacing: 0.005em;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
 }
 
 .prose p {
-  margin-top: 1.4em;
-  margin-bottom: 1.4em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .prose img {
   border-radius: 4px;
-  border: 1px solid var(--color-rule);
+  border: 1px solid #e0e0e0;
   margin-top: 2em;
   margin-bottom: 2em;
   width: 100%;
@@ -47,28 +50,29 @@ body {
 .prose blockquote {
   font-style: italic;
   border-left-width: 2px;
-  border-left-color: var(--color-rule);
+  border-left-color: #1a1a1a;
   padding-left: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
-  color: var(--color-muted);
+  color: #555;
 }
 
 .prose h1,
 .prose h2,
 .prose h3 {
-  color: var(--color-ink);
-  margin-top: 2.2em;
-  margin-bottom: 0.8em;
-  line-height: 1.25;
+  color: #1a1a1a;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  line-height: 1.2;
 }
 
 .prose a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: all 0.15s;
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 4px;
+  transition: all 0.2s;
 }
 .prose a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration-color: #1a1a1a;
 }
