@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { FactorList, Factor } from '@/components/mdx/factor-list';
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -53,6 +54,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         >
           <MDXRemote
             source={post.content}
+            components={{ FactorList, Factor }}
             options={{
               mdxOptions: {
                 rehypePlugins: [
