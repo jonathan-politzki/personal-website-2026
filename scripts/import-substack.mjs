@@ -97,7 +97,14 @@ function htmlToMarkdown(html) {
 
 // --- main --------------------------------------------------------------------
 
-const res = await fetch(FEED_URL);
+// Substack's CDN 403s requests without a browser-like User-Agent.
+const res = await fetch(FEED_URL, {
+  headers: {
+    'User-Agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    Accept: 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
+  },
+});
 if (!res.ok) {
   console.error(`Failed to fetch feed: ${res.status} ${res.statusText}`);
   process.exit(1);
