@@ -17,8 +17,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Fetch the Substack feed (Chrome TLS impersonation)
+        run: |
+          pip install --quiet curl_cffi
+          python3 - <<'EOF'
+          from curl_cffi import requests
+          r = requests.get('https://jonathanpolitzki.substack.com/feed', impersonate='chrome')
+          r.raise_for_status()
+          open('/tmp/feed.xml', 'w').write(r.text)
+          print(f'fetched {len(r.text)} bytes')
+          EOF
       - name: Import new posts from the Substack feed
-        run: node scripts/import-substack.mjs
+        run: node scripts/import-substack.mjs --feed-file /tmp/feed.xml
       - name: Commit and push any new posts
         run: |
           git config user.name "github-actions[bot]"

@@ -6,6 +6,7 @@
  *   npm run import:substack             # import posts missing locally
  *   npm run import:substack -- --dry-run
  *   npm run import:substack -- --force <slug>   # re-import one post, overwriting local edits
+ *   npm run import:substack -- --feed-file feed.xml   # parse a pre-downloaded feed instead of fetching
  *
  * By default a post whose slug already exists locally is SKIPPED, so local
  * edits are never clobbered. The Substack RSS feed only carries the ~20 most
@@ -20,6 +21,8 @@ const CONTENT_DIR = path.join(process.cwd(), 'src', 'content', 'writing');
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
+const feedFileIdx = args.indexOf('--feed-file');
+const feedFile = feedFileIdx === -1 ? null : args.splice(feedFileIdx, 2)[1];
 const forceIdx = args.indexOf('--force');
 const forceSlugs = forceIdx === -1 ? [] : args.slice(forceIdx + 1).filter((a) => !a.startsWith('--'));
 
@@ -97,19 +100,24 @@ function htmlToMarkdown(html) {
 
 // --- main --------------------------------------------------------------------
 
-// Substack's CDN 403s requests without a browser-like User-Agent.
-const res = await fetch(FEED_URL, {
-  headers: {
-    'User-Agent':
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-    Accept: 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
-  },
-});
-if (!res.ok) {
-  console.error(`Failed to fetch feed: ${res.status} ${res.statusText}`);
-  process.exit(1);
+let xml;
+if (feedFile) {
+  xml = fs.readFileSync(feedFile, 'utf8');
+} else {
+  // Substack's CDN 403s requests without a browser-like User-Agent.
+  const res = await fetch(FEED_URL, {
+    headers: {
+      'User-Agent':
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+      Accept: 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
+    },
+  });
+  if (!res.ok) {
+    console.error(`Failed to fetch feed: ${res.status} ${res.statusText}`);
+    process.exit(1);
+  }
+  xml = await res.text();
 }
-const xml = await res.text();
 const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((m) => m[1]);
 
 if (items.length === 0) {
