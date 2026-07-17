@@ -17,34 +17,45 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Fetch the Substack feed (real headless Chrome)
+      - name: Fetch the Substack feed (headed Chrome under xvfb)
         run: |
           npm install --no-save playwright-core
-          node --input-type=module - <<'EOF'
+          xvfb-run --auto-servernum node --input-type=module - <<'EOF'
           import fs from 'node:fs';
           import { chromium } from 'playwright-core';
-          const browser = await chromium.launch({ channel: 'chrome' });
-          const context = await browser.newContext({
-            userAgent:
-              'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-          });
-          const page = await context.newPage();
+          // Headed real Chrome with its native fingerprint: Cloudflare's
+          // "Just a moment..." challenge won't clear for headless/spoofed-UA.
+          const browser = await chromium.launch({ channel: 'chrome', headless: false });
+          const page = await browser.newPage();
           const nav = await page.goto('https://jonathanpolitzki.substack.com/', { waitUntil: 'domcontentloaded', timeout: 60000 });
           console.log(`homepage: HTTP ${nav.status()}, title "${await page.title()}"`);
-          await page.waitForTimeout(8000); // let any bot challenge resolve
+          for (let i = 0; i < 15 && /just a moment/i.test(await page.title()); i++) {
+            await page.waitForTimeout(3000);
+          }
+          console.log(`after challenge wait: title "${await page.title()}"`);
 
-          // The /feed endpoint 403s from CI even in a real browser, so use the
-          // same-origin JSON API instead and rebuild an RSS-shaped feed from it.
-          const posts = await page.evaluate(async () => {
-            const r = await fetch('/api/v1/archive?sort=new&limit=20');
-            if (!r.ok) throw new Error(`archive fetch failed: ${r.status}`);
-            const list = await r.json();
-            const out = [];
-            for (const p of list) {
-              const pr = await fetch(`/api/v1/posts/${p.slug}`);
-              if (!pr.ok) throw new Error(`post ${p.slug} fetch failed: ${pr.status}`);
-              const full = await pr.json();
-              out.push({
+          const grab = (path) =>
+            page.evaluate(async (p) => {
+              const r = await fetch(p);
+              return { status: r.status, body: r.ok ? await r.text() : '' };
+            }, path);
+
+          let xml;
+          const feed = await grab('/feed');
+          console.log(`/feed: HTTP ${feed.status}`);
+          if (feed.status === 200) {
+            xml = feed.body;
+          } else {
+            // Fall back to the JSON API and rebuild an RSS-shaped feed from it.
+            const archive = await grab('/api/v1/archive?sort=new&limit=20');
+            console.log(`/api/v1/archive: HTTP ${archive.status}`);
+            if (archive.status !== 200) throw new Error('both /feed and the JSON API are blocked');
+            const posts = [];
+            for (const p of JSON.parse(archive.body)) {
+              const post = await grab(`/api/v1/posts/${p.slug}`);
+              if (post.status !== 200) throw new Error(`post ${p.slug}: HTTP ${post.status}`);
+              const full = JSON.parse(post.body);
+              posts.push({
                 title: full.title,
                 link: full.canonical_url,
                 description: full.description || '',
@@ -52,19 +63,18 @@ jobs:
                 html: full.body_html || '',
               });
             }
-            return out;
-          });
-          const cdata = (s) => `<![CDATA[${String(s).replaceAll(']]>', ']]]]><![CDATA[>')}]]>`;
-          const xml = `<rss><channel>${posts
-            .map(
-              (p) =>
-                `<item><title>${cdata(p.title)}</title><link>${p.link}</link>` +
-                `<description>${cdata(p.description)}</description><pubDate>${p.pubDate}</pubDate>` +
-                `<content:encoded>${cdata(p.html)}</content:encoded></item>`
-            )
-            .join('\n')}</channel></rss>`;
+            const cdata = (s) => `<![CDATA[${String(s).replaceAll(']]>', ']]]]><![CDATA[>')}]]>`;
+            xml = `<rss><channel>${posts
+              .map(
+                (p) =>
+                  `<item><title>${cdata(p.title)}</title><link>${p.link}</link>` +
+                  `<description>${cdata(p.description)}</description><pubDate>${p.pubDate}</pubDate>` +
+                  `<content:encoded>${cdata(p.html)}</content:encoded></item>`
+              )
+              .join('\n')}</channel></rss>`;
+          }
           fs.writeFileSync('/tmp/feed.xml', xml);
-          console.log(`built feed with ${posts.length} posts, ${xml.length} bytes`);
+          console.log(`wrote feed, ${xml.length} bytes`);
           await browser.close();
           EOF
       - name: Import new posts from the Substack feed
