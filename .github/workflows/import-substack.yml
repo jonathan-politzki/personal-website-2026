@@ -2,6 +2,9 @@ name: Import Substack posts
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - claude/substack-post-sync-yw1y6w
 
 permissions:
   contents: write
