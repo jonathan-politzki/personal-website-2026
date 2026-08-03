@@ -1,22 +1,49 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@theme {
-  --font-serif: var(--font-source-serif), Georgia, serif;
+/* Academic theme — cream background, Georgia serif, literary/scholarly.
+   All colors live here; swap this block to re-palette the whole site. */
+:root {
+  --color-paper: #faf8f3;
+  --color-paper-2: #f5f1e8;
+  --color-ink: #2b2b2b;
+  --color-heading: #1a1a1a;
+  --color-accent: #8b4513;
+  --color-accent-dark: #5c2e0a;
+  --color-rule: #d4a574;
+  --color-muted: #777;
+}
 
-  --color-paper: #fcfcfa;
-  --color-ink: #333333;
-  --color-muted: #757068;
-  --color-rule: #e2e0da;
-  --color-accent: #4c6bc0;
+@theme {
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --color-paper: #faf8f3;
+  --color-ink: #2b2b2b;
+  --color-muted: #777777;
+  --color-rule: #d4a574;
+  --color-accent: #8b4513;
 }
 
 body {
-  background: var(--color-paper);
+  background-color: var(--color-paper);
   color: var(--color-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 
-/* In @layer base so page-level selection: utilities (essay pages) can override */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+  border-bottom-color: var(--color-accent);
+}
+
 @layer base {
   ::selection {
     background: var(--color-accent);
@@ -24,55 +51,224 @@ body {
   }
 }
 
-/* --- Essay typography (reading-optimized style from the pre-redesign site) --- */
-.prose {
-  line-height: 1.8;
-  letter-spacing: 0.01em;
+/* Navigation menu */
+#menu {
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+  text-align: right;
+  width: 150px;
 }
 
-.prose p {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+#menu .title {
+  display: block;
+  margin-bottom: 12px;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  color: var(--color-accent-dark);
 }
 
-.prose img {
-  border-radius: 4px;
-  border: 1px solid #e0e0e0;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: contain;
-  background: #f4f3ef;
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.prose blockquote {
+#menu li {
+  margin-bottom: 6px;
+}
+
+#menu li a {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 13px;
+}
+
+/* Left spacer */
+#left {
+  height: 1px;
+  float: left;
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Content area */
+#content {
+  margin-top: 15px;
+  float: left;
+  width: 500px;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+#content h1,
+#content h2,
+#content h3 {
+  margin: 1.5em 0 0.5em 0;
+  color: var(--color-heading);
+  font-weight: normal;
+}
+
+#content h1 {
+  font-size: 2.2em;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--color-rule);
+  padding-bottom: 0.3em;
+}
+
+#content h2 {
+  font-size: 1.6em;
   font-style: italic;
-  border-left-width: 2px;
-  border-left-color: #1a1a1a;
-  padding-left: 1.5em;
+}
+
+#content h3 {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+#content .byline,
+#content .byline a,
+#content .note {
+  font-size: 0.875em;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+#content p,
+#content ul {
+  color: var(--color-ink);
+  line-height: 20px;
+}
+
+#content p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+#content li {
+  margin-bottom: 0.8em;
+}
+
+#content blockquote {
+  border-left: 2px solid var(--color-rule);
+  margin-left: 0;
+  padding-left: 1em;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+#content img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--color-rule);
+}
+
+#content .thanks {
   margin-top: 2em;
-  margin-bottom: 2em;
-  color: #555;
+  padding-top: 1em;
+  border-top: 1px solid var(--color-rule);
+  margin-bottom: 4em;
+  font-size: smaller;
 }
 
-.prose h1,
-.prose h2,
-.prose h3 {
-  color: #1a1a1a;
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  line-height: 1.2;
+.post + .post {
+  margin-top: 50px;
 }
 
-.prose a {
-  color: #1a1a1a;
-  text-decoration: underline;
-  text-decoration-color: #ccc;
-  text-underline-offset: 4px;
-  transition: all 0.2s;
+/* Tablet styles (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  #left {
+    width: 100px;
+  }
+
+  #content {
+    width: 450px;
+  }
+
+  #menu {
+    margin-right: 15px;
+    width: 130px;
+  }
 }
-.prose a:hover {
-  text-decoration-color: #1a1a1a;
+
+/* Mobile styles (< 768px) */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  #menu {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: var(--color-paper-2);
+    border-bottom: 2px solid var(--color-rule);
+  }
+
+  #menu .title {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+
+  #menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  #menu li {
+    margin: 0;
+  }
+
+  #left {
+    display: none;
+  }
+
+  #content {
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    padding: 0 20px;
+  }
+
+  #content p {
+    text-align: left;
+  }
+
+  #content h1 {
+    font-size: 1.8em;
+  }
+
+  #content h2 {
+    font-size: 1.4em;
+  }
+
+  #content h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 13px;
+  }
+
+  #content {
+    padding: 0 15px;
+  }
+
+  #menu ul {
+    gap: 8px 12px;
+  }
 }

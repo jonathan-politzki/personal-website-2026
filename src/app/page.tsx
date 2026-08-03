@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
 const quotes = [
   {
     en: "What are the important problems of your field, and why aren't you working on them?",
@@ -28,136 +27,119 @@ const quotes = [
 ];
 
 const connect = [
-  { label: "jonathan.politzki@gmail.com", href: "mailto:jonathan.politzki@gmail.com" },
+  { label: "Email", href: "mailto:jonathan.politzki@gmail.com" },
   { label: "X", href: "https://x.com/ITNAmatter" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/jonathanpolitzki/" },
   { label: "GitHub", href: "https://github.com/jonathan-politzki" },
   { label: "Substack", href: "https://jonathanpolitzki.substack.com" },
 ];
 
-const a =
-  "text-accent transition-all hover:underline hover:underline-offset-4";
-
 export default function Home() {
   return (
-    <main className="w-full px-6 pb-24 pt-10 md:px-12 lg:px-16">
-      <h1 className="mb-4 border-b border-rule pb-4 text-3xl font-medium">
-        Welcome
-      </h1>
+    <main>
+      <h1>Welcome</h1>
 
-      <div className="mt-8 flex flex-col-reverse gap-8 md:flex-row md:items-start">
-        <div className="flex-1 space-y-5 leading-relaxed">
+      <Image
+        src="/profile.jpg"
+        alt="Jonathan Politzki"
+        width={140}
+        height={140}
+        priority
+        style={{
+          float: "right",
+          margin: "0.4em 0 1em 1.2em",
+          width: 140,
+          height: 140,
+          objectFit: "cover",
+        }}
+      />
+
+      <p>
+        My name is Jonathan Alexander Politzki. I grew up in the NW suburbs of
+        Chicago. I studied finance with a minor in engineering at the
+        University of Illinois, where I fell in love with technology and I
+        founded my first &ldquo;startups&rdquo; (
+        <a
+          href="https://www.quantillinois.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Quant
+        </a>
+        ,{" "}
+        <a
+          href="https://nephramed.wordpress.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Nephra
+        </a>
+        ). After university, I started my career in investment banking at
+        Leerink Partners in NYC, then worked at Shaper Capital, and now work on
+        AI, which I consider my main area of expertise. Many textbooks,
+        projects, and products later, I consider myself more of an engineer
+        than anything else.
+      </p>
+      <p>
+        I believe human focus is the most misallocated resource on earth, and
+        that we can use AI to elevate ourselves and save people from repetitive
+        and boring work. Most of this technology is already here but it is just
+        not evenly distributed yet. One vector of progress I am focused on is
+        simply helping companies absorb this technology.
+      </p>
+      <p>
+        I also believe the arrival of computers that understand humans will be
+        the most important technology of my lifetime and perhaps my
+        life&apos;s work. This is what we are building at{" "}
+        <a
+          href="https://jeanmemory.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jean
+        </a>
+        . In this vein, my interests center on how computers understand and
+        represent humans: representation learning, contrastive learning, AI
+        memory, context engineering, embedding systems, user models, and
+        emotion vectors. Most of them sprung out of my original essay,{" "}
+        <Link href="/writing/general-personal-embeddings">
+          General Personal Embeddings
+        </Link>
+        .
+      </p>
+
+      <h2>Guiding quotes</h2>
+      {quotes.map((quote) => (
+        <blockquote key={quote.en}>
           <p>
-            My name is Jonathan Alexander Politzki. I grew up in the NW
-            suburbs of Chicago. I studied finance with a minor in engineering
-            at the University of Illinois, where I fell in love with
-            technology and I founded my first &ldquo;startups&rdquo; (
-            <a
-              href="https://www.quantillinois.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={a}
-            >
-              Quant
-            </a>
-            ,{" "}
-            <a
-              href="https://nephramed.wordpress.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={a}
-            >
-              Nephra
-            </a>
-            ). After university, I started my career in investment banking at
-            Leerink Partners in NYC, then worked at Shaper Capital, and now
-            work on AI, which I consider my main area of expertise. Many
-            textbooks, projects, and products later, I consider myself more of
-            an engineer than anything else.
+            &ldquo;{quote.en}&rdquo;
+            {quote.de && <span> ({quote.de})</span>}
           </p>
-          <p>
-            I believe human focus is the most misallocated resource on earth,
-            and that we can use AI to elevate ourselves and save people from
-            repetitive and boring work. Most of this technology is already
-            here but it is just not evenly distributed yet. One vector of
-            progress I am focused on is simply helping companies absorb this
-            technology.
+          <p className="note">
+            &mdash; {quote.author}
+            {quote.source && (
+              <>
+                , <cite>{quote.source}</cite>
+              </>
+            )}
           </p>
-          <p>
-            I also believe the arrival of computers that understand humans will
-            be the most important technology of my lifetime and perhaps my
-            life&apos;s work. This is what we are building at{" "}
+        </blockquote>
+      ))}
+
+      <p className="thanks">
+        {connect.map((link, i) => (
+          <span key={link.label}>
+            {i > 0 && " · "}
             <a
-              href="https://jeanmemory.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={a}
-            >
-              Jean
-            </a>
-            . In this vein, my interests center on how computers understand and
-            represent humans: representation learning, contrastive learning,
-            AI memory,
-            context engineering, embedding systems, user models, and emotion
-            vectors. Most of them sprung out of my original essay,{" "}
-            <Link href="/writing/general-personal-embeddings" className={a}>
-              General Personal Embeddings
-            </Link>
-            .
-          </p>
-        </div>
-
-        <div className="shrink-0 md:pt-1">
-          <Image
-            src="/profile.jpg"
-            alt="Jonathan Politzki"
-            width={224}
-            height={224}
-            priority
-            className="mx-auto h-44 w-44 rounded-full border border-rule object-cover md:h-56 md:w-56"
-          />
-        </div>
-      </div>
-
-      <section className="mt-16 border-t border-rule pt-8">
-        <h2 className="mb-5 text-sm font-medium uppercase tracking-wide text-muted">
-          Guiding quotes
-        </h2>
-        <div className="space-y-5">
-          {quotes.map((quote) => (
-            <blockquote key={quote.en} className="text-sm text-muted">
-              <p className="leading-relaxed">
-                &ldquo;{quote.en}&rdquo;
-                {quote.de && <span className="italic"> ({quote.de})</span>}
-              </p>
-              <footer className="mt-0.5 text-xs">
-                {quote.author}
-                {quote.source && (
-                  <>
-                    , <cite className="not-italic">{quote.source}</cite>
-                  </>
-                )}
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </section>
-
-      <footer className="mt-16 border-t border-rule pt-6">
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[15px]">
-          {connect.map((link) => (
-            <a
-              key={link.label}
               href={link.href}
               target={link.href.startsWith("mailto:") ? undefined : "_blank"}
               rel="noopener noreferrer"
-              className={a}
             >
               {link.label}
             </a>
-          ))}
-        </nav>
-      </footer>
+          </span>
+        ))}
+      </p>
     </main>
   );
 }
