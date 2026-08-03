@@ -4,24 +4,24 @@
 /* Academic theme — cream background, Georgia serif, literary/scholarly.
    All colors live here; swap this block to re-palette the whole site. */
 :root {
-  --color-paper: #f5f7f9;
-  --color-paper-2: #e9edf2;
-  --color-ink: #2b3138;
-  --color-heading: #1c2127;
-  --color-accent: #4a6d8c;
-  --color-accent-dark: #2e4a63;
-  --color-rule: #b9c6d2;
-  --color-muted: #78828c;
+  --color-paper: #fbfaf7;
+  --color-paper-2: #f0eee8;
+  --color-ink: #27272b;
+  --color-heading: #1b1b1f;
+  --color-accent: #4a5d75;
+  --color-accent-dark: #2f3f52;
+  --color-rule: #d5d3cc;
+  --color-muted: #807e78;
 }
 
 @theme {
   --font-serif: Georgia, "Times New Roman", serif;
 
-  --color-paper: #f5f7f9;
-  --color-ink: #2b3138;
-  --color-muted: #78828c;
-  --color-rule: #b9c6d2;
-  --color-accent: #4a6d8c;
+  --color-paper: #fbfaf7;
+  --color-ink: #27272b;
+  --color-muted: #807e78;
+  --color-rule: #d5d3cc;
+  --color-accent: #4a5d75;
 }
 
 body {
