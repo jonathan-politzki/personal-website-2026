@@ -146,9 +146,24 @@ a:hover {
   line-height: 20px;
 }
 
+/* Tailwind preflight strips the browser defaults the reference design
+   relies on; restore them for content flow. */
 #content p {
+  margin: 1em 0;
   text-align: justify;
   hyphens: auto;
+}
+
+#content ul {
+  list-style: disc;
+  margin: 1em 0;
+  padding-left: 30px;
+}
+
+#content ol {
+  list-style: decimal;
+  margin: 1em 0;
+  padding-left: 30px;
 }
 
 #content li {
@@ -157,7 +172,7 @@ a:hover {
 
 #content blockquote {
   border-left: 2px solid var(--color-rule);
-  margin-left: 0;
+  margin: 1em 0;
   padding-left: 1em;
   font-style: italic;
   color: var(--color-muted);
