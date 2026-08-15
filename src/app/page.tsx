@@ -98,7 +98,7 @@ export default function Home() {
         >
           Jean
         </a>
-        . In this vein, my interests center on how computers understand and
+        . In this vein, my interests center around how computers understand and
         represent humans: representation learning, contrastive learning, AI
         memory, context engineering, embedding systems, user models, and
         emotion vectors. Most of them sprung out of my original essay,{" "}
