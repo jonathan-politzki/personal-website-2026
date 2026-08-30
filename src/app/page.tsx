@@ -90,7 +90,7 @@ export default function Home() {
         .
       </p>
 
-      <h2>Guiding quotes</h2>
+      <h2>Good quotes</h2>
       {quotes.map((quote) => (
         <blockquote key={quote.en}>
           <p>
