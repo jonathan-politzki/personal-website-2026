@@ -55,10 +55,8 @@ export default function Home() {
       />
 
       <p>
-        My name is Jonathan Alexander Politzki. I grew up in the NW suburbs of
-        Chicago. I studied finance with a minor in engineering at the
-        University of Illinois, where I fell in love with technology and I
-        founded my first &ldquo;startups&rdquo; (
+        My name is Jonathan Alexander Politzki. I grew up in Cary, IL. I studied at the
+        University of Illinois, where I was first introduced to technology startups (
         <a
           href="https://www.quantillinois.com/"
           target="_blank"
@@ -74,23 +72,10 @@ export default function Home() {
         >
           Nephra
         </a>
-        ). After university, I started my career in investment banking at
-        Leerink Partners in NYC, then worked at Shaper Capital, and now work on
-        AI, which I consider my main area of expertise. Many textbooks,
-        projects, and products later, I consider myself more of an engineer
-        than anything else.
+        ). My first job was in biotechnology investment banking at Leerink Partners in NYC. Then, I worked at Shaper Capital. Now, I am starting a company to solve important societal problems. 
       </p>
       <p>
-        I believe human focus is the most misallocated resource on earth, and
-        that we can use AI to elevate ourselves and save people from repetitive
-        and boring work. Most of this technology is already here but it is just
-        not evenly distributed yet. One vector of progress I am focused on is
-        simply helping companies absorb this technology.
-      </p>
-      <p>
-        I also believe the arrival of computers that understand humans will be
-        the most important technology of my lifetime and perhaps my
-        life&apos;s work. This is what we are building at{" "}
+        Computers have proven a remarkable ability to understand the world and us. I am very interested in how we can teach computers to understand humans and what the implications of that technology will be. The company I founded to work on this is {" "}
         <a
           href="https://jeanmemory.com"
           target="_blank"
@@ -98,10 +83,7 @@ export default function Home() {
         >
           Jean
         </a>
-        . In this vein, my interests center around how computers understand and
-        represent humans: representation learning, contrastive learning, AI
-        memory, context engineering, embedding systems, user models, and
-        emotion vectors. Most of them sprung out of my original essay,{" "}
+        . More specifically, we are working to build foundation models of human behavior. The inspiration for this work started out of my original essay,{" "}
         <Link href="/writing/general-personal-embeddings">
           General Personal Embeddings
         </Link>
