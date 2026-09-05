@@ -14,6 +14,7 @@ export type Post = {
     tags?: string[];
     type?: 'essay' | 'report' | 'treatise' | 'note'; // Added 'type'
     hidden?: boolean; // Exclude from listings (e.g. the Library)
+    externalUrl?: string; // Link off-site instead of a local post
   };
   content: string;
 };

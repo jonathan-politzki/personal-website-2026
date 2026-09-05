@@ -25,9 +25,19 @@ export default function Writing() {
           <ul>
             {postsByYear[year].map((post) => (
               <li key={post.slug}>
-                <Link href={`/writing/${post.slug}`}>
-                  {post.metadata.title}
-                </Link>
+                {post.metadata.externalUrl ? (
+                  <a
+                    href={post.metadata.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {post.metadata.title}
+                  </a>
+                ) : (
+                  <Link href={`/writing/${post.slug}`}>
+                    {post.metadata.title}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
