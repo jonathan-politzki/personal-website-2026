@@ -75,7 +75,15 @@ export default function Home() {
         ). My first job was in biotechnology investment banking at Leerink Partners in NYC. Then, I worked at Shaper Capital. Now, I am starting a company to solve important societal problems. 
       </p>
       <p>
-        Computers have proven a remarkable ability to understand the world and us. I am very interested in how we can teach computers to understand humans and what the implications of that technology will be. The company I founded to work on this is {" "}
+        Computers have proven a remarkable ability to understand the world and us. I am very interested in{" "}
+        <a
+          href="https://www.jeantechnologies.com/editorial/posts/teaching-machines-to-understand-humans"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          how we can teach computers to understand humans
+        </a>{" "}
+        and what the implications of that technology will be. The company I founded to work on this is {" "}
         <a
           href="https://jeanmemory.com"
           target="_blank"
