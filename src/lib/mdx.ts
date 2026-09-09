@@ -36,12 +36,14 @@ export function getPostBySlug(slug: string): Post {
   };
 }
 
-export function getAllPosts(): Post[] {
+// `includeHidden` is for the private archive only — every public listing leaves
+// hidden posts out.
+export function getAllPosts({ includeHidden = false } = {}): Post[] {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
     // Hide posts flagged as hidden in their frontmatter
-    .filter((post) => !post.metadata.hidden)
+    .filter((post) => includeHidden || !post.metadata.hidden)
     // Sort posts by date in descending order
     .sort((post1, post2) => (post1.metadata.publishedAt > post2.metadata.publishedAt ? -1 : 1));
   return posts;

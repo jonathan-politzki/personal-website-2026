@@ -1,9 +1,6 @@
 import { getPostBySlug, getAllPosts } from '@/lib/mdx';
-import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound, redirect } from 'next/navigation';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { FactorList, Factor } from '@/components/mdx/factor-list';
+import { PostArticle } from '@/components/post-article';
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -12,41 +9,35 @@ export async function generateStaticParams() {
   }));
 }
 
+function publicPost(slug: string) {
+  try {
+    const post = getPostBySlug(slug);
+    // Unlisted posts live under /writing/private, which robots.txt keeps crawlers
+    // out of. This path denies they exist at all.
+    return post.metadata.hidden ? null : post;
+  } catch {
+    return null;
+  }
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = publicPost(slug);
+  if (!post) return {};
+  return {
+    title: `${post.metadata.title} · Jonathan Politzki`,
+    description: post.metadata.summary,
+  };
+}
+
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-
-  let post;
-  try {
-    post = getPostBySlug(slug);
-  } catch {
-    notFound();
-  }
+  const post = publicPost(slug);
+  if (!post) notFound();
 
   if (post.metadata.externalUrl) {
     redirect(post.metadata.externalUrl);
   }
 
-  return (
-    <article className="post">
-      <h1>{post.metadata.title}</h1>
-      <p className="byline">
-        <time>{post.metadata.publishedAt}</time>
-        {' · '}
-        {post.metadata.type || 'Essay'}
-      </p>
-      {post.metadata.summary && <p className="note">{post.metadata.summary}</p>}
-      <MDXRemote
-        source={post.content}
-        components={{ FactorList, Factor }}
-        options={{
-          mdxOptions: {
-            rehypePlugins: [
-              rehypeSlug,
-              [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-            ],
-          },
-        }}
-      />
-    </article>
-  );
+  return <PostArticle post={post} />;
 }
