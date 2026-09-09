@@ -28,7 +28,7 @@ export default async function Archive({ params }: { params: Promise<{ key: strin
       <h1>Archive</h1>
       <p className="note">
         Everything, including the {posts.filter((p) => p.metadata.hidden).length} pieces
-        left off <Link href="/writing">Writing</Link>. Marked ones are unlisted.
+        that are not public. Marked ones are unlisted.
       </p>
       {years.map((year) => (
         <section key={year}>
