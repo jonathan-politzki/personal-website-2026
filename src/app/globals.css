@@ -184,6 +184,54 @@ a:hover {
   border: 1px solid var(--color-rule);
 }
 
+/* Narration player — a pill under the byline that unfolds into the player */
+#content .listen {
+  margin: 1.2em 0 1.6em;
+}
+
+#content .listen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: inherit;
+  font-size: 0.875em;
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+  color: var(--color-muted);
+  background: none;
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  padding: 0.35em 0.9em 0.35em 0.75em;
+  cursor: pointer;
+  transition: color 140ms ease, border-color 140ms ease;
+}
+
+#content .listen-btn:hover {
+  color: var(--color-accent-dark);
+  border-color: var(--color-accent);
+}
+
+#content .listen-btn svg {
+  width: 0.7em;
+  height: 0.7em;
+  flex: none;
+}
+
+#content .listen audio {
+  display: none;
+  height: 32px;
+  width: 300px;
+  max-width: 100%;
+}
+
+#content .listen[data-expanded="true"] audio {
+  display: block;
+}
+
+#content .listen[data-expanded="true"] .listen-btn {
+  display: none;
+}
+
 #content .thanks {
   margin-top: 2em;
   padding-top: 1em;

@@ -1,0 +1,39 @@
+{
+  "boldness": {
+    "seconds": 1556,
+    "minutes": 26
+  },
+  "culture": {
+    "seconds": 1739,
+    "minutes": 29
+  },
+  "everything-i-know-now": {
+    "seconds": 2767,
+    "minutes": 46
+  },
+  "general-personal-embeddings": {
+    "seconds": 2758,
+    "minutes": 46
+  },
+  "invention": {
+    "seconds": 834,
+    "minutes": 14
+  },
+  "politzkis-law": {
+    "seconds": 279,
+    "minutes": 5
+  },
+  "self-reliance": {
+    "seconds": 688,
+    "minutes": 11
+  },
+  "state-of-ai": {
+    "seconds": 691,
+    "minutes": 12
+  },
+  "the-irreverent-act": {
+    "seconds": 3017,
+    "minutes": 50,
+    "partial": true
+  }
+}
