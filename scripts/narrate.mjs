@@ -25,6 +25,7 @@ const MANIFEST = path.join(ROOT, 'src/content/narration.json');
 // Essays to narrate. `stopBefore` is a line-anchored regex: everything from that
 // line on is left unread.
 const NARRATION = [
+  { slug: 'the-cemetery' },
   { slug: 'everything-i-know-now' },
   { slug: 'culture' },
   { slug: 'general-personal-embeddings' },
