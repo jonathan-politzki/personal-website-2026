@@ -91,14 +91,6 @@ export default function Home() {
         >
           Jean
         </a>
-        . More specifically, we are progressing the field of{" "}
-        <a
-          href="https://www.jeantechnologies.com/Toward_a_Foundation_Model_of_Human_Behavior.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          foundation models for human behavior
-        </a>
         . The inspiration for this work started out of my original essay,{" "}
         <Link href="/writing/general-personal-embeddings">
           General Personal Embeddings
