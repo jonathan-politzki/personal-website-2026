@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const quotes = [
   {
@@ -31,28 +30,12 @@ const connect = [
   { label: "X", href: "https://x.com/ITNAmatter" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/jonathanpolitzki/" },
   { label: "GitHub", href: "https://github.com/jonathan-politzki" },
-  { label: "Substack", href: "https://jonathanpolitzki.substack.com" },
 ];
 
 export default function Home() {
   return (
     <main>
       <h1>Welcome</h1>
-
-      <Image
-        src="/profile.jpg"
-        alt="Jonathan Politzki"
-        width={140}
-        height={140}
-        priority
-        style={{
-          float: "right",
-          margin: "0.4em 0 1em 1.2em",
-          width: 140,
-          height: 140,
-          objectFit: "cover",
-        }}
-      />
 
       <p>
         My name is Jonathan Alexander Politzki. I grew up in Cary, IL. I studied at the
@@ -72,7 +55,7 @@ export default function Home() {
         >
           Nephra
         </a>
-        ). My first job was in biotechnology investment banking at Leerink Partners in NYC. Then, I worked at Shaper Capital. Now, I am starting a company to solve important societal problems. 
+        ). My first job was in biotechnology investment banking at Leerink Partners in NYC. Then, I worked at Shaper Capital.
       </p>
       <p>
         Computers have proven a remarkable ability to understand the world and us. I am very interested in{" "}
@@ -83,15 +66,16 @@ export default function Home() {
         >
           how we can teach computers to understand humans
         </a>{" "}
-        and what the implications of that technology will be. The company I founded to work on this is {" "}
+        and what the implications of that technology will be. I started{" "}
         <a
           href="https://jeanmemory.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           Jean
-        </a>
-        . The inspiration for this work started out of my original essay,{" "}
+        </a>{" "}
+        to work on these problems and teach computers to understand us better than we
+        understand ourselves. I used to write a lot and it led me here. Most of this work was inspired by my essay,{" "}
         <Link href="/writing/general-personal-embeddings">
           General Personal Embeddings
         </Link>

@@ -1,10 +1,7 @@
 import Link from "next/link";
 
-// Writing points at Substack — the site keeps no public index of its own.
-const items = [
-  { label: "Home", href: "/" },
-  { label: "Writing", href: "https://jonathanpolitzki.substack.com", external: true },
-];
+// The site links to no writing index; the only essay link lives in the home-page bio.
+const items = [{ label: "Home", href: "/" }];
 
 export default function Menu() {
   return (
@@ -13,13 +10,7 @@ export default function Menu() {
       <ul>
         {items.map((item) => (
           <li key={item.href}>
-            {item.external ? (
-              <a href={item.href} target="_blank" rel="noopener noreferrer">
-                {item.label}
-              </a>
-            ) : (
-              <Link href={item.href}>{item.label}</Link>
-            )}
+            <Link href={item.href}>{item.label}</Link>
           </li>
         ))}
       </ul>
