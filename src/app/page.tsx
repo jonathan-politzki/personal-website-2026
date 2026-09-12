@@ -82,15 +82,16 @@ export default function Home() {
         >
           how we can teach computers to understand humans
         </a>{" "}
-        and what the implications of that technology will be. The company I founded to work on this is {" "}
+        and what the implications of that technology will be. I started{" "}
         <a
           href="https://jeanmemory.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           Jean
-        </a>
-        . I used to write a lot and it led me here. Most of this work was inspired by my essay,{" "}
+        </a>{" "}
+        to work on these problems and teach computers to understand us better than we
+        understand ourselves. I used to write a lot and it led me here. Most of this work was inspired by my essay,{" "}
         <Link href="/writing/general-personal-embeddings">
           General Personal Embeddings
         </Link>
