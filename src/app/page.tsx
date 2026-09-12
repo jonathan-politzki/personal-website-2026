@@ -31,7 +31,6 @@ const connect = [
   { label: "X", href: "https://x.com/ITNAmatter" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/jonathanpolitzki/" },
   { label: "GitHub", href: "https://github.com/jonathan-politzki" },
-  { label: "Substack", href: "https://jonathanpolitzki.substack.com" },
 ];
 
 export default function Home() {
@@ -72,7 +71,7 @@ export default function Home() {
         >
           Nephra
         </a>
-        ). My first job was in biotechnology investment banking at Leerink Partners in NYC. Then, I worked at Shaper Capital. Now, I am starting a company to solve important societal problems. 
+        ). My first job was in biotechnology investment banking at Leerink Partners in NYC. Then, I worked at Shaper Capital.
       </p>
       <p>
         Computers have proven a remarkable ability to understand the world and us. I am very interested in{" "}
@@ -91,7 +90,7 @@ export default function Home() {
         >
           Jean
         </a>
-        . The inspiration for this work started out of my original essay,{" "}
+        . I used to write a lot and it led me here. Most of this work was inspired by my essay,{" "}
         <Link href="/writing/general-personal-embeddings">
           General Personal Embeddings
         </Link>
