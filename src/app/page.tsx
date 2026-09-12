@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const quotes = [
   {
@@ -37,21 +36,6 @@ export default function Home() {
   return (
     <main>
       <h1>Welcome</h1>
-
-      <Image
-        src="/profile.jpg"
-        alt="Jonathan Politzki"
-        width={140}
-        height={140}
-        priority
-        style={{
-          float: "right",
-          margin: "0.4em 0 1em 1.2em",
-          width: 140,
-          height: 140,
-          objectFit: "cover",
-        }}
-      />
 
       <p>
         My name is Jonathan Alexander Politzki. I grew up in Cary, IL. I studied at the
