@@ -74,8 +74,7 @@ export default function Home() {
         >
           Jean
         </a>{" "}
-        to work on these problems and teach computers to understand us better than we
-        understand ourselves. I used to write a lot and it led me here. Most of this work was inspired by my essay,{" "}
+        to build this technology. Most of this work was inspired by my essay,{" "}
         <Link href="/writing/general-personal-embeddings">
           General Personal Embeddings
         </Link>
