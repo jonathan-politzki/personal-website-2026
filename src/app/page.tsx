@@ -1,27 +1,23 @@
 import Link from "next/link";
 
+// Quotes stay in their original language where the original is not English;
+// the author alone is credited, inline at the end of the line.
 const quotes = [
   {
-    en: "What are the important problems of your field, and why aren't you working on them?",
+    text: "What are the important problems of your field, and why aren't you working on them?",
     author: "Richard Hamming",
   },
   {
-    en: "He who has a why to live can bear almost any how.",
-    de: "Hat man sein wofür des Lebens, so verträgt man sich fast mit jedem wie.",
+    text: "Hat man sein wofür des Lebens, so verträgt man sich fast mit jedem wie.",
     author: "Friedrich Nietzsche",
-    source: "Twilight of the Idols",
   },
   {
-    en: "He who strives and lives to strive, can earn redemption still.",
-    de: "Wer immer strebend sich bemüht, den können wir erlösen.",
+    text: "Wer immer strebend sich bemüht, den können wir erlösen.",
     author: "Johann Wolfgang von Goethe",
-    source: "Faust, Part II",
   },
   {
-    en: "Only he who is constantly changing is my kin.",
-    de: "Nur wer sich wandelt, bleibt mit mir verwandt.",
+    text: "Nur wer sich wandelt, bleibt mit mir verwandt.",
     author: "Friedrich Nietzsche",
-    source: "Posthumous Fragments",
   },
 ];
 
@@ -35,7 +31,7 @@ const connect = [
 export default function Home() {
   return (
     <main>
-      <h1>Welcome</h1>
+      <h1>Jonathan Politzki</h1>
 
       <p>
         My name is Jonathan Alexander Politzki. I grew up in Cary, IL. I studied at the
@@ -82,22 +78,14 @@ export default function Home() {
       </p>
 
       <h2>Good quotes</h2>
-      {quotes.map((quote) => (
-        <blockquote key={quote.en}>
-          <p>
-            &ldquo;{quote.en}&rdquo;
-            {quote.de && <span> ({quote.de})</span>}
-          </p>
-          <p className="note">
-            &mdash; {quote.author}
-            {quote.source && (
-              <>
-                , <cite>{quote.source}</cite>
-              </>
-            )}
-          </p>
-        </blockquote>
-      ))}
+      <ul className="quotes">
+        {quotes.map((quote) => (
+          <li key={quote.text}>
+            &ldquo;{quote.text}&rdquo;{" "}
+            <span className="attribution">&mdash; {quote.author}</span>
+          </li>
+        ))}
+      </ul>
 
       <p className="thanks">
         {connect.map((link, i) => (
