@@ -100,7 +100,7 @@ a:hover {
 #content {
   margin-top: 15px;
   float: left;
-  width: 500px;
+  width: 600px;
   max-width: 100%;
   padding: 0 15px;
   box-sizing: border-box;
@@ -178,6 +178,27 @@ a:hover {
   color: var(--color-muted);
 }
 
+/* Home-page quotes — quieter and tighter than body text, with the author
+   credited inline at the end of each line rather than on its own row. */
+#content ul.quotes {
+  list-style: none;
+  margin: 0.25em 0 0;
+  padding: 0;
+  font-size: 0.925em;
+  line-height: 18px;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+#content .quotes li {
+  margin: 0 0 0.6em;
+}
+
+#content .quotes .attribution {
+  font-style: normal;
+  white-space: nowrap;
+}
+
 #content img {
   max-width: 100%;
   height: auto;
@@ -251,7 +272,7 @@ a:hover {
   }
 
   #content {
-    width: 450px;
+    width: 520px;
   }
 
   #menu {
