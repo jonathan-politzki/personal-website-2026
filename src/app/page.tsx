@@ -31,8 +31,6 @@ const connect = [
 export default function Home() {
   return (
     <main>
-      <h1>Jonathan Politzki</h1>
-
       <p>
         My name is Jonathan Alexander Politzki. I grew up in Cary, IL. I studied at the
         University of Illinois, where I was first introduced to technology startups (
